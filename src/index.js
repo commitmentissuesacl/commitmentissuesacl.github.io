@@ -5,7 +5,11 @@ const userNameDisplay = document.getElementById('user-name-display');
 const userNameContainer = document.getElementById('user-name-container');
 
 const user = {
-    name: ''
+    name: '',
+    age: '',
+    sex: '',
+    location: '',
+    completed: [{}]
 };
 
 /*if user already exists:
