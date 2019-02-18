@@ -8,8 +8,7 @@ const user = {
     name: '',
     age: '',
     sex: '',
-    location: '',
-    completed: [{}]
+    location: ''
 };
 
 /*if user already exists:
