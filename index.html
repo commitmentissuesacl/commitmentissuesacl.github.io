@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <title>Document</title>
+    <title>The Runs</title>
 </head>
 <body>
+    <header class="index-header">
+        <!-- logo -->
+        <a href="index.html"><img src="#" alt="Logo"></a>
+
+        <section id="user-name-container" hidden>
+            <a href=""><span id="user-name-display"></span></a>
+        </section>
+        <!-- user data - hidden until name input filled -->
+    </header>
+
+    <main class="index-container">
+        <!-- full body bg image -->
+        <h1>QUOTE HERE</h1>
+
+        <form id="user-name">
+            <input type="text" id="name" name="name" placeholder="enter name here">
+            <button id="submit">SUBMIT</button>
+        </form>
+        <form id="destination-form" hidden>
+            <select id="destination-dropdown" name="destination-dropdown">
+                
+                <!-- make "Choose your destination" not a selectable option the build event listener to re-direct to next page -->
+                <option value="choose-destination">Choose Your Destination:</option>
+                <option value="forest-park">Forest Park</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- include opion to change username if already logged in -->
+        </form>
+    </main>
+
     
+    <script type="module" src="./src/index.js"></script>
 </body>
 </html>
