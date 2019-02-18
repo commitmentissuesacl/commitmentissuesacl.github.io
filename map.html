@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Find Your Routes</title>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600|Roboto:400,400i,700,700i|Shrikhand" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -29,6 +30,8 @@
         <section class="filters">
             <form id="filter-form">
                 <!-- amenities + distance/elevation change + family friendly filters --- finish after break-->
+                <label><input type="checkbox" id="bathroom" name="bathroom" value=true>Bathroom near route</label>
+                <label><input type="checkbox" id="family" name="family" value=true>Kid friendly</label>
             </form>
         </section>
 
@@ -49,7 +52,7 @@
         </section>
 
     </main>
-        <footer>
+        <footer class="footer">
             <!-- contains same information as nav and about us page -->
         </footer>
         <script type="module" src="src/map.js"></script>

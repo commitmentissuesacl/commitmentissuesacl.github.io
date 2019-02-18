@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+}
+
+h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25em;
+}
+
+h5 {
+    font-family: 'Oswald', sans-serif;
+}
+
+/* INDEX STYLING */
+
+.index-background {
+    width: 100%;
+    height: 100vh;
+    background-color: pink;
+}
+
+
+/* MAP PAGE STYLING */
+
+.hero {
+    background-color: yellow;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: #999;
+}
+
+.footer {
+    width: 100%;
+    height: 150px;
+    background-color: blue;
+}
