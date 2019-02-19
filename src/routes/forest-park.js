@@ -6,16 +6,17 @@ const forestParkMarathon = {
     elevation: '100000000',
     favorite: false,
     completed: false,
-    imageMapPage: './assets/fp-marathon1.jpg',
-    imageOne: './assets/fp-marathon1.jpg',
-    imageTwo: './assets/fp-marathon1.jpg',
-    imageThree: './assets/fp-marathon1.jpg',
+    imageMapPage: './assets/creed.jpg',
+    imageOne: './assets/creed.jpg',
+    imageTwo: './assets/creed.jpg',
+    imageThree: './assets/creed.jpg',
     thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
-    largeMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
     extraInfo: 'Hello hi we need to update this!',
     bathroom: true,
     familyFriendly: false,
-    gpsCoordinates: '12.345 67.890'
+    gpsCoordinates: '12.345 67.890',
+    elevationChart: './assets/creed.jpg'
 };
 
 const forestParkMarathon2 = {
@@ -26,16 +27,17 @@ const forestParkMarathon2 = {
     elevation: '2',
     favorite: false,
     completed: false,
-    imageMapPage: './assets/fp-marathon1.jpg',
-    imageOne: './assets/fp-marathon1.jpg',
-    imageTwo: './assets/fp-marathon1.jpg',
-    imageThree: './assets/fp-marathon1.jpg',
+    imageMapPage: './assets/creed.jpg',
+    imageOne: './assets/creed.jpg',
+    imageTwo: './assets/creed.jpg',
+    imageThree: './assets/creed.jpg',
     thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
-    largeMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
     extraInfo: 'Hello hi we need to update this!',
     bathroom: false,
     familyFriendly: true,
-    gpsCoordinates: '12.345 67.890'
+    gpsCoordinates: '12.345 67.890',
+    elevationChart: './assets/creed.jpg'
 };
 
 
