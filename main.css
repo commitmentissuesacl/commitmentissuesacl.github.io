@@ -80,12 +80,16 @@ h5 {
     font-size: .75em;
 }
 
-#user-name {
+.user-name {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     /* visibility: hidden; */
+}
+
+.hidden {
+    display: none;
 }
 
 #name {
@@ -195,4 +199,22 @@ h5 {
     width: 100%;
     height: 150px;
     background-color: blue;
+}
+
+.display-photo {
+    width: 200px;
+}
+
+.run-container-all {
+    background-color: salmon;
+    margin: 20px 0;
+}
+
+.run-container {
+    background-color: lightblue;
+    margin: 20px;
+}
+
+.run-icon-container {
+    border: 1px solid black;
 }

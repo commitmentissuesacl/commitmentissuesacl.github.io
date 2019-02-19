@@ -23,17 +23,26 @@ for(let i = 0; i < routeOptions.length; i++) {
     const route = routeOptions[i];
     console.log(route);
 
+    const runContainer = document.createElement('section');
+    runContainer.classList.add('run-container');
+
     const runImage = document.createElement('img');
     runImage.src = route.imageMapPage;
     runImage.alt = 'image of run';
     runImage.classList.add('display-photo');
     const imageContainer = document.createElement('section');
     imageContainer.classList.add('image-container');
+    const imageLink = document.createElement('a');
+    imageLink.href = 'route.html?routeid=' + encodeURIComponent(route.id);
     imageContainer.appendChild(runImage);
-    runContainerAll.appendChild(imageContainer);
+    imageLink.appendChild(imageContainer);
+    runContainer.appendChild(imageLink);
 
+    const link = document.createElement('a');
+    link.href = 'route.html?routeid=' + encodeURIComponent(route.id);
     const runName = document.createElement('h3');
     runName.textContent = route.name;
+    link.appendChild(runName);
     const distance = document.createElement('h4');
     distance.textContent = route.distance + ' miles';
     const elevation = document.createElement('h4');
@@ -42,11 +51,11 @@ for(let i = 0; i < routeOptions.length; i++) {
     description.textContent = route.description;
     const runInfoContainer = document.createElement('section');
     runInfoContainer.classList.add('run-info-container');
-    runInfoContainer.appendChild(runName);
+    runInfoContainer.appendChild(link);
     runInfoContainer.appendChild(distance);
     runInfoContainer.appendChild(elevation);
     runInfoContainer.appendChild(description);
-    runContainerAll.appendChild(runInfoContainer);
+    runContainer.appendChild(runInfoContainer);
 
     const runIcons = document.createElement('section');
     runIcons.classList.add('run-icon-container');
@@ -69,5 +78,6 @@ for(let i = 0; i < routeOptions.length; i++) {
     runIcons.appendChild(favoriteIcon);
     runIcons.appendChild(thumbnailMap);
 
-    runContainerAll.appendChild(runIcons);
+    runContainer.appendChild(runIcons);
+    runContainerAll.appendChild(runContainer);
 }

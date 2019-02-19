@@ -3,6 +3,7 @@ const destinationForm = document.getElementById('destination-form');
 const destinationDropdown = document.getElementById('destination-dropdown');
 const userNameDisplay = document.getElementById('user-name-display');
 const userNameContainer = document.getElementById('user-name-container');
+const selectForm = document.getElementById('destination-dropdown');
 
 const user = {
     name: '',
@@ -17,15 +18,19 @@ if no user object exists in local storage, then show the name form and set event
 if a user object exists, then hide the userNameForm,unhide the userNameContainer and update
 its text content, and unhide destinationForm
 */
+
 userNameForm.addEventListener('submit', function(event) {
     event.preventDefault();
     const formData = new FormData(userNameForm);
     user.name = formData.get('name');
-    userNameForm.hidden = true;
+    userNameForm.classList.remove('user-name');
+    userNameForm.classList.add('hidden');
     destinationForm.hidden = false;
 
     const userJson = JSON.stringify(user);
     window.localStorage.setItem('user', userJson);
+
+    selectForm.classList.remove('hidden');
 
     userNameContainer.hidden = false;
     userNameDisplay.textContent = user.name;
