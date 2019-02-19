@@ -90,10 +90,10 @@ $(function() {
         max: 50,
         values: [1, 15],
         slide: function(event, ui) {
-            $('#amount').val(ui.values[ 0 ] + '- ' + ui.values[ 1 ] + 'mi.');
+            $('#amount').val(ui.values[ 0 ] + '- ' + ui.values[ 1 ] + 'mi.≠≠≠≠');
         }
     });
     $('#amount').val(('#slider-range').slider('values', 0) +
       '- ' + $('#slider-range').slider('values', 1));
 });
- 
+ ``
