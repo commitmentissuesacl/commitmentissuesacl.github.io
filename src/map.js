@@ -21,7 +21,6 @@ if(routeUrl === 'forest-park') {
 
 for(let i = 0; i < routeOptions.length; i++) {
     const route = routeOptions[i];
-    console.log(route);
 
     const runContainer = document.createElement('section');
     runContainer.classList.add('run-container');
@@ -83,17 +82,39 @@ for(let i = 0; i < routeOptions.length; i++) {
 }
 
 
-$(function() {
-    $('#slider-range').slider({
-        range: true,
-        min: 1,
-        max: 50,
-        values: [1, 15],
-        slide: function(event, ui) {
-            $('#amount').val(ui.values[ 0 ] + '- ' + ui.values[ 1 ] + 'mi.≠≠≠≠');
-        }
-    });
-    $('#amount').val(('#slider-range').slider('values', 0) +
-      '- ' + $('#slider-range').slider('values', 1));
+// $(function() {
+//     $('#slider-range').slider({
+//         range: true,
+//         min: 1,
+//         max: 50,`
+//         values: [1, 15],
+//         slide: function(event, ui) {
+//             $('#amount').val(ui.values[ 0 ] + '- ' + ui.values[ 1 ] + 'mi.');
+//         }
+//     });
+//  //   $('#amount').val(('#slider-range').slider('values', 0) +
+//       '- ' + $('#slider-range').slider('values', 1));
+// });
+
+//get values from mile sliders
+//get values from bathroom and kid friendly
+//elevation slider
+//button to filter
+//event listener to listen for check boxes and range values to display results
+const bathroomFilter = document.getElementById('bathroom');
+const familyFilter = document.getElementById('family');
+
+function filter() {
+    console.log('filter!!!!!');
+}
+
+bathroomFilter.addEventListener('change', function(){
+    filter();
+    
 });
- ``
+
+familyFilter.addEventListener('change', function(){
+    filter();
+
+});
+// familyFilter.addEventListener('change', filter());
