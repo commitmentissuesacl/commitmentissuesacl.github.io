@@ -1,3 +1,5 @@
+import forestParkOptions from './routes/forest-park.js';
+
 const routeMap = document.getElementById('route-map');
 const elevationChart = document.getElementById('elevation-chart');
 const routeDetails = document.getElementById('route-details');
@@ -7,20 +9,19 @@ const detailPhoto3 = document.getElementById('detail-photo-3');
 const moreInfoSection = document.getElementById('more-info-section');
 
 
-
-//get destination (edit map js to send destination)
-//get route id
-//import route array
-//bring in user info
-//get info for chosen route
-//update DOM with route info    
-const routeOptionsJson = window.localStorage.getItem('destination-array');
-if(!routeOptionsJson) {
+const userJson = window.localStorage.getItem('user');
+if(!userJson) {
     window.location = 'index.html';
 }
 
-const routeOptions = JSON.parse(routeOptionsJson);
+const user = JSON.parse(userJson);
+let routeOptions = null;
+console.log(user.destination);
 
+if(user.destination === 'forest-park') {
+    routeOptions = forestParkOptions;
+}
+console.log(routeOptions);
 const urlParams = new URLSearchParams(window.location.search);
 const routeId = urlParams.get('routeid');
 

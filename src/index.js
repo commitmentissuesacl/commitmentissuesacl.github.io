@@ -9,7 +9,8 @@ const user = {
     name: '',
     age: '',
     sex: '',
-    location: ''
+    location: '',
+    destination: ''
 };
 
 /*if user already exists:
@@ -27,11 +28,9 @@ userNameForm.addEventListener('submit', function(event) {
     userNameForm.classList.add('hidden');
     destinationForm.hidden = false;
 
-    const userJson = JSON.stringify(user);
-    window.localStorage.setItem('user', userJson);
-
+    
     selectForm.classList.remove('hidden');
-
+    
     userNameContainer.hidden = false;
     userNameDisplay.textContent = user.name;
 });
@@ -40,7 +39,9 @@ destinationDropdown.addEventListener('change', function() {
     const formData = new FormData(destinationForm);
     const destinationChoice = formData.get('destination-dropdown');
     console.log(destinationChoice);
+    user.destination = destinationChoice;
 
+    const userJson = JSON.stringify(user);
+    window.localStorage.setItem('user', userJson);
     window.location = './map.html?destination=' + encodeURIComponent(destinationChoice);
-
 });

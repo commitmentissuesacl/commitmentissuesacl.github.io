@@ -1,4 +1,5 @@
 import forestParkOptions from './routes/forest-park.js';
+import otherOptions from './routes/other.js';
 
 const runContainerAll = document.getElementById('run-container-all');
 const userNameDisplay = document.getElementById('user-name-display');
@@ -18,11 +19,10 @@ let routeOptions = null;
 if(routeUrl === 'forest-park') {
     routeOptions = forestParkOptions;
 }
-
-const routeOptionsJson = JSON.stringify(routeOptions);
-window.localStorage.setItem('destination-array', routeOptionsJson);
-
-
+else if(routeUrl === 'other') {
+    routeOptions = otherOptions;
+}
+``
 // $(function() {
 //     $('#slider-range').slider({
 //         range: true,
@@ -74,7 +74,7 @@ function filter() {
         for(let i = 0; i < noFamily.length; i++) {
             noFamily[i].classList.add('hidden');
         }
-    }``
+    }
 
 }
 
