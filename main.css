@@ -228,3 +228,9 @@ h5 {
     align-items: center;
     justify-content: center;
 }
+
+/* nonsense jquery */
+
+#slider-range {
+    width: 25%;
+}
