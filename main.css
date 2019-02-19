@@ -10,6 +10,7 @@ body {
 
 h1 {
     font-family: 'Shrikhand', cursive;
+    font-size: 2em;
 }
 
 h2 {
@@ -31,12 +32,145 @@ h5 {
     font-family: 'Oswald', sans-serif;
 }
 
+#logo-image {
+    height: 60px;
+}
+
 /* INDEX STYLING */
 
 .index-background {
     width: 100%;
     height: 100vh;
-    background-color: pink;
+    background-image: url(./assets/index-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.index-header {
+    display: flex;
+    width: 1200px;
+    height: 60px;
+    margin: 40px 0 0 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.index-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    width: 1200px;
+}
+
+.index-container h1 {
+    color: white;
+    margin: 160px 0 80px 0;
+    width: 780px;
+    text-align: center;
+}
+
+.hellyeah {
+    font-size: .75em;
+}
+
+#user-name {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* visibility: hidden; */
+}
+
+#name {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 40px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    transition: 0.2s all linear;
+    outline: none;
+    padding: 0 5px 0 5px;
+    font-size: .8em;
+    text-align: center;
+    color: #fff;
+    
+    position: relative;
+    top: 2px;
+}
+#name::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, .75);
+}
+
+.index-link {
+    color: #fff;
+    font-size: .8em;
+    text-decoration: none;
+}
+
+.index-link:hover {
+    text-decoration: underline;
+}
+
+
+#submit {
+    width: 180px;
+    height: 30px;
+    border-radius: 15px;
+    justify-content: center;
+    outline: none;
+    background-color: white;
+    color: black;
+    border: 0px;
+}
+
+#submit:hover {
+    background: #333;
+    color: #fff;
+}
+
+#submit:active {
+    transform: translateY(1px);
+}
+
+#destination-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#destination-dropdown {
+    /* -webkit-appearance: none;
+    -moz-appearance: none; */
+    /* appearance: none; */
+    
+    width: 300px;
+    height: 30px;
+    color: #000;
+    
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+    padding: 0 5px 0 5px;
+    font-size: .8em;
+    border-radius: 0px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 40px;
 }
 
 
