@@ -5,7 +5,7 @@ const detailPhoto1 = document.getElementById('detail-photo-1');
 const detailPhoto2 = document.getElementById('detail-photo-2');
 const detailPhoto3 = document.getElementById('detail-photo-3');
 const moreInfoSection = document.getElementById('more-info-section');
-const moreInfo = document.getElementById('more-info');
+
 
 
 //get destination (edit map js to send destination)
@@ -33,10 +33,7 @@ for(let i = 0; i < routeOptions.length; i++) {
 }
 
 routeMap.src = route.largeMap;
-elevationChart.src = route.elevationChart;``
-detailPhoto1.src = route.imageOne;
-detailPhoto2.src = route.imageTwo;
-detailPhoto3.src = route.imageThree;
+elevationChart.src = route.elevationChart;
 
 
 const runName = document.createElement('h3');
@@ -45,6 +42,8 @@ const distance = document.createElement('h4');
 distance.textContent = route.distance + ' miles';
 const elevation = document.createElement('h4');
 elevation.textContent = route.elevation + ' feet';
+const gpsCoordinates = document.createElement('h5');
+gpsCoordinates.textContent = route.gpsCoordinates;
 const description = document.createElement('p');
 description.textContent = route.description;
 const routeDetailsContainer = document.createElement('section');
@@ -52,5 +51,16 @@ routeDetailsContainer.classList.add('route-details-container');
 routeDetailsContainer.appendChild(runName);
 routeDetailsContainer.appendChild(distance);
 routeDetailsContainer.appendChild(elevation);
+routeDetailsContainer.appendChild(gpsCoordinates);
 routeDetailsContainer.appendChild(description);
 routeDetails.appendChild(routeDetailsContainer);
+
+detailPhoto1.src = route.imageOne;
+detailPhoto2.src = route.imageTwo;
+detailPhoto3.src = route.imageThree;
+
+const moreInfo = document.createElement('p');
+moreInfo.textContent = route.extraInfo;
+moreInfoSection.appendChild(moreInfo);
+
+

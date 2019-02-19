@@ -62,24 +62,19 @@ function filter() {
         console.log(routes[i]);
         const route = routeOptions[i];
         console.log(route);
-        
-        if(filterByFamily){``
-            if(!route.familyFriendly) {
-                console.log('filterbyfamily');
-                routes[i].classList.add('hidden');
-            }
-        }
-        if(filterByBathrooms){
-            if(!route.bathroom) {
-                routes[i].classList.add('hidden');
-                console.log('filterbybroom');
-            }
+    }
+    if(filterByBathrooms){
+        const noBathroom = document.getElementsByClassName('no-bathroom');
+        for(let i = 0; i < noBathroom.length; i++) {
+            noBathroom[i].classList.add('hidden');
         }
     }
-        //target the run-container within run filter
-        // get all elements of run container
-        // unhide all run containers
-        // run containers through for loop to add or remove class of hidden
+    if(filterByFamily){
+        const noFamily = document.getElementsByClassName('no-family');
+        for(let i = 0; i < noFamily.length; i++) {
+            noFamily[i].classList.add('hidden');
+        }
+    }``
 
 }
 
@@ -87,10 +82,14 @@ function filter() {
 for(let i = 0; i < routeOptions.length; i++) {
     const route = routeOptions[i];
 
-
-
     const runContainer = document.createElement('section');
     runContainer.classList.add('run-container');
+    if(!route.bathroom){
+        runContainer.classList.add('no-bathroom');
+    }
+    if(!route.familyFriendly){
+        runContainer.classList.add('no-family');
+    }
     
     const runImage = document.createElement('img');
     runImage.src = route.imageMapPage;
