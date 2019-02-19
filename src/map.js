@@ -19,6 +19,9 @@ if(routeUrl === 'forest-park') {
     routeOptions = forestParkOptions;
 }
 
+const routeOptionsJson = JSON.stringify(routeOptions);
+window.localStorage.setItem('destination-array', routeOptionsJson);
+
 
 // $(function() {
 //     $('#slider-range').slider({
