@@ -13,7 +13,7 @@ const forestParkMarathon = {
     thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
     largeMap: '',
     extraInfo: '',
-    bathroom: false,
+    bathroom: true,
     familyFriendly: false,
     gpsCoordinates: '12.345 67.890'
 };
@@ -33,7 +33,7 @@ const forestParkMarathon2 = {
     thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
     largeMap: '',
     extraInfo: '',
-    bathroom: true,
+    bathroom: false,
     familyFriendly: true,
     gpsCoordinates: '12.345 67.890'
 };
