@@ -115,9 +115,7 @@ function filter() {
     }
     for(let i = 0; i < routes.length; i++){
         routes[i].classList.remove('hidden');
-        const route = routeOptions[i];
-        console.log(route);
-
+        const route = routes[i];
     }
     if(filterByBathrooms){
         const noBathroom = document.getElementsByClassName('no-bathroom');
@@ -136,6 +134,7 @@ function filter() {
     for(let i = 0; i < routes.length; i++) {
         if(Number(routes[i].distance) < Number(min)) {
             routes[i].classList.add('hidden');
+            console.log(routes[i]);
         }
     }
     const max = maxMiles.value;
@@ -168,7 +167,6 @@ bathroomFilter.addEventListener('change', function(){
 familyFilter.addEventListener('change', function(){
     filter();
 });
-
 
 minMiles.addEventListener('change', function() {
     filter();
