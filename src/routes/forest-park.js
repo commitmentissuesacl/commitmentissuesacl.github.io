@@ -58,7 +58,7 @@ const half = {
     bathroom: true,
     familyFriendly: false,
     gpsCoordinates: '45.540874, -122.726184',
-    elevationChart: './assets/creed.jpg'
+    elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
 
 const ultra = {
@@ -79,7 +79,7 @@ const ultra = {
     bathroom: true,
     familyFriendly: false,
     gpsCoordinates: '45.540874, -122.726184',
-    elevationChart: './assets/creed.jpg'
+    elevationChart: 'assets/elevation-profile/elevation50k.png'
 };
 
 
