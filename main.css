@@ -219,6 +219,14 @@ h5 {
     border: 1px solid black;
 }
 
+.miles-range {
+    margin: 10px -2px;
+}
+
+#range-display {
+    margin-left: 20px;
+}
+
 /* Route page styling */
 .route-map {
     background-color: orange;

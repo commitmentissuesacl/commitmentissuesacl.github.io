@@ -22,26 +22,7 @@ if(routeUrl === 'forest-park') {
 else if(routeUrl === 'other') {
     routeOptions = otherOptions;
 }
-``
-// $(function() {
-//     $('#slider-range').slider({
-//         range: true,
-//         min: 1,
-//         max: 50,`
-//         values: [1, 15],
-//         slide: function(event, ui) {
-//             $('#amount').val(ui.values[ 0 ] + '- ' + ui.values[ 1 ] + 'mi.');
-//         }
-//     });
-//  //   $('#amount').val(('#slider-range').slider('values', 0) +
-//       '- ' + $('#slider-range').slider('values', 1));
-// });
 
-//get values from mile sliders
-//get values from bathroom and kid friendly
-//elevation slider
-//button to filter
-//event listener to listen for check boxes and range values to display results
 const bathroomFilter = document.getElementById('bathroom');
 const familyFilter = document.getElementById('family');
 
@@ -146,20 +127,52 @@ for(let i = 0; i < routeOptions.length; i++) {
     runContainer.appendChild(runIcons);
     runContainerAll.appendChild(runContainer);
 }
-    
-
-
-    
-
-// filter();
 
 bathroomFilter.addEventListener('change', function(){
-    // location.reload();
     filter();
 });
 
 familyFilter.addEventListener('change', function(){
-    // location.reload();
     filter();
 });
 
+// $(function() {
+//     $('#slider-range').slider({
+//         range: true,
+//         min: 1,
+//         max: 50,
+//         values: [1, 15],
+//         slide: function(event, ui) {
+//             $('#amount').val(ui.values[ 0 ] + '- ' + ui.values[ 1 ] + 'mi.');
+//         }
+//     });
+//     $('#amount').val(('#slider-range').slider('values', 0) +
+//       '- ' + $('#slider-range').slider('values', 1));
+// // });
+
+// let min = $('#slider-range').slider('values', 0);
+// let max = $('#slider-range').slider('values', 1);
+
+// console.log(min, max, "!!");
+const minMiles = document.getElementById('min-miles');
+const maxMiles = document.getElementById('max-miles');
+
+function changeMilesRange() {
+    const rangeDisplay = document.getElementById('range-display');
+    maxMiles.min = Number(minMiles.value) + 2;
+    console.log(minMiles.value, maxMiles.value);
+    rangeDisplay.textContent = 'Distance: ' + minMiles.value + ' - ' + maxMiles.value + ' miles';
+}
+
+minMiles.addEventListener('change', function() {
+    changeMilesRange();
+});
+
+maxMiles.addEventListener('change', function() {
+    changeMilesRange();
+});
+
+// get values from mile sliders
+// elevation slider
+// button to filter
+// event listener to listen for range values to display results
