@@ -164,3 +164,30 @@ maxMiles.addEventListener('change', function() {
         }
     }
 });
+
+const minElevation = document.getElementById('min-elevation');
+const maxElevation = document.getElementById('max-elevation');
+
+minElevation.addEventListener('change', function() {
+    const min = minElevation.value;
+    maxElevation.min = Number(min) + 2;
+    const routes = document.getElementsByClassName('run-container');
+    for(let i = 0; i < routes.length; i++) {
+        routes[i].classList.remove('hidden');
+        if(Number(routes[i].elevation) < Number(min)) {
+            routes[i].classList.add('hidden');
+        }
+    }
+});
+
+maxElevation.addEventListener('change', function() {
+    const max = maxElevation.value;
+    minElevation.max = Number(max) - 2;
+    const routes = document.getElementsByClassName('run-container');
+    for(let i = 0; i < routes.length; i++) {
+        routes[i].classList.remove('hidden');
+        if(Number(routes[i].elevation) > Number(max)) {
+            routes[i].classList.add('hidden');
+        }
+    }``
+});
