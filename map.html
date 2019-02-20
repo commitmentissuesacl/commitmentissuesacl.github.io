@@ -34,17 +34,13 @@
       
         
         <section class="filters">
-<!--             
-                <p>
-                <label for="amount">Miles:</label>
-                <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-            </p>
-                
-            <div id="slider-range"></div> -->
-            <section id="miles-sliders">
-                <span id="range-display">Filter by Distance</span><br>
-                <input type="range" id="min-miles" min="1" max="28" class="miles-range">
-                <input type="range" id="max-miles" min="2" max="30" class="miles-range">
+
+            <section id="miles-filter">
+                <span>Filter by Distance</span><br>
+                <!-- <label for="min-miles">Min distance</label> -->
+                <input type="number" id="min-miles" min="1" max="28" class="miles-range" placeholder="1">
+                <!-- <label for="max-miles">Max distance</label> --> -
+                <input type="number" id="max-miles" min="2" max="30" class="miles-range" placeholder="30"> miles
                 <br>
             </section> 
 
