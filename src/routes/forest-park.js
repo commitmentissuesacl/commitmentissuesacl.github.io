@@ -3,7 +3,7 @@ const forestParkMarathon = {
     name: 'Forest Park Marathon',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales ex quis arcu accumsan sodales. Integer eget felis in augue condimentum vehicula. Proin pretium finibus erat, et placerat arcu. In hac habitasse platea dictumst. Nunc porttitor ornare leo in dapibus. Aliquam nec tincidunt risus. Curabitur ac ullamcorper ipsum. Mauris at.',
     distance: '26.38',
-    elevation: '100000000',
+    elevation: '3200',
     favorite: false,
     completed: false,
     imageMapPage: './assets/creed.jpg',
@@ -21,10 +21,10 @@ const forestParkMarathon = {
 
 const forestParkMarathon2 = {
     id: 'fp-marathon2',
-    name: 'Forest Park Marathon2',
+ ``   name: 'Forest Park Marathon2',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales ex quis arcu accumsan sodales. Integer eget felis in augue condimentum vehicula. Proin pretium finibus erat, et placerat arcu. In hac habitasse platea dictumst. Nunc porttitor ornare leo in dapibus. Aliquam nec tincidunt risus. Curabitur ac ullamcorper ipsum. Mauris at.',
     distance: '2',
-    elevation: '2',
+    elevation: '478',
     favorite: false,
     completed: false,
     imageMapPage: './assets/creed.jpg',
