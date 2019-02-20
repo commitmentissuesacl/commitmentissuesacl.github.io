@@ -37,31 +37,27 @@
         <section class="filters">
             <section class="filters-container">
 
-                <section id="miles-filter">
-                    <span>Filter by Distance</span>
-                    <!-- <label for="min-miles">Min distance</label> -->
-                    <section class="filter-input">
-                        <input type="number" id="min-miles" min="1" max="28" class="miles-range" value="1">
-                        <!-- <label for="max-miles">Max distance</label> --> -
-                        <input type="number" id="max-miles" min="2" max="30" class="miles-range" value="30"> miles
-                    </section>
-                </section> 
-    
-                <section id="elevation-filter">
-                    <span>Filter by Elevation Gain</span>
-                    <section class="filter-input">
-                        <input type="number" id="min-elevation" min="1" max="28" class="elevation-range" value="0">
-                        -
-                        <input type="number" id="max-elevation" min="2" max="30" class="elevation-range" value="5000"> feet
-                    </section>
-                </section> 
-    
-                <form id="filter-form">
-                    <!-- amenities + distance/elevation change + family friendly filters --- finish after break-->
-                    <label><input type="checkbox" id="bathroom" name="bathroom" value="true">Bathroom near route</label>
-                    <label><input type="checkbox" id="family" name="family" value="true">Kid friendly</label>
-                </form>
-            </section>
+            <section id="miles-filter">
+                <span>Filter by Distance</span><br>
+                <!-- <label for="min-miles">Min distance</label> -->
+                <input type="number" id="min-miles" min="1" max="28" class="miles-range" value="1">
+                <!-- <label for="max-miles">Max distance</label> --> -
+                <input type="number" id="max-miles" min="2" max="32" class="miles-range" value="32"> miles
+                <br>
+            </section> 
+
+            <section id="elevation-filter">
+                <span>Filter by Elevation Gain</span><br>
+                <input type="number" id="min-elevation" min="0" max="5000" class="elevation-range" value="0">
+                 -
+                <input type="number" id="max-elevation" min="2" max="10000" class="elevation-range" value="6000"> feet
+                <br>
+            </section> 
+
+            <form id="filter-form">
+                <label><input type="checkbox" id="bathroom" name="bathroom" value=true>Bathroom near route</label>
+                <label><input type="checkbox" id="family" name="family" value=true>Kid friendly</label>
+            </form>
         </section>
 
         <section class="run-container-all" id="run-container-all">
