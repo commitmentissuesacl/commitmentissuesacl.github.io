@@ -107,11 +107,7 @@ const springville = {
 const saltzman = {
     id: 'saltzman',
     name: 'Saltzman Slog',
-<<<<<<< HEAD
     description: 'This point-to-point run begins at the intersection of Firelane 5 and Leif Erikson and ends at the intersection of Saltzman Road trailhead and Leif Erikson.',
-=======
-    description: 'This run begins at the intersection of Firelane 5 and Leif Erikson and ends at the intersection of Saltzman Road trailhead and Leif Erikson.',
->>>>>>> d4c4f0069d682db79469a539c522d70785b86660
     distance: '5.3',
     elevation: '658',
     favorite: false,
