@@ -7,16 +7,16 @@ const forestParkMarathon = {
     favorite: false,
     completed: false,
     imageMapPage: './assets/creed.jpg',
-    imageOne: './assets/creed.jpg',
-    imageTwo: './assets/creed.jpg',
-    imageThree: './assets/creed.jpg',
+    imageOne: 'assets/lieferikson-firelane/lieferkison-firelane-photo1.jpg',
+    imageTwo: 'assets/lieferikson-firelane/lieferkison-firelane-photo2.jpg',
+    imageThree: 'assets/lieferikson-firelane/lieferkison-firelane-photo3.jpg',
     thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
-    largeMap: './assets/creed.jpg',
+    largeMap: 'assets/lieferikson-firelane/map-lieferikson-firelane.svg',
     extraInfo: 'Hello hi we need to update this!',
     bathroom: true,
     familyFriendly: false,
     gpsCoordinates: '12.345 67.890',
-    elevationChart: './assets/creed.jpg'
+    elevationChart: 'assets/lieferikson-firelane/elevation-lieferikson-firelane.svg'
 };
 
 const forestParkMarathon2 = {

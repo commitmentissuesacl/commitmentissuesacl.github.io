@@ -11,13 +11,14 @@
 </head>
 <body>
     <header class="header">
-        <!-- logo -->
-        <a href="index.html"><img src="./assets/logo.png" alt="Logo" id="logo-image"></a>
-        <nav class="nav-container">
-            Links will go here
-        </nav>
-        <section id="user-name-container">
-            <a href=""><span id="user-name-display"></span></a>
+        <section class="header-container">
+            <a href="index.html"><img src="./assets/logo.png" alt="Logo" id="logo-image"></a>
+            <nav class="nav-container">
+                Links will go here
+            </nav>
+            <section id="user-name-container">
+                <a href=""><span id="user-name-display"></span></a>
+            </section>
         </section>
     </header>
 
@@ -33,15 +34,19 @@
         <section id="route-details"> </section>
 
         <section id="detail-photo-section">
-            <img class="detail-photo" id="detail-photo-1" src="#">
-            <img class="detail-photo" id="detail-photo-2" src="#">
-            <img class="detail-photo" id="detail-photo-3" src="#">
+            <section id="detail-photo-flex">
+                <img class="detail-photo" id="detail-photo-1" src="#">
+                <img class="detail-photo" id="detail-photo-2" src="#">
+                <img class="detail-photo" id="detail-photo-3" src="#">
+            </section>
         </section>
 
-        <section id="more-info-section">
-            <h4>More Info</h4>
+        <section id="more-info-container">
+            <section id="more-info-section">
+                <h4>More Info</h4>
+            </section>
         </section>
-
+        
     </main>
 
     <footer class="footer">
@@ -49,5 +54,6 @@
     </footer>
     
     <script type="module" src="src/route.js"></script>
+    <script type="module" src="src/map.js"></script>
 </body>
 </html>

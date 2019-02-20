@@ -33,10 +33,26 @@ h5 {
 }
 
 #logo-image {
-    height: 60px;
+    height: 30px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 /* INDEX STYLING */
+
+#logo-image-index {
+    height: 40px;
+}
+
+.index-header {
+    background-color: transparent;
+}
 
 .index-background {
     width: 100%;
@@ -53,7 +69,7 @@ h5 {
 
 .index-header {
     display: flex;
-    width: 1200px;
+    width: 1180px;
     height: 60px;
     margin: 40px 0 0 0;
     justify-content: space-between;
@@ -114,6 +130,7 @@ h5 {
     position: relative;
     top: 2px;
 }
+
 #name::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgba(255, 255, 255, .75);
 }
@@ -158,11 +175,9 @@ h5 {
 }
 
 #destination-dropdown {
-    /* -webkit-appearance: none;
-    -moz-appearance: none; */
-    /* appearance: none; */
+    -webkit-border-radius: 0px;
     
-    width: 300px;
+    width: 310px;
     height: 30px;
     color: #000;
     
@@ -173,15 +188,22 @@ h5 {
     font-size: .8em;
     border-radius: 0px;
     outline: none;
-    background-color: rgba(255, 255, 255, 0);
-    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, .25);
+    position: relative;
+    top: 5px;
+    margin-bottom: 73px;
 }
 
 
 /* MAP PAGE STYLING */
 
 .hero {
-    background-color: yellow;
+    background-image: url(./assets/map-hero.svg);
+    background-color: beige;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
     width: 100%;
     height: 500px;
     display: flex;
@@ -189,16 +211,26 @@ h5 {
     justify-content: center;
 }
 
-.header {
+header {
     width: 100%;
-    height: 100px;
-    background-color: #999;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container {
+    height: 80px;
+    display: flex;
+    width: 1180px;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer {
     width: 100%;
     height: 150px;
-    background-color: blue;
+    background-color: #d1d1d1;
 }
 
 .display-photo {
@@ -221,12 +253,63 @@ h5 {
 
 /* Route page styling */
 .route-map {
-    background-color: orange;
     width: 100%;
-    height: 400px;
+    background-color: #f7f7f7;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#route-map {
+    width: 980px;
+}
+
+#elevation-details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 80px 0;
+}
+
+#route-details {
+    margin: 40px 0 80px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.route-details-container {
+    width: 780px;
+}
+
+.route-details-container h5 {
+    float: right;
+    position: relative;
+    top: -105px;
+    color: #666;
+}
+
+#detail-photo-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#detail-photo-flex {
+    width: 1180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#more-info-container {
+    margin: 80px 0 80px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#more-info-section {
+    width: 780px;
 }
 
 /* nonsense jquery */
