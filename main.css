@@ -44,6 +44,12 @@ a:hover {
     text-decoration: none;
 }
 
+.footer {
+    width: 100%;
+    height: 150px;
+    background-color: #d1d1d1;
+}
+
 
 /* INDEX STYLING */
 
@@ -205,10 +211,8 @@ a:hover {
 
 .hero {
     background-image: url(./assets/map-hero.svg);
-    background-color: beige;
     background-position: center;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     background-size: cover;
     width: 100%;
     height: 500px;
@@ -232,12 +236,41 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
-.footer {
-    width: 100%;
-    height: 150px;
-    background-color: #d1d1d1;
+ 
+.filters {
+    background-color: salmon;
+    display: flex;
+    justify-content: center;
 }
+
+.filters-container {
+    display: flex;
+    width: 1180px;
+    justify-content: space-between;
+    background-color: palegoldenrod;
+}
+
+#miles-filter {
+    background-color: aqua;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-input {
+    background-color: green;
+}
+
+#filter-form {
+    background: purple;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .display-photo {
     width: 200px;
@@ -255,13 +288,10 @@ header {
 
 .run-icon-container {
     border: 1px solid black;
-}
+} 
 
-#miles-filter {
-    border: 1px solid blue;
-    padding: 3px;
-    margin: 3px;
-}
+
+
 /* Route page styling */
 .route-map {
     width: 100%;
