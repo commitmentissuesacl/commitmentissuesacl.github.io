@@ -17,12 +17,10 @@ if(!userJson) {
 
 const user = JSON.parse(userJson);
 let routeOptions = null;
-console.log(user.destination);
 
 if(user.destination === 'forest-park') {
     routeOptions = forestParkOptions;
 }
-console.log(routeOptions);
 const urlParams = new URLSearchParams(window.location.search);
 const routeId = urlParams.get('routeid');
 
