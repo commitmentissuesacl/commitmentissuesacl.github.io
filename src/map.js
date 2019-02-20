@@ -86,8 +86,8 @@ for(let i = 0; i < routeOptions.length; i++) {
         favoriteIcon.src = './assets/not-favorite.png';
     }
     thumbnailMap.src = route.thumbnailMap;
-    runIcons.appendChild(completedIcon);
-    runIcons.appendChild(favoriteIcon);
+    // runIcons.appendChild(completedIcon);
+    // runIcons.appendChild(favoriteIcon);
     runIcons.appendChild(thumbnailMap);
     
     runContainer.appendChild(runIcons);
@@ -117,7 +117,7 @@ function filter() {
         routes[i].classList.remove('hidden');
         const route = routeOptions[i];
         console.log(route);
-        
+
     }
     if(filterByBathrooms){
         const noBathroom = document.getElementsByClassName('no-bathroom');

@@ -6,6 +6,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
+    color: #404041;
 }
 
 h1 {
@@ -37,11 +38,11 @@ h5 {
 }
 
 a {
-    color: black;
+    color: #404041;
 }
 
 a:hover {
-    text-decoration: none;
+    color: #f16521;
 }
 
 .footer {
@@ -238,7 +239,7 @@ header {
 }
  
 .filters {
-    background-color: salmon;
+    background-color: yellow;
     display: flex;
     justify-content: center;
 }
@@ -260,7 +261,7 @@ header {
 }
 
 .filter-input {
-    background-color: green;
+    background-color: goldenrod;
 }
 
 #filter-form {
@@ -271,23 +272,51 @@ header {
     align-items: center;
 }
 
-
 .display-photo {
     width: 200px;
 }
 
 .run-container-all {
-    background-color: salmon;
-    margin: 20px 0;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .run-container {
-    background-color: lightblue;
-    margin: 20px;
+    background-color: #E8E8E8;
+    margin: 10px 0;
+    width: 1180px;
+    display: flex;
+    height: 280px;
+}
+
+.image-container {
+    height: 280px;
+    width: 280px;
+}
+
+.display-photo {
+    height: 280px;
+    width: 280px;
+}
+
+.run-info-container {
+    padding: 20px;
+    width: 620px;
+    /* height: px; */
+    overflow: hidden;
+}
+
+.run-info-container p {
+    margin-top: 20px;
 }
 
 .run-icon-container {
-    border: 1px solid black;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 } 
 
 
