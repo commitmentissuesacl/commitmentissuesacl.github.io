@@ -44,6 +44,7 @@ a:hover {
     text-decoration: none;
 }
 
+
 /* INDEX STYLING */
 
 #logo-image-index {
@@ -164,6 +165,7 @@ a:hover {
 #submit:hover {
     background: #333;
     color: #fff;
+    cursor: pointer;
 }
 
 #submit:active {
@@ -192,10 +194,10 @@ a:hover {
     font-size: .8em;
     border-radius: 0px;
     outline: none;
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0, 0, 0, .5);
     position: relative;
     top: 5px;
-    margin-bottom: 73px;
+    margin-bottom: 71px;
 }
 
 
@@ -263,14 +265,15 @@ header {
 /* Route page styling */
 .route-map {
     width: 100%;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
 }
 
 #route-map {
-    width: 980px;
+    width: 1180px;
 }
 
 #elevation-details {
