@@ -11,7 +11,7 @@ const forestParkMarathon = {
     imageTwo: 'assets/lieferikson-firelane/lieferkison-firelane-photo2.jpg',
     imageThree: 'assets/lieferikson-firelane/lieferkison-firelane-photo3.jpg',
     thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
-    largeMap: 'assets/lieferikson-firelane/map-lieferikson-firelane.svg',
+    largeMap: 'assets/working/FP-Marathon.svg',
     extraInfo: 'Access the starting trailhead on Lower Saltzman Road off of Highway 30. Limited street parking is available. The route ends at Lower Macleay Park, which has restrooms, parking, and a water fountain.',
     bathroom: true,
     familyFriendly: false,
