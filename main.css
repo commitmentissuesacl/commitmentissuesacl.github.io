@@ -236,10 +236,11 @@ header {
 .header-container {
     height: 80px;
     display: flex;
-    width: 960px;
+    width: 1180px;
     height: 60px;
     justify-content: space-between;
     align-items: center;
+    font-size: .8em;
 }
  
 .filters {
