@@ -269,18 +269,21 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 
 #route-map {
-    width: 1180px;
+    width: 780px;
 }
 
 #elevation-details {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 40px 0 80px 0;
+}
+
+#elevation-chart {
+    width: 780px;
 }
 
 #route-details {
@@ -308,9 +311,12 @@ header {
 }
 
 #detail-photo-flex {
-    width: 1180px;
+    width: 780px;
+    height: 520px;
     display: flex;
     justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
 }
 
 #more-info-container {
