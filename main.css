@@ -42,7 +42,7 @@ a {
 }
 
 a:hover {
-    color: #f16521;
+    color: #f26522;
 }
 
 .footer {
@@ -143,6 +143,10 @@ a:hover {
     top: 2px;
 }
 
+#name:focus {
+    border-bottom: 2px solid #f26522;
+}
+
 #name::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgba(255, 255, 255, .75);
 }
@@ -170,9 +174,9 @@ a:hover {
 }
 
 #submit:hover {
-    background: #333;
-    color: #fff;
     cursor: pointer;
+    background-color: #f26522;
+    color: white;
 }
 
 #submit:active {
@@ -232,7 +236,7 @@ header {
 .header-container {
     height: 80px;
     display: flex;
-    width: 1180px;
+    width: 960px;
     height: 60px;
     justify-content: space-between;
     align-items: center;
@@ -247,29 +251,66 @@ header {
 .filters-container {
     display: flex;
     width: 1180px;
+    height: 60px;
+    align-items: center;
     justify-content: space-between;
     background-color: rgb(121, 152, 161);
 }
 
 #miles-filter {
-    background-color: rgb(121, 152, 161);
+    background-color: rgb(156, 121, 161);
     width: 280px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+#elevation-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    background-color: yellow;
+}
+
 .filter-input {
-    background-color: rgb(121, 152, 161);
+    background-color: rgb(59, 86, 94);
+    margin-left: 10px;
+}
+
+.filter-icon {
+    height: 30px;
 }
 
 #filter-form {
-    background: rgb(121, 152, 161);
+    background: rgb(31, 146, 41);
     width: 400px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-content: center;
+}
+
+.checkbox {
+    margin-right: 5px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+
+    position: relative;
+    top: 2px;
+}
+
+.checkbox:checked {
+    border: 6px solid black;
 }
 
 .display-photo {
