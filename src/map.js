@@ -94,6 +94,13 @@ for(let i = 0; i < routeOptions.length; i++) {
     runContainerAll.appendChild(runContainer);
 }
 
+const minMiles = document.getElementById('min-miles');
+const maxMiles = document.getElementById('max-miles');
+const minElevation = document.getElementById('min-elevation');
+const maxElevation = document.getElementById('max-elevation');
+const bathroomFilter = document.getElementById('bathroom');
+const familyFilter = document.getElementById('family');
+
 function filter() {
     const routes = document.getElementsByClassName('run-container');
     
@@ -108,9 +115,9 @@ function filter() {
     }
     for(let i = 0; i < routes.length; i++){
         routes[i].classList.remove('hidden');
-        console.log(routes[i]);
         const route = routeOptions[i];
         console.log(route);
+        
     }
     if(filterByBathrooms){
         const noBathroom = document.getElementsByClassName('no-bathroom');
@@ -138,28 +145,21 @@ function filter() {
             routes[i].classList.add('hidden');
         }
     }
-    const min = minElevation.value;
-    maxElevation.min = Number(min) + 2;
+    const minElev = minElevation.value;
+    maxElevation.min = Number(minElev) + 2;
     for(let i = 0; i < routes.length; i++) {
-        if(Number(routes[i].elevation) < Number(min)) {
+        if(Number(routes[i].elevation) < Number(minElev)) {
             routes[i].classList.add('hidden');
         }
     }
-    const max = maxElevation.value;
-    minElevation.max = Number(max) - 2;
+    const maxElev = maxElevation.value;
+    minElevation.max = Number(maxElev) - 2;
     for(let i = 0; i < routes.length; i++) {
-        if(Number(routes[i].elevation) > Number(max)) {
+        if(Number(routes[i].elevation) > Number(maxElev)) {
             routes[i].classList.add('hidden');
         }
     }
 }
-
-const minMiles = document.getElementById('min-miles');
-const maxMiles = document.getElementById('max-miles');
-const minElevation = document.getElementById('min-elevation');
-const maxElevation = document.getElementById('max-elevation');
-const bathroomFilter = document.getElementById('bathroom');
-const familyFilter = document.getElementById('family');
 
 bathroomFilter.addEventListener('change', function(){
     filter();
@@ -168,6 +168,7 @@ bathroomFilter.addEventListener('change', function(){
 familyFilter.addEventListener('change', function(){
     filter();
 });
+
 
 minMiles.addEventListener('change', function() {
     filter();
