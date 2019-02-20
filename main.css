@@ -239,7 +239,7 @@ header {
 }
  
 .filters {
-    background-color: yellow;
+    background-color: rgb(121, 152, 161);
     display: flex;
     justify-content: center;
 }
@@ -248,11 +248,11 @@ header {
     display: flex;
     width: 1180px;
     justify-content: space-between;
-    background-color: palegoldenrod;
+    background-color: rgb(121, 152, 161);
 }
 
 #miles-filter {
-    background-color: aqua;
+    background-color: rgb(121, 152, 161);
     width: 280px;
     display: flex;
     flex-direction: column;
@@ -261,11 +261,11 @@ header {
 }
 
 .filter-input {
-    background-color: goldenrod;
+    background-color: rgb(121, 152, 161);
 }
 
 #filter-form {
-    background: purple;
+    background: rgb(121, 152, 161);
     width: 400px;
     display: flex;
     justify-content: space-between;
@@ -317,6 +317,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-right: 20px;
 } 
 
 
