@@ -83,7 +83,110 @@ const ultra = {
     elevationChart: 'assets/elevation-profile/elevation50k.png'
 };
 
+const springville = {
+    id: 'springville',
+    name: 'Springville Baptism',
+    description: 'full of beautiful stuff that is on this and you will run by and see it yourself!',
+    distance: '5.5',
+    elevation: '1566',
+    favorite: false,
+    completed: false,
+    imageMapPage: './assets/creed.jpg',
+    imageOne: './assets/creed.jpg',
+    imageTwo: './assets/creed.jpg',
+    imageThree: './assets/creed.jpg',
+    thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
+    extraInfo: 'This routes starts and ends at the Springville Road. It follows Firelane 7 and Leif Erikson to make a loop around a portion of the Wildwood trail. There are no bathrooms near this route, so use a leaf!',
+    bathroom: false,
+    familyFriendly: false,
+    gpsCoordinates: '45.540874, -122.726184',
+    elevationChart: 'assets/elevation-profile/stumptown-half.png'
+};
 
-const forestParkOptions = [forestParkMarathon, ramblers, half, ultra];
+const saltzman = {
+    id: 'saltzman',
+    name: 'Saltzman Slog',
+    description: 'This run begins at the intersection of Firelane 5 and Leif Erikson and ends at the intersection of Saltzman Road trailhead and Leif Erikson. ',
+    distance: '5.3',
+    elevation: '+658/-400',
+    favorite: false,
+    completed: false,
+    imageMapPage: './assets/creed.jpg',
+    imageOne: './assets/creed.jpg',
+    imageTwo: './assets/creed.jpg',
+    imageThree: './assets/creed.jpg',
+    thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
+    extraInfo: 'There are port-a-potties at the start of this route near mile marker 11.',
+    bathroom: true,
+    familyFriendly: false,
+    gpsCoordinates: '45.540874, -122.726184',
+    elevationChart: 'assets/elevation-profile/stumptown-half.png'
+};
+
+const trilliumtrek = {
+    id: 'trillium',
+    name: 'Trillium Trek',
+    description: '',
+    distance: '4.75',
+    elevation: '600',
+    favorite: false,
+    completed: false,
+    imageMapPage: './assets/creed.jpg',
+    imageOne: './assets/creed.jpg',
+    imageTwo: './assets/creed.jpg',
+    imageThree: './assets/creed.jpg',
+    thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
+    extraInfo: '',
+    bathroom: false,
+    familyFriendly: false,
+    gpsCoordinates: '45.540874, -122.726184',
+    elevationChart: 'assets/elevation-profile/stumptown-half.png'
+};
+
+const pittock = {
+    id: 'pittock',
+    name: 'Pittock-It-Out',
+    description: '',
+    distance: '4.4',
+    elevation: '+235/-628',
+    favorite: false,
+    completed: false,
+    imageMapPage: './assets/creed.jpg',
+    imageOne: './assets/creed.jpg',
+    imageTwo: './assets/creed.jpg',
+    imageThree: './assets/creed.jpg',
+    thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
+    extraInfo: '',
+    bathroom: true,
+    familyFriendly: true,
+    gpsCoordinates: '45.540874, -122.726184',
+    elevationChart: 'assets/elevation-profile/stumptown-half.png'
+};
+
+const saltzmanwhirl = {
+    id: 'saltzmanwhirl',
+    name: 'Saltzman Whirl',
+    description: '',
+    elevation: '1016',
+    favorite: false,
+    completed: false,
+    imageMapPage: './assets/creed.jpg',
+    imageOne: './assets/creed.jpg',
+    imageTwo: './assets/creed.jpg',
+    imageThree: './assets/creed.jpg',
+    thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
+    extraInfo: '',
+    bathroom: false,
+    familyFriendly: false,
+    gpsCoordinates: '45.540874, -122.726184',
+    elevationChart: 'assets/elevation-profile/stumptown-half.png'
+};
+
+const forestParkOptions = [forestParkMarathon, ramblers, half, ultra, springville, saltzman, trilliumtrek, pittock, saltzmanwhirl];
 
 export default forestParkOptions;
