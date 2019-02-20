@@ -22,62 +22,6 @@ if(routeUrl === 'forest-park') {
 else if(routeUrl === 'other') {
     routeOptions = otherOptions;
 }
-``
-// $(function() {
-//     $('#slider-range').slider({
-//         range: true,
-//         min: 1,
-//         max: 50,`
-//         values: [1, 15],
-//         slide: function(event, ui) {
-//             $('#amount').val(ui.values[ 0 ] + '- ' + ui.values[ 1 ] + 'mi.');
-//         }
-//     });
-//  //   $('#amount').val(('#slider-range').slider('values', 0) +
-//       '- ' + $('#slider-range').slider('values', 1));
-// });
-
-//get values from mile sliders
-//get values from bathroom and kid friendly
-//elevation slider
-//button to filter
-//event listener to listen for check boxes and range values to display results
-const bathroomFilter = document.getElementById('bathroom');
-const familyFilter = document.getElementById('family');
-
-function filter() {
-    const routes = document.getElementsByClassName('run-container');
-    
-    let filterByBathrooms = false;
-    let filterByFamily = false;
-    
-    if(bathroomFilter.checked) {
-        filterByBathrooms = true;
-    }
-    if(familyFilter.checked) {
-        filterByFamily = true;
-    }
-    for(let i = 0; i < routes.length; i++){
-        routes[i].classList.remove('hidden');
-        console.log(routes[i]);
-        const route = routeOptions[i];
-        console.log(route);
-    }
-    if(filterByBathrooms){
-        const noBathroom = document.getElementsByClassName('no-bathroom');
-        for(let i = 0; i < noBathroom.length; i++) {
-            noBathroom[i].classList.add('hidden');
-        }
-    }
-    if(filterByFamily){
-        const noFamily = document.getElementsByClassName('no-family');
-        for(let i = 0; i < noFamily.length; i++) {
-            noFamily[i].classList.add('hidden');
-        }
-    }
-
-}
-
 
 for(let i = 0; i < routeOptions.length; i++) {
     const route = routeOptions[i];
@@ -90,6 +34,9 @@ for(let i = 0; i < routeOptions.length; i++) {
     if(!route.familyFriendly){
         runContainer.classList.add('no-family');
     }
+
+    runContainer.distance = route.distance;
+    runContainer.elevation = route.elevation;
     
     const runImage = document.createElement('img');
     runImage.src = route.imageMapPage;
@@ -146,20 +93,74 @@ for(let i = 0; i < routeOptions.length; i++) {
     runContainer.appendChild(runIcons);
     runContainerAll.appendChild(runContainer);
 }
+
+const bathroomFilter = document.getElementById('bathroom');
+const familyFilter = document.getElementById('family');
+
+function filter() {
+    const routes = document.getElementsByClassName('run-container');
     
-
-
+    let filterByBathrooms = false;
+    let filterByFamily = false;
     
+    if(bathroomFilter.checked) {
+        filterByBathrooms = true;
+    }
+    if(familyFilter.checked) {
+        filterByFamily = true;
+    }
+    for(let i = 0; i < routes.length; i++){
+        routes[i].classList.remove('hidden');
+        console.log(routes[i]);
+        const route = routeOptions[i];
+        console.log(route);
+    }
+    if(filterByBathrooms){
+        const noBathroom = document.getElementsByClassName('no-bathroom');
+        for(let i = 0; i < noBathroom.length; i++) {
+            noBathroom[i].classList.add('hidden');
+        }
+    }
+    if(filterByFamily){
+        const noFamily = document.getElementsByClassName('no-family');
+        for(let i = 0; i < noFamily.length; i++) {
+            noFamily[i].classList.add('hidden');
+        }
+    }
 
-// filter();
+}
 
 bathroomFilter.addEventListener('change', function(){
-    // location.reload();
     filter();
 });
 
 familyFilter.addEventListener('change', function(){
-    // location.reload();
     filter();
 });
 
+const minMiles = document.getElementById('min-miles');
+const maxMiles = document.getElementById('max-miles');
+
+minMiles.addEventListener('change', function() {
+    const min = minMiles.value;
+    maxMiles.min = Number(min) + 2;
+    const routes = document.getElementsByClassName('run-container');
+    for(let i = 0; i < routes.length; i++) {
+        routes[i].classList.remove('hidden');
+        if(Number(routes[i].distance) < Number(min)) {
+            routes[i].classList.add('hidden');
+        }
+    }
+});
+
+maxMiles.addEventListener('change', function() {
+    const max = maxMiles.value;
+    minMiles.max = Number(max) - 2;
+    const routes = document.getElementsByClassName('run-container');
+    for(let i = 0; i < routes.length; i++) {
+        routes[i].classList.remove('hidden');
+        if(Number(routes[i].distance) > Number(max)) {
+            routes[i].classList.add('hidden');
+        }
+    }
+});

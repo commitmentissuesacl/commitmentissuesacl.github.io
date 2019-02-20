@@ -251,6 +251,11 @@ header {
     border: 1px solid black;
 }
 
+#miles-filter {
+    border: 1px solid blue;
+    padding: 3px;
+    margin: 3px;
+}
 /* Route page styling */
 .route-map {
     width: 100%;
