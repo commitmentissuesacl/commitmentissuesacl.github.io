@@ -6,6 +6,7 @@ const routeDetails = document.getElementById('route-details');
 const detailPhoto1 = document.getElementById('detail-photo-1');
 const detailPhoto2 = document.getElementById('detail-photo-2');
 const detailPhoto3 = document.getElementById('detail-photo-3');
+const detailPhoto4 = document.getElementById('detail-photo-4');
 const moreInfoSection = document.getElementById('more-info-section');
 
 
@@ -59,6 +60,7 @@ routeDetails.appendChild(routeDetailsContainer);
 detailPhoto1.src = route.imageOne;
 detailPhoto2.src = route.imageTwo;
 detailPhoto3.src = route.imageThree;
+detailPhoto4.src = route.imageFour;
 
 const moreInfo = document.createElement('p');
 moreInfo.textContent = route.extraInfo;
