@@ -60,7 +60,7 @@ const half = {
     extraInfo: 'This course starts and ends at the intersection of Leif Erickson and Wild Cherry. To get there, take NW Thurman Rd until it ends at the Leif Erickson trailhead, where there is a small parking lot and ample street parking. Walk approximately a quarter mile to Wild Cherry. At the start of this route there are porto-potties.',
     bathroom: true,
     familyFriendly: false,
-    gpsCoordinates: '45.540874, -122.726184',
+    gpsCoordinates: '45.540874 -122.726184',
     elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
 
@@ -82,7 +82,7 @@ const ultra = {
     extraInfo: 'This course starts and ends at the intersection of Leif Erickson and Wild Cherry. To get there, take NW Thurman Rd until it ends at the Leif Erickson trailhead, where there is a small parking lot and ample street parking. Walk approximately a quarter mile to Wild Cherry. The course begins with a small out and back heading back down Leif Erickson toward Thurman, which is designed to allow runners to spread out. While this course does include a bathroom, it is at the start and end of the route, so plan accordingly.',
     bathroom: true,
     familyFriendly: false,
-    gpsCoordinates: '45.540874, -122.726184',
+    gpsCoordinates: '45.540874 -122.726184',
     elevationChart: 'assets/elevation-profile/elevation50k.png'
 };
 
@@ -104,7 +104,7 @@ const springville = {
     extraInfo: 'This routes starts and ends at Springville Road. It follows Firelane 7 and Leif Erikson to make a loop around a portion of Wildwood trail. There are no bathrooms near this route, so use a leaf!',
     bathroom: false,
     familyFriendly: false,
-    gpsCoordinates: '45.540874, -122.726184',
+    gpsCoordinates: '45.540874 -122.726184',
     elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
 
@@ -126,7 +126,7 @@ const saltzman = {
     extraInfo: 'There are port-a-potties at the start of this route near Wildwood mile marker 11. The trailhead where this run starts has off-street parking, and there is street parking at the ending point.',
     bathroom: true,
     familyFriendly: false,
-    gpsCoordinates: '45.540874, -122.726184',
+    gpsCoordinates: '45.540874 -122.726184',
     elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
 
@@ -148,14 +148,14 @@ const trilliumtrek = {
     extraInfo: 'This route is generally one of the flatter ones in the park, but use caution when descending Trillium Trail in the first half mile- it\'s steep, winding, and full of mud and tree roots! Parking is available along the road at the trailhead. This access point is popular with equestrians because the road is accessible to horse trailers.',
     bathroom: false,
     familyFriendly: true,
-    gpsCoordinates: '45.540874, -122.726184',
+    gpsCoordinates: '45.540874 -122.726184',
     elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
 
 const pittock = {
     id: 'pittock',
     name: 'Pittock-It-Out',
-    description: 'Make your way up to one of the best viewpoints in Portland by way of some of the most serene trails in any major city. Be prepared for a serious climb as you pass the Audubon Society and make your way up Wildwood Trail to Pittock Mansion. This route features three places to go to the bathroom, making it an excellent choice for after your morning coffee.',
+    description: 'Make your way up to one of the best viewpoints in Portland via some of the most serene trails in any major city. Be prepared for a serious climb as you pass the Audubon Society and make your way up Wildwood Trail to Pittock Mansion. This route features three places to go to the bathroom, making it an excellent choice for after your morning coffee.',
     distance: '4.4',
     elevation: '1275',
     favorite: false,
@@ -170,7 +170,7 @@ const pittock = {
     extraInfo: 'Parking is usually readily available at the Leif Erikson trailhead where this route starts, and a quarter mile in you\'ll encounter your first bank of porto-potties. A few miles later, where Wildwood Trail crosses NW Cornell Blvd, you\'ll find the second potty pit stop. There\'s a large parking lot, bathrooms, water fountains, and even a gift shop when you finish at Pittock Mansion. This route is not a loop, so plan your transportation accordingly.',
     bathroom: true,
     familyFriendly: true,
-    gpsCoordinates: '45.540874, -122.726184',
+    gpsCoordinates: '45.540874 -122.726184',
     elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
 
@@ -192,7 +192,7 @@ const saltzmanwhirl = {
     extraInfo: 'This route is open to equestrians, pedestrians, and cyclists. Street parking is available at the trailhead.',
     bathroom: false,
     familyFriendly: false,
-    gpsCoordinates: '45.540874, -122.726184',
+    gpsCoordinates: '45.540874 -122.726184',
     elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
 
