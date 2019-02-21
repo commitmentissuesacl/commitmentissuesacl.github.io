@@ -60,6 +60,10 @@ a img:hover {
     transition:.2s;
 }
 
+#logo-image {
+    opacity: 1;
+}
+
 a:hover {
     text-decoration-color: #f26522;
 }
@@ -195,6 +199,8 @@ main {
     width: 180px;
     height: 30px;
     border-radius: 15px;
+    font-size: .7em;
+    font-weight: 500;
     justify-content: center;
     outline: none;
     background-color: white;
