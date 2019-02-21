@@ -17,7 +17,7 @@ const forestParkMarathon = {
     bathroom: true,
     familyFriendly: false,
     gpsCoordinates: '519280E 504589N',
-    elevationChart: 'assets/lieferikson-firelane/elevation-lieferikson-firelane.svg'
+    elevationChart: 'assets/elevation-profile/fp-marathon-elevation.svg'
 };
 
 const ramblers = {
@@ -39,7 +39,7 @@ const ramblers = {
     bathroom: true,
     familyFriendly: false,
     gpsCoordinates: '521529E 5042950N',
-    elevationChart: './assets/creed.jpg'
+    elevationChart: 'assets/elevation-profile/ramblers-elevation.svg'
 };
 
 const half = {
@@ -61,7 +61,7 @@ const half = {
     bathroom: true,
     familyFriendly: false,
     gpsCoordinates: '45.540874 -122.726184',
-    elevationChart: 'assets/elevation-profile/stumptown-half.png'
+    elevationChart: 'assets/elevation-profile/half-elevation.svg'
 };
 
 const ultra = {
@@ -79,12 +79,11 @@ const ultra = {
     imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
     thumbnailMap: 'assets/working/ultra-map.svg',
     largeMap: 'assets/working/ultra-map.svg',
-
     extraInfo: 'This course starts and ends at the intersection of Leif Erickson and Wild Cherry. To get there, take NW Thurman Rd until it ends at the Leif Erickson trailhead, where there is a small parking lot and ample street parking. Walk approximately a quarter mile to Wild Cherry. The course begins with a small out and back heading back down Leif Erickson toward Thurman, which is designed to allow runners to spread out. While this course does include a bathroom, it is at the start and end of the route, so plan accordingly.',
     bathroom: true,
     familyFriendly: false,
     gpsCoordinates: '45.540874 -122.726184',
-    elevationChart: 'assets/elevation-profile/elevation50k.png'
+    elevationChart: 'assets/elevation-profile/ultra-elevation.svg'
 };
 
 const saltzmanwhirl = {
@@ -106,7 +105,7 @@ const saltzmanwhirl = {
     bathroom: false,
     familyFriendly: false,
     gpsCoordinates: '45.540874 -122.726184',
-    elevationChart: 'assets/elevation-profile/stumptown-half.png'
+    elevationChart: 'assets/elevation-profile/saltzmanwhirl-elevation.svg'
 };
 
 const springville = {
@@ -151,7 +150,7 @@ const saltzman = {
     bathroom: true,
     familyFriendly: false,
     gpsCoordinates: '45.540874 -122.726184',
-    elevationChart: 'assets/elevation-profile/stumptown-half.png'
+    elevationChart: 'assets/elevation-profile/saltzman-elevation.svg'
 };
 
 const trilliumtrek = {
@@ -173,7 +172,7 @@ const trilliumtrek = {
     bathroom: false,
     familyFriendly: true,
     gpsCoordinates: '45.540874 -122.726184',
-    elevationChart: 'assets/elevation-profile/stumptown-half.png'
+    elevationChart: 'assets/elevation-profile/trillium-elevation.svg'
 };
 
 const pittock = {
@@ -195,7 +194,7 @@ const pittock = {
     bathroom: true,
     familyFriendly: true,
     gpsCoordinates: '45.540874 -122.726184',
-    elevationChart: 'assets/elevation-profile/stumptown-half.png'
+    elevationChart: 'assets/elevation-profile/pittock-elevation.svg'
 };
 
 
@@ -219,7 +218,7 @@ const firelane1 = {
 
     familyFriendly: true,
     gpsCoordinates: '45.540874 -122.726184',
-    elevationChart: 'assets/elevation-profile/stumptown-half.png'
+    elevationChart: 'assets/elevation-profile/firelaneone-elevation.svg'
 };
 
 const forestParkOptions = [ultra, forestParkMarathon, ramblers, half, saltzmanwhirl, springville, saltzman, trilliumtrek, pittock, firelane1];
