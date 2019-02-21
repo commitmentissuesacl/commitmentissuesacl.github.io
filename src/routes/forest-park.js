@@ -7,10 +7,10 @@ const forestParkMarathon = {
     favorite: false,
     completed: false,
     imageMapPage: 'assets/images/lowerpark/dogwood2.jpg',
-    imageOne: 'assets/images/lowerpark/lowermacleay/LM1.jpg',
-    imageTwo: 'assets/images/lowerpark/WildCherryDogwood.jpg',
-    imageThree: 'assets/images/lowerpark/lowermacleay/LowerMcleayTrailPic2.jpg',
-    imageFour: 'assets/images/lowerpark/firelane1.jpg',
+    imageOne: 'assets/images/lowerpark/lowermacleay/LM2.jpg',
+    imageTwo: 'assets/images/lowerpark/lowermacleay/LM6.jpg',
+    imageThree: 'assets/images/lowerpark/keil.jpg',
+    imageFour: 'assets/images/midpark/trillium.jpg',
     thumbnailMap: 'assets/working/FP-MarathonTwo.svg',
     largeMap: 'assets/working/FP-MarathonTwo.svg',
     extraInfo: 'Access the starting trailhead on Lower Saltzman Road off of Highway 30. Limited street parking is available. The route ends at Lower Macleay Park, which has restrooms, parking, and a water fountain.',
@@ -33,8 +33,8 @@ const ramblers = {
     imageTwo: 'assets/images/midpark/wildwood.jpg',
     imageThree: 'assets/images/lowerpark/WildwoodTrailPic1.jpg',
     imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
-    thumbnailMap: 'assets/working/Ramblers.svg',
-    largeMap: 'assets/working/Ramblers.svg',
+    thumbnailMap: 'assets/working/Ramblers-Marathon.svg',
+    largeMap: 'assets/working/Ramblers-Marathon.svg',
     extraInfo: 'There is a small parking lot and ample street parking at the trailhead, which also features restrooms, a water fountain, and a picnic shelter. After you finish your run, you\'re close enough to the cafes and restaurants on NW 23rd to treat yourself to a post-run beer!',
     bathroom: true,
     familyFriendly: false,
@@ -79,11 +79,34 @@ const ultra = {
     imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
     thumbnailMap: 'assets/working/ultra-map.svg',
     largeMap: 'assets/working/ultra-map.svg',
+
     extraInfo: 'This course starts and ends at the intersection of Leif Erickson and Wild Cherry. To get there, take NW Thurman Rd until it ends at the Leif Erickson trailhead, where there is a small parking lot and ample street parking. Walk approximately a quarter mile to Wild Cherry. The course begins with a small out and back heading back down Leif Erickson toward Thurman, which is designed to allow runners to spread out. While this course does include a bathroom, it is at the start and end of the route, so plan accordingly.',
     bathroom: true,
     familyFriendly: false,
     gpsCoordinates: '45.540874 -122.726184',
     elevationChart: 'assets/elevation-profile/elevation50k.png'
+};
+
+const saltzmanwhirl = {
+    id: 'saltzmanwhirl',
+    name: 'Saltzman Whirl',
+    description: 'Climb the entire Saltzman trail from Highway 30 to Skyline Blvd for spectacular views and burning glutes, then descend Firelane 5 till you meet back up with Saltzman.',
+    distance: '6.2',
+    elevation: '1016',
+    favorite: false,
+    completed: false,
+    imageMapPage: 'assets/images/lowerpark/leif1.jpg',
+    imageOne: 'assets/images/midpark/mid2.jpg',
+    imageTwo: 'assets/images/midpark/mid5.jpg',
+    imageThree: 'assets/images/midpark/trillium.jpg',
+    imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
+    thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
+    extraInfo: 'This route is open to equestrians, pedestrians, and cyclists. Street parking is available at the trailhead.',
+    bathroom: false,
+    familyFriendly: false,
+    gpsCoordinates: '45.540874 -122.726184',
+    elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
 
 const springville = {
@@ -99,8 +122,8 @@ const springville = {
     imageTwo: 'assets/images/midpark/mid1.jpg',
     imageThree: 'assets/images/lowerpark/dogwood2.jpg',
     imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
-    thumbnailMap: 'assets/Springville-Baptism.svg',
-    largeMap: 'assets/Springville-Baptism.svg',
+    thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
     extraInfo: 'This routes starts and ends at Springville Road. It follows Firelane 7 and Leif Erikson to make a loop around a portion of Wildwood trail. There are no bathrooms near this route, so use a leaf!',
     bathroom: false,
     familyFriendly: false,
@@ -123,6 +146,7 @@ const saltzman = {
     imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
     thumbnailMap: 'assets/working/saltzman-slog-map.png',
     largeMap: 'assets/working/saltzman-slog-map.png',
+
     extraInfo: 'There are port-a-potties at the start of this route near Wildwood mile marker 11. The trailhead where this run starts has off-street parking, and there is street parking at the ending point.',
     bathroom: true,
     familyFriendly: false,
@@ -143,8 +167,8 @@ const trilliumtrek = {
     imageTwo: 'assets/images/midpark/maple.jpg',
     imageThree: 'assets/images/lowerpark/lowermacleay/LM6.jpg',
     imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
-    thumbnailMap: 'assets/working/Trillium-Trek.svg',
-    largeMap: 'assets/working/Trillium-Trek.svg',
+    thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
     extraInfo: 'This route is generally one of the flatter ones in the park, but use caution when descending Trillium Trail in the first half mile- it\'s steep, winding, and full of mud and tree roots! Parking is available along the road at the trailhead. This access point is popular with equestrians because the road is accessible to horse trailers.',
     bathroom: false,
     familyFriendly: true,
@@ -165,8 +189,8 @@ const pittock = {
     imageTwo: 'assets/images/lowerpark/WildwoodTrailMeetsUpperMacleayTrail.jpeg',
     imageThree: 'assets/images/lowerpark/holman.jpg',
     imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
-    thumbnailMap: 'assets/working/Pittock-It-Out.svg',
-    largeMap: 'assets/working/Pittock-It-Out.svg',
+    thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
     extraInfo: 'Parking is usually readily available at the Leif Erikson trailhead where this route starts, and a quarter mile in you\'ll encounter your first bank of porto-potties. A few miles later, where Wildwood Trail crosses NW Cornell Blvd, you\'ll find the second potty pit stop. There\'s a large parking lot, bathrooms, water fountains, and even a gift shop when you finish at Pittock Mansion. This route is not a loop, so plan your transportation accordingly.',
     bathroom: true,
     familyFriendly: true,
@@ -174,28 +198,30 @@ const pittock = {
     elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
 
-const saltzmanwhirl = {
-    id: 'saltzmanwhirl',
-    name: 'Saltzman Whirl',
-    description: 'Climb the entire Saltzman trail from Highway 30 to Skyline Blvd for spectacular views and burning glutes, then descend Firelane 5 till you meet back up with Saltzman.',
-    distance: '6.2',
-    elevation: '1016',
+
+const firelane1 = {
+    id: 'firelane1',
+    name: 'Firelane 1 Rip',
+    description: 'Start and end at the Firelane 1 trailhead. Relatively easy trek for families to enjoy some fresh air and the beautiful Forest Park section A',
+    distance: '4.2',
+    elevation: '639',
     favorite: false,
     completed: false,
-    imageMapPage: 'assets/images/lowerpark/leif1.jpg',
+    imageMapPage: 'assets/images/lowerpark/firelane1.jpg',
     imageOne: 'assets/images/midpark/mid2.jpg',
     imageTwo: 'assets/images/midpark/mid5.jpg',
     imageThree: 'assets/images/midpark/trillium.jpg',
     imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
-    thumbnailMap: 'assets/working/saltzman-whirl.svg',
-    largeMap: 'assets/working/saltzman-whirl.svg',
-    extraInfo: 'This route is open to equestrians, pedestrians, and cyclists. Street parking is available at the trailhead.',
+    thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
+    extraInfo: 'OTHER DETAILS GO HERE BUT I DON\'T KNOW WHAT.',
     bathroom: false,
-    familyFriendly: false,
+
+    familyFriendly: true,
     gpsCoordinates: '45.540874 -122.726184',
     elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
 
-const forestParkOptions = [forestParkMarathon, ramblers, half, ultra, springville, saltzman, trilliumtrek, pittock, saltzmanwhirl];
+const forestParkOptions = [ultra, forestParkMarathon, ramblers, half, saltzmanwhirl, springville, saltzman, trilliumtrek, pittock, firelane1];
 
 export default forestParkOptions;
