@@ -87,6 +87,10 @@ main {
     height: 40px;
 }
 
+#logo-image-index:hover {
+    opacity: 1;
+}
+
 .index-container {
     background-color: transparent;
 }
@@ -113,7 +117,7 @@ main {
     align-items: center;
     background-color: transparent;
     opacity: 1;
-    animation: fade 1s;
+    animation: fade 2s;
     border: none;
 }
 
@@ -131,7 +135,7 @@ main {
     height: 70vh;
     width: 1200px;
     opacity: 1;
-    animation: fade 1s;
+    animation: fade 2s;
 }
 
 .index-container h1 {
