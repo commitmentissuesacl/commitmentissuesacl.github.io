@@ -86,6 +86,28 @@ const ultra = {
     elevationChart: 'assets/elevation-profile/elevation50k.png'
 };
 
+const saltzmanwhirl = {
+    id: 'saltzmanwhirl',
+    name: 'Saltzman Whirl',
+    description: 'Climb the entire Saltzman trail from Highway 30 to Skyline Blvd for spectacular views and burning glutes, then descend Firelane 5 till you meet back up with Saltzman.',
+    distance: '6.2',
+    elevation: '1016',
+    favorite: false,
+    completed: false,
+    imageMapPage: 'assets/images/lowerpark/leif1.jpg',
+    imageOne: 'assets/images/midpark/mid2.jpg',
+    imageTwo: 'assets/images/midpark/mid5.jpg',
+    imageThree: 'assets/images/midpark/trillium.jpg',
+    imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
+    thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
+    extraInfo: 'This route is open to equestrians, pedestrians, and cyclists. Street parking is available at the trailhead.',
+    bathroom: false,
+    familyFriendly: false,
+    gpsCoordinates: '45.540874, -122.726184',
+    elevationChart: 'assets/elevation-profile/stumptown-half.png'
+};
+
 const springville = {
     id: 'springville',
     name: 'Springville Baptism',
@@ -174,27 +196,6 @@ const pittock = {
     elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
 
-const saltzmanwhirl = {
-    id: 'saltzmanwhirl',
-    name: 'Saltzman Whirl',
-    description: 'Climb the entire Saltzman trail from Highway 30 to Skyline Blvd for spectacular views and burning glutes, then descend Firelane 5 till you meet back up with Saltzman.',
-    distance: '6.2',
-    elevation: '1016',
-    favorite: false,
-    completed: false,
-    imageMapPage: 'assets/images/lowerpark/leif1.jpg',
-    imageOne: 'assets/images/midpark/mid2.jpg',
-    imageTwo: 'assets/images/midpark/mid5.jpg',
-    imageThree: 'assets/images/midpark/trillium.jpg',
-    imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
-    thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
-    largeMap: './assets/creed.jpg',
-    extraInfo: 'This route is open to equestrians, pedestrians, and cyclists. Street parking is available at the trailhead.',
-    bathroom: false,
-    familyFriendly: false,
-    gpsCoordinates: '45.540874, -122.726184',
-    elevationChart: 'assets/elevation-profile/stumptown-half.png'
-};
 
 const firelane1 = {
     id: 'firelane1',
@@ -218,6 +219,6 @@ const firelane1 = {
     elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
 
-const forestParkOptions = [forestParkMarathon, ramblers, half, ultra, springville, saltzman, trilliumtrek, pittock, saltzmanwhirl, firelane1];
+const forestParkOptions = [ultra, forestParkMarathon, ramblers, half, saltzmanwhirl, springville, saltzman, trilliumtrek, pittock, firelane1];
 
 export default forestParkOptions;
