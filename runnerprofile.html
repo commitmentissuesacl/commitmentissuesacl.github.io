@@ -6,9 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Runner Details</title>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
-
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <header>
+        <section class="header-container">
+            <a href="index.html"><img src="./assets/logo.png" alt="Logo" id="logo-image"></a>
+            <nav class="nav-container">
+                Links will go here
+            </nav>
+            <section id="user-name-container">
+                <a href=""><span id="user-name-display"></span></a>
+            </section>
+        </section>
+    </header>
+
+    <main>
+        <form id="user-info">
+            <fieldset>
+                <legend>Update your profile</legend>
+                <label>Name: 
+                    <input type="text" id="input-name" name="input-name">
+                </label>
+                <br>
+                <label>Age: 
+                    <input type="number" id="age" name="age" min="1">
+                </label>
+                <br>
+                <label>Location: 
+                    <input type="text" id="location" name="location">
+                </label>
+                <br>
+                <label>Sex: 
+                    <select id="sex" name="sex">
+                        <option value="" disabled selected></option>
+                        <option value="female">female</option>
+                        <option value="male">male</option>
+                        <option value="non-binary">non-binary</option>
+                    </select>
+                </label>
+                <br>
+                <button>submit</button>
+            </fieldset>
+        </form>
+
+    </main>
     
+    <footer class="footer">
+            <!-- contains same information as nav and about us page -->
+    </footer>
+
+    <script type="module" src="src/runner-profile.js"></script>
 </body>
 </html>
