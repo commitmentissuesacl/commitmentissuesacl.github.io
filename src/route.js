@@ -8,6 +8,7 @@ const detailPhoto2 = document.getElementById('detail-photo-2');
 const detailPhoto3 = document.getElementById('detail-photo-3');
 const detailPhoto4 = document.getElementById('detail-photo-4');
 const moreInfoSection = document.getElementById('more-info-section');
+const back = document.getElementById('back');
 
 
 const userJson = window.localStorage.getItem('user');
@@ -64,4 +65,6 @@ const moreInfo = document.createElement('p');
 moreInfo.textContent = route.extraInfo;
 moreInfoSection.appendChild(moreInfo);
 
-
+back.addEventListener('click', function() {
+    window.history.back();
+});

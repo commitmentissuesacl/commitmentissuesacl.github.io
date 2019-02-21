@@ -71,23 +71,9 @@ for(let i = 0; i < routeOptions.length; i++) {
     
     const runIcons = document.createElement('section');
     runIcons.classList.add('run-icon-container');
-    const completedIcon = document.createElement('img');
-    completedIcon.classList.add('completed-icon');
-    const favoriteIcon = document.createElement('img');
-    favoriteIcon.classList.add('favorite-icon');
     const thumbnailMap = document.createElement('img');
     thumbnailMap.classList.add('thumbnail-map');
-    
-    completedIcon.src = './assets/completed.png';
-    if(route.favorite) {
-        favoriteIcon.src = './assets/favorite.png';
-    }
-    else {
-        favoriteIcon.src = './assets/not-favorite.png';
-    }
     thumbnailMap.src = route.thumbnailMap;
-    // runIcons.appendChild(completedIcon);
-    // runIcons.appendChild(favoriteIcon);
     runIcons.appendChild(thumbnailMap);
     
     runContainer.appendChild(runIcons);
@@ -115,7 +101,6 @@ function filter() {
     }
     for(let i = 0; i < routes.length; i++){
         routes[i].classList.remove('hidden');
-        const route = routes[i];
     }
     if(filterByBathrooms){
         const noBathroom = document.getElementsByClassName('no-bathroom');
@@ -134,7 +119,6 @@ function filter() {
     for(let i = 0; i < routes.length; i++) {
         if(Number(routes[i].distance) < Number(min)) {
             routes[i].classList.add('hidden');
-            console.log(routes[i]);
         }
     }
     const max = maxMiles.value;
