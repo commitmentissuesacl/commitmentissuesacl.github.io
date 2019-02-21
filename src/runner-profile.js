@@ -1,4 +1,7 @@
 const userJson = window.localStorage.getItem('user');
+const mapNav = document.getElementById('map-nav');
+const userNameDisplay = document.getElementById('user-name-display');
+
 let user = {
     name: '',
     age: '',
@@ -11,7 +14,9 @@ if(userJson) {
     user = JSON.parse(userJson);
 }
 
-console.log(user);
+userNameDisplay.textContent = user.name;
+mapNav.href = 'map.html?destination=' + encodeURIComponent(user.destination);
+
 const name = document.getElementById('input-name');
 const age = document.getElementById('age');
 const sex = document.getElementById('sex');

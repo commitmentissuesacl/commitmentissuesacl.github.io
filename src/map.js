@@ -7,12 +7,15 @@ const search = window.location.search;
 const searchParams = new URLSearchParams(search);
 const routeUrl = searchParams.get('destination');
 const userJson = window.localStorage.getItem('user');
+const mapNav = document.getElementById('map-nav');
+
 
 if(!userJson) {
     window.location = './index.html';
 }
 const user = JSON.parse(userJson);
 userNameDisplay.textContent = user.name;
+mapNav.href = 'map.html?destination=' + encodeURIComponent(user.destination);
 
 let routeOptions = null;
 
