@@ -213,7 +213,7 @@ const firelane1 = {
     largeMap: './assets/creed.jpg',
     extraInfo: 'OTHER DETAILS GO HERE BUT I DON\'T KNOW WHAT.',
     bathroom: false,
-    familyFriendly: false,
+    familyFriendly: true,
     gpsCoordinates: '45.540874, -122.726184',
     elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
