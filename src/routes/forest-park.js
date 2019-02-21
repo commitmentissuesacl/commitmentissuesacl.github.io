@@ -196,6 +196,28 @@ const saltzmanwhirl = {
     elevationChart: 'assets/elevation-profile/stumptown-half.png'
 };
 
-const forestParkOptions = [forestParkMarathon, ramblers, half, ultra, springville, saltzman, trilliumtrek, pittock, saltzmanwhirl];
+const firelane1 = {
+    id: 'firelane1',
+    name: 'Firelane 1 Rip',
+    description: 'Start and end at the Firelane 1 trailhead. Relatively easy trek for families to enjoy some fresh air and the beautiful Forest Park section A',
+    distance: '4.2',
+    elevation: '639',
+    favorite: false,
+    completed: false,
+    imageMapPage: 'assets/images/lowerpark/leif1.jpg',
+    imageOne: 'assets/images/midpark/mid2.jpg',
+    imageTwo: 'assets/images/midpark/mid5.jpg',
+    imageThree: 'assets/images/midpark/trillium.jpg',
+    imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
+    thumbnailMap: './assets/fp-marathon-map-thumb.jpg',
+    largeMap: './assets/creed.jpg',
+    extraInfo: 'OTHER DETAILS GO HERE BUT I DON\'T KNOW WHAT.',
+    bathroom: false,
+    familyFriendly: false,
+    gpsCoordinates: '45.540874, -122.726184',
+    elevationChart: 'assets/elevation-profile/stumptown-half.png'
+};
+
+const forestParkOptions = [forestParkMarathon, ramblers, half, ultra, springville, saltzman, trilliumtrek, pittock, saltzmanwhirl, firelane1];
 
 export default forestParkOptions;
