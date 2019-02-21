@@ -204,7 +204,7 @@ const firelane1 = {
     elevation: '639',
     favorite: false,
     completed: false,
-    imageMapPage: 'assets/images/lowerpark/leif1.jpg',
+    imageMapPage: 'assets/images/lowerpark/firelane1.jpg',
     imageOne: 'assets/images/midpark/mid2.jpg',
     imageTwo: 'assets/images/midpark/mid5.jpg',
     imageThree: 'assets/images/midpark/trillium.jpg',
