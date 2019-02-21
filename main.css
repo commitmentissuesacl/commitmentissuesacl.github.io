@@ -7,6 +7,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #404041;
+    background-color: #414042;
 }
 
 h1 {
@@ -39,16 +40,44 @@ h5 {
 
 a {
     color: #404041;
+    font-weight: 600;
+
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    /* ...and now for the proper property */
+    transition:.2s;
+}
+
+a img:hover {
+    opacity: .85;
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    /* ...and now for the proper property */
+    transition:.2s;
+}
+
+#logo-image {
+    opacity: 1;
 }
 
 a:hover {
-    color: #f26522;
+    text-decoration-color: #f26522;
 }
 
 .footer {
     width: 100%;
-    height: 150px;
-    background-color: #d1d1d1;
+    height: 200px;
+    background-color: #414042;
+}
+
+main {
+    opacity: 1;
+    animation: fade 1.5s;
+    background: white;
 }
 
 
@@ -56,6 +85,14 @@ a:hover {
 
 #logo-image-index {
     height: 40px;
+}
+
+#logo-image-index:hover {
+    opacity: 1;
+}
+
+.index-container {
+    background-color: transparent;
 }
 
 .index-background {
@@ -79,8 +116,16 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-
+    opacity: 1;
+    animation: fade 2s;
+    border: none;
 }
+
+#user-name-display {
+    opacity: 1;
+    animation: fade 1s;
+}
+
 
 .index-container {
     display: flex;
@@ -89,6 +134,8 @@ a:hover {
     justify-content: center;
     height: 70vh;
     width: 1200px;
+    opacity: 1;
+    animation: fade 2s;
 }
 
 .index-container h1 {
@@ -98,7 +145,7 @@ a:hover {
     text-align: center;
     /* position: fixed;
     top: 100px; */
-
+    
 }
 
 .muir {
@@ -109,12 +156,6 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* visibility: hidden; */
-    /* background-color: rgba(255, 255, 255, .15);
-    border-radius: 20px;
-    padding: 30px; */
-    /* position: relative;
-    bottom: 0; */
 }
 
 #name {
@@ -162,11 +203,16 @@ a:hover {
     width: 180px;
     height: 30px;
     border-radius: 15px;
+    font-size: .7em;
+    font-weight: 500;
     justify-content: center;
     outline: none;
     background-color: white;
     color: black;
     border: 0px;
+
+    -webkit-transition: background-color .2s ease-in-out,color .2s ease-in-out;
+    transition: background-color .2s ease-in-out,color .2s ease-in-out;
 }
 
 #submit:hover {
@@ -205,6 +251,19 @@ a:hover {
     position: relative;
     top: 5px;
     margin-bottom: 71px;
+
+    opacity: 1;
+    animation: fade 1s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -227,6 +286,7 @@ header {
     background-color: #fff;
     display: flex;
     justify-content: center;
+    border-bottom: 2px solid #f26522;
 }
 
 .header-container {
@@ -322,11 +382,26 @@ header {
 }
 
 .run-container {
-    background-color: #E8E8E8;
+    background-color: #f4f4f4;
+    border: 1px solid #cbccce;
     margin: 10px 0;
     width: 1180px;
     display: flex;
     height: 280px;
+    opacity: 1;
+    animation: fade 1s;
+
+    transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out;
+}
+
+.run-container:hover {
+    background-color: #E8E8E8;
+
+    transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out;
 }
 
 .image-container {
@@ -335,6 +410,7 @@ header {
     overflow: hidden;
     display: flex;
     align-items: center;
+    border-right: 1px solid #cbccce;
 }
 
 .display-photo {
@@ -359,6 +435,12 @@ header {
     justify-content: center;
     padding-right: 20px;
 } 
+
+.thumbnail-map {
+    border: 1px solid #cbccce;
+    /* width: 280px; */
+    height: 190px;
+}
 
 
 
@@ -387,7 +469,7 @@ header {
 }
 
 #route-details {
-    margin: 40px 0 80px 0;
+    margin: 80px 0 80px 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -397,11 +479,16 @@ header {
     width: 780px;
 }
 
+.route-details-container p {
+    margin-top: 20px;
+}
+
 .route-details-container h5 {
     float: right;
     position: relative;
-    top: -105px;
+    top: -98px;
     color: #666;
+    word-spacing: 15px;
 }
 
 #detail-photo-section {
@@ -420,7 +507,7 @@ header {
 }
 
 #more-info-container {
-    margin: 80px 0 80px 0;
+    padding: 80px 0 80px 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -428,6 +515,10 @@ header {
 
 #more-info-section {
     width: 780px;
+}
+
+#more-info-section p {
+    margin-top: 20px;
 }
 
 /* nonsense jquery */
