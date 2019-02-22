@@ -67,7 +67,7 @@ const half = {
 const ultra = {
     id: 'ultra',
     name: 'Stumptown Races 50k',
-    description: 'This is the route for Go Beyond Racing\'s Stumptown 50K, the only ultramarathon trail race held within Portland city limits. This beautiful, challenging course is best tackled with a well-stocked hydration vest and a friend or six.',
+    description: 'This is the route for Go Beyond Racing\'s Stumptown 50K, the only ultra-marathon trail race held within Portland city limits. This beautiful, challenging course is best tackled with a well-stocked hydration vest and a friend or six.',
     distance: '31',
     elevation: '4180',
     favorite: false,
@@ -117,7 +117,7 @@ const springville = {
     favorite: false,
     completed: false,
     imageMapPage: 'assets/thumbnailsformaps/springville-baptism-thumb.jpg',
-    imageOne: 'assets/images/midpark/maple.jpg',
+    imageOne: 'assets/images/lowerpark/holman.jpg',
     imageTwo: 'assets/images/midpark/mid1.jpg',
     imageThree: 'assets/images/midpark/maple.jpg',
     imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
@@ -201,7 +201,8 @@ const pittock = {
 const firelane1 = {
     id: 'firelane1',
     name: 'Firelane 1 Rip',
-    description: 'Start and end at the Firelane 1 trailhead. This is a relatively easy trek for families to enjoy some fresh air and the beautiful Forest Park Section A. ',
+    description: 'Make your way up to one of the best viewpoints in Portland via some of the most serene trails in any major city. Prepare for a serious climb as you pass the Audubon Society and make your way up Wildwood Trail to Pittock Mansion. This route features three places to go to the bathroom, making it an excellent choice for after your morning coffee.',
+    // 'Start and end at the Firelane 1 trailhead. This is a relatively easy trek for families to enjoy some fresh air and the beautiful Forest Park Section A. ', 
     distance: '4.2',
     elevation: '639',
     favorite: false,

@@ -6,7 +6,7 @@ const comingSoon = {
     elevation: '2500',
     favorite: false,
     completed: false,
-    imageMapPage: './assets/index-background.jpg',
+    imageMapPage: 'assets/creed280280.jpg',
     imageOne: 'assets/creed280280.jpg',
     imageTwo: 'assets/creed280280.jpg',
     imageThree: 'assets/creed280280.jpg',

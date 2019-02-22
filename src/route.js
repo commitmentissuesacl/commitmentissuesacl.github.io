@@ -10,6 +10,7 @@ const detailPhoto3 = document.getElementById('detail-photo-3');
 const detailPhoto4 = document.getElementById('detail-photo-4');
 const moreInfoSection = document.getElementById('more-info-section');
 const mapNav = document.getElementById('map-nav');
+const userNameDisplay = document.getElementById('user-name-display');
 
 const userJson = window.localStorage.getItem('user');
 if(!userJson) {
@@ -20,7 +21,7 @@ const user = JSON.parse(userJson);
 let routeOptions = null;
 
 mapNav.href = 'map.html?destination=' + encodeURIComponent(user.destination);
-
+userNameDisplay.textContent = user.name;
 
 if(user.destination === 'forest-park') {
     routeOptions = forestParkOptions;
@@ -42,7 +43,6 @@ for(let i = 0; i < routeOptions.length; i++) {
 
 routeMap.src = route.largeMap;
 elevationChart.src = route.elevationChart;
-
 
 const runName = document.createElement('h3');
 runName.textContent = route.name;
