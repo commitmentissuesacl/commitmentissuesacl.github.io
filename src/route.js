@@ -9,8 +9,7 @@ const detailPhoto2 = document.getElementById('detail-photo-2');
 const detailPhoto3 = document.getElementById('detail-photo-3');
 const detailPhoto4 = document.getElementById('detail-photo-4');
 const moreInfoSection = document.getElementById('more-info-section');
-const back = document.getElementById('back');
-
+const mapNav = document.getElementById('map-nav');
 
 const userJson = window.localStorage.getItem('user');
 if(!userJson) {
@@ -19,6 +18,9 @@ if(!userJson) {
 
 const user = JSON.parse(userJson);
 let routeOptions = null;
+
+mapNav.href = 'map.html?destination=' + encodeURIComponent(user.destination);
+
 
 if(user.destination === 'forest-park') {
     routeOptions = forestParkOptions;
@@ -69,7 +71,3 @@ detailPhoto4.src = route.imageFour;
 const moreInfo = document.createElement('p');
 moreInfo.textContent = route.extraInfo;
 moreInfoSection.appendChild(moreInfo);
-
-back.addEventListener('click', function() {
-    window.history.back();
-});
