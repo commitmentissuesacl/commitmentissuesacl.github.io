@@ -55,6 +55,9 @@ for(let i = 0; i < routeOptions.length; i++) {
     
     const link = document.createElement('a');
     link.href = 'route.html?routeid=' + encodeURIComponent(route.id);
+    if(routeUrl === 'other'){
+        link.href = 'index.html';
+    }
     const runName = document.createElement('h3');
     runName.textContent = route.name;
     link.appendChild(runName);
