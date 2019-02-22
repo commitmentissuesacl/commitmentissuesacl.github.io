@@ -31,7 +31,7 @@
     <main>
         <section class="hero">
             <h2>
-                Find your next favorite run
+                find your next favorite run
             </h2>
         </section>
 
@@ -41,35 +41,31 @@
             <section class="filters-container">
 
                 <section id="miles-filter">
-                    <span>Distance</span>
+                    <span class="filter-text">Distance</span>
                     <section class="filter-input">
-                        <input type="number" id="min-miles" min="1" max="30" class="miles-range" value="1">
-                        <input type="number" id="max-miles" min="3" max="32" class="miles-range" value="33"> miles
+                        <input type="number" id="min-miles" min="1" max="30" class="input-range" value="1"> -
+                        <input type="number" id="max-miles" min="3" max="32" class="input-range" value="33"> miles
                     </section>
                 </section>
 
                 <section id="elevation-filter">
-                    <span>Elevation Gain</span>
+                    <span class="filter-text">Elevation Gain</span>
                     <section class="filter-input">
-                        <input type="number" id="min-elevation" min="0" max="6000" class="elevation-range" value="0">
-                        -
-                        <input type="number" id="max-elevation" min="100" max="6000" class="elevation-range"
+                        <input type="number" id="min-elevation" min="0" max="6000" class="input-range" value="0"> -
+                        <input type="number" id="max-elevation" min="100" max="6000" class="input-range"
                             value="6000"> feet
                     </section>
                 </section>
 
                 <form id="filter-form">
-                    <label><input type="checkbox" id="bathroom" name="bathroom" value="true" class="checkbox"><img
-                            src="assets/icons/toilet.svg" alt="Bathrooms Near Route" class="filter-icon"></label>
+                    <label><input type="checkbox" id="bathroom" name="bathroom" value="true" class="checkbox">Bathroom</label>
 
-                    <label><input type="checkbox" id="family" name="family" value="true" class="checkbox"><img
-                            src="assets/icons/family-silhouette.svg" alt="Family Friendly" class="filter-icon"></label>
+                    <label><input type="checkbox" id="family" name="family" value="true" class="checkbox">Kid Friendly</label>
                 </form>
             </section>
         </section>
 
         <section class="run-container-all" id="run-container-all">
-
         </section>
 
     </main>
@@ -81,5 +77,4 @@
     </footer>
     <script type="module" src="src/map.js"></script>
 </body>
-
 </html>

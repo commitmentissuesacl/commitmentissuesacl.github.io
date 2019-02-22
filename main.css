@@ -300,7 +300,7 @@ main {
 /* MAP PAGE STYLING */
 
 .hero {
-    background-image: url(./assets/map-hero.svg);
+    background-image: url(./assets/maps-background.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -309,6 +309,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.hero h2 {
+    color: white;
+    text-transform: uppercase;
 }
 
 header {
@@ -338,7 +343,6 @@ header a:hover {
 }
 
 .nav-container {
-    /* background: pink; */
     width: 400px;
     display: flex;
     align-items: center;
@@ -346,7 +350,7 @@ header a:hover {
 }
  
 .filters {
-    background-color: rgb(121, 152, 161);
+    background-color: #496b73;
     display: flex;
     justify-content: center;
 }
@@ -357,14 +361,13 @@ header a:hover {
     height: 60px;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(121, 152, 161);
+    color: #e8e8e8;
 }
 
 #miles-filter {
-    background-color: rgb(156, 121, 161);
-    width: 280px;
+    width: 320px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -372,49 +375,79 @@ header a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 280px;
-    background-color: yellow;
+    width: 380px;
+    position: relative;
+    left: -20px;
+}
+
+.filter-text {
+    position: relative;
+    top: -1px;
+    left: 4px;
 }
 
 .filter-input {
-    background-color: rgb(59, 86, 94);
     margin-left: 10px;
 }
 
-.filter-icon {
-    height: 30px;
-}
-
 #filter-form {
-    background: rgb(31, 146, 41);
-    width: 400px;
+    width: 300px;
+    margin-right: 6px;
     display: flex;
     justify-content: space-between;
     align-content: center;
 }
 
 .checkbox {
-    margin-right: 5px;
-
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
-    width: 16px;
-    height: 16px;
-
-    border: 2px solid #999;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #cbccce;
+    border-radius: 4px;
     transition: 0.2s all linear;
     outline: none;
-    margin-right: 5px;
-
+    margin-right: 12px;
     position: relative;
-    top: 2px;
+    top: 3px;
 }
 
 .checkbox:checked {
-    border: 6px solid black;
+    border: 6px solid #f26522;
 }
+
+.input-range {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   width: 60px;
+   height: 23px;
+   border: 2px solid #cbccce;
+   border-radius: 4px;
+   background-color: #e8e8e8;
+   color: #414042;
+   transition: 0.2s all linear;
+   outline: none;
+   padding: 0 5px 0 5px;
+   font-size: .8em;
+   position: relative;
+   top: 0px;
+   margin: 0 3px;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
 
 .display-photo {
     width: 200px;
