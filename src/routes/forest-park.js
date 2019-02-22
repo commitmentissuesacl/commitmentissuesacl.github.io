@@ -201,8 +201,7 @@ const pittock = {
 const firelane1 = {
     id: 'firelane1',
     name: 'Firelane 1 Rip',
-    description: 'Make your way up to one of the best viewpoints in Portland via some of the most serene trails in any major city. Prepare for a serious climb as you pass the Audubon Society and make your way up Wildwood Trail to Pittock Mansion. This route features three places to go to the bathroom, making it an excellent choice for after your morning coffee.',
-    // 'Start and end at the Firelane 1 trailhead. This is a relatively easy trek for families to enjoy some fresh air and the beautiful Forest Park Section A. ', 
+    description: 'Start and end at the Firelane 1 trailhead. This is a relatively easy trek for families to enjoy some fresh air and the beautiful Forest Park Section A. This short route will still expose you to many kinds of trail terrain, from single track to wide open road, and has a tame elevation profile.', 
     distance: '4.2',
     elevation: '639',
     favorite: false,
@@ -214,9 +213,8 @@ const firelane1 = {
     imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
     thumbnailMap: 'assets/working/firelane-loop.svg',
     largeMap: 'assets/working/firelane-loop.svg',
-    extraInfo: 'OTHER DETAILS GO HERE BUT I DON\'T KNOW WHAT.',
+    extraInfo: 'This route starts at a relatively low-traffic trailhead where street parking is usually readily available. Descend down the single-track of Firelane 1 before reaching the wide-open, relatively flat Leif Erikson, and then return to Firelane 1 along a bright, rolling section of Wildwood.',
     bathroom: false,
-
     familyFriendly: true,
     gpsCoordinates: '45.540874 -122.726184',
     elevationChart: 'assets/elevation-profile/firelaneone-elevation.svg'

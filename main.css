@@ -542,19 +542,22 @@ input[type=number] {
 
 .route-details-container {
     width: 780px;
-}
-
-.route-details-container p {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .route-details-container h5 {
-    float: right;
+    align-self: flex-end;
     position: relative;
     top: -98px;
-    color: #666;
+    color: #769096;
     word-spacing: 15px;
 }
+
+.route-details-container p {
+    margin-top: 10px;
+}
+
 
 #detail-photo-section {
     width: 100%;
