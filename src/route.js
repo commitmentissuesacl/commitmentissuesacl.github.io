@@ -1,4 +1,5 @@
 import forestParkOptions from './routes/forest-park.js';
+import otherOptions from './routes/other.js';
 
 const routeMap = document.getElementById('route-map');
 const elevationChart = document.getElementById('elevation-chart');
@@ -22,6 +23,10 @@ let routeOptions = null;
 if(user.destination === 'forest-park') {
     routeOptions = forestParkOptions;
 }
+else {
+    routeOptions = otherOptions;
+}
+
 const urlParams = new URLSearchParams(window.location.search);
 const routeId = urlParams.get('routeid');
 

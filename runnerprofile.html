@@ -24,33 +24,37 @@
         </section>
     </header>
 
-    <main>
+    <main id="user-info-main">
+        <h3>Update your profile</h3>
         <form id="user-info">
-            <fieldset>
-                <legend>Update your profile</legend>
-                <label>Name:
-                    <input type="text" id="input-name" name="input-name">
-                </label>
-                <br>
-                <label>Age:
-                    <input type="number" id="age" name="age" min="1">
-                </label>
-                <br>
-                <label>Location:
-                    <input type="text" id="location" name="location">
-                </label>
-                <br>
-                <label>Sex:
-                    <select id="sex" name="sex">
-                        <option value="" disabled selected></option>
-                        <option value="female">female</option>
-                        <option value="male">male</option>
-                        <option value="non-binary">non-binary</option>
-                    </select>
-                </label>
-                <br>
-                <button>submit</button>
-            </fieldset>
+            <section id="user-info-container">
+                <section class="user-info-input">
+                    <label>Name:
+                        <input type="text" id="input-name" name="input-name" class="user-input-range">
+                    </label>
+                </section>
+                <section class="user-info-input">
+                    <label>Age:
+                        <input type="number" id="age" name="age" min="1" class="user-input-range">
+                    </label>
+                </section>
+                <section class="user-info-input">
+                    <label>Location:
+                        <input type="text" id="location" name="location" class="user-input-range">
+                    </label>
+                </section>
+                <section class="user-info-input">
+                    <label>Sex:
+                        <select id="sex" name="sex">
+                            <option value="" disabled selected></option>
+                            <option value="female">female</option>
+                            <option value="male">male</option>
+                            <option value="non-binary">non-binary</option>
+                        </select>
+                    </label>
+                </section>
+                <button id="submit">SUBMIT</button>
+            </section>
         </form>
 
     </main>
