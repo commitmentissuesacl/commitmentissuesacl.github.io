@@ -37,7 +37,7 @@ h5 {
 #logo-image {
     height: 45px;
     position: relative;
-    top: 5px;
+    top: 4px;
 }
 
 a {
@@ -93,7 +93,7 @@ a:hover {
 
 #footer-copyright {
     color: #CBCCCE;
-    font-size: .5em;
+    font-size: .7em;
     position: relative;
     top: -38px;
 }
@@ -685,25 +685,6 @@ input[type=number] {
     text-align: center;
 }
 
-#sex {
-    margin: 5px 0 20px 0;
-    width: 340px;
-    display: flex;
-    -webkit-border-radius: 0px;  
-    height: 30px;
-    color: #000; 
-    border: 2px solid #cbccce;
-    color: white;
-    text-align: center;
-    padding: 0 5px 0 5px;
-    font-size: .8em;
-    border-radius: 0px;
-    outline: none;
-    background-color: #fff;
-    opacity: 1;
-    animation: fade 1s;
-}
-
 .user-input-range {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -718,6 +699,22 @@ input[type=number] {
     padding: 0 5px 0 5px;
     font-size: .8em;
  }
+
+#sex {
+    margin: 5px 0 20px 0;
+    width: 340px;
+    display: flex;
+    -webkit-border-radius: 0px;  
+    height: 30px;
+    color: #414042; 
+    border: 2px solid #cbccce;
+    text-align: center;
+    padding: 0 5px 0 5px;
+    font-size: .8em;
+    border-radius: 0px;
+    outline: none;
+    background-color: #fff;
+}
 
  #user-info button {
      background: #769096;
