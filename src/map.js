@@ -94,6 +94,9 @@ const maxElevation = document.getElementById('max-elevation');
 const bathroomFilter = document.getElementById('bathroom');
 const familyFilter = document.getElementById('family');
 
+// Though you'd need to peel this apart from the dom manimpulation,
+// this filtering functionality is perfect for TDD.
+// Bugs love to cluster around branching logic.
 function filter() {
     const routes = document.getElementsByClassName('run-container');
     

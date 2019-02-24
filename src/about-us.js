@@ -8,4 +8,9 @@ if(!userJson) {
 
 const user = JSON.parse(userJson);
 userNameDisplay.textContent = user.name;
+// encodeURIComponent will only escape non-alphanumeric characters (it also
+// won't escape parens, hyphens, etc); the destination value
+// doesn't require any encoding. Also this method applies more when
+// sending this data to a server, which we aren't doing yet.
+// See MDN for details on when you'd want to use encodeURIComponent
 mapNav.href = 'map.html?destination=' + encodeURIComponent(user.destination);
