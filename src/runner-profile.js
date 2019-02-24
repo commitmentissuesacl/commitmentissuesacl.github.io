@@ -1,7 +1,9 @@
 const userJson = window.localStorage.getItem('user');
 const mapNav = document.getElementById('map-nav');
 const userNameDisplay = document.getElementById('user-name-display');
-
+// some of this logic on this page would be great for TDD;
+// it's always good to test branching logic - ifs, elses, etc.
+// Building the user object would make a good callable function to TDD.
 let user = {
     name: '',
     age: '',

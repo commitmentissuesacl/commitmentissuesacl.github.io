@@ -33,6 +33,7 @@ else {
 const urlParams = new URLSearchParams(window.location.search);
 const routeId = urlParams.get('routeid');
 
+// ripe for pinning down with tests
 let route = null;
 for(let i = 0; i < routeOptions.length; i++) {
     if(routeOptions[i].id === routeId) {
