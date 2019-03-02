@@ -1,6 +1,3 @@
-//import './route-list-component.test.js';
-//import './html-equal.js';
-
 class TemplateError extends Error {}
 
 var pattern = /[\f\n\r\t\v ]{2,}/g;
@@ -30,25 +27,25 @@ QUnit.assert.htmlEqual = function(fragment, expected) {
 
 function makeHtmlTemplate(route) {
     const html = /* html */`
-        <section class="run-container no-family">
+        <section class="run-container">
 
-                <a href="route.html?routeid=fp-marathon">
+                <a href="route.html?routeid=${route.id}">
                     <section class="image-container">
-                            <img src="assets/thumbnailsformaps/forest-park-marathon-thumb.jpg" alt="image of run" class="display-photo">
+                            <img src="${route.imageMapPage}" alt="image of run" class="display-photo">
                     </section>
                 </a>
 
                 <section class="run-info-container">
-                    <a href="route.html?routeid=fp-marathon">
-                        <h3>Forest Park Marathon</h3>
+                    <a href="route.html?routeid=${route.id}">
+                        <h3>${route.name}</h3>
                     </a>
-                    <h4>26.38 miles</h4>
-                    <h4>3200 feet</h4>
-                    <p>This route will take you across 2/3 of the length of Forest Park, through some of the less busy areas, and along some of the most scenic parts of Wildwood Trail. Note that this route is not a loop! It begins with a climb from the Lower Saltzman Road trailhead and ends at Lower Macleay Park.</p>
+                    <h4>${route.distance} miles</h4>
+                    <h4>${route.elevation} feet</h4>
+                    <p>${route.description}</p>
                 </section>
 
                 <section class="run-icon-container">
-                    <img class="thumbnail-map" src="assets/working/FP-MarathonTwo.svg">
+                    <img class="thumbnail-map" src="${route.thumbnailMap}">
                 </section>
             </section>
     `;
@@ -85,7 +82,7 @@ const route = {
 
 QUnit.test("forest park template", assert => {
     const expected = /* html */ `
-        <section class="run-container no-family">
+        <section class="run-container">
 
                 <a href="route.html?routeid=fp-marathon">
                     <section class="image-container">
