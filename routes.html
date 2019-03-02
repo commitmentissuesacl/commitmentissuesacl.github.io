@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Your Routes</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600|Roboto:400,400i,700,700i|Shrikhand"
+        rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+</head>
+
+<body>
+    <header class="header">
+        <section class="header-container">
+            <nav class="nav-container">
+                <a href="index.html"><img src="assets/boundless-logo.svg" alt="Logo" id="logo-image"></a>
+                <a href="" id="map-nav" class="header-nav">All Routes</a>
+                <a href="aboutus.html" class="header-nav">About Us</a>
+            </nav>
+            <section id="user-name-container">
+                <a href="runnerprofile.html"><span id="user-name-display"></span></a>
+            </section>
+        </section>
+    </header>
+
+    <main>
+        <!-- <section class="hero">
+            <h2>"Of all the paths you take in life, make sure a few of them are dirt."<br><span class="muir">- John Muir</span></h2>
+        </section> -->
+
+
+
+        <section class="filters">
+            <section class="filters-container">
+
+                <section id="miles-filter">
+                    <span class="filter-text">Distance</span>
+                    <section class="filter-input">
+                        <input type="number" id="min-miles" min="1" max="30" class="input-range" value="1"> -
+                        <input type="number" id="max-miles" min="3" max="32" class="input-range" value="33"> miles
+                    </section>
+                </section>
+
+                <section id="elevation-filter">
+                    <span class="filter-text">Elevation Gain</span>
+                    <section class="filter-input">
+                        <input type="number" id="min-elevation" min="0" max="6000" class="input-range" value="0"> -
+                        <input type="number" id="max-elevation" min="100" max="6000" class="input-range"
+                            value="6000"> feet
+                    </section>
+                </section>
+
+                <form id="filter-form">
+                    <label><input type="checkbox" id="bathroom" name="bathroom" value="true" class="checkbox">Bathroom</label>
+
+                    <label><input type="checkbox" id="family" name="family" value="true" class="checkbox">Kid Friendly</label>
+                </form>
+            </section>
+        </section>
+
+        <section class="run-container-all" id="run-container-all">
+            <section class="run-container no-family">
+
+                <a href="route.html?routeid=fp-marathon">
+                    <section class="image-container">
+                            <img src="assets/thumbnailsformaps/forest-park-marathon-thumb.jpg" alt="image of run" class="display-photo">
+                    </section>
+                </a>
+
+                <section class="run-info-container">
+                    <a href="route.html?routeid=fp-marathon">
+                        <h3>Forest Park Marathon</h3>
+                    </a>
+                    <h4>26.38 miles</h4>
+                    <h4>3200 feet</h4>
+                    <p>This route will take you across 2/3 of the length of Forest Park, through some of the less busy areas, and along some of the most scenic parts of Wildwood Trail. Note that this route is not a loop! It begins with a climb from the Lower Saltzman Road trailhead and ends at Lower Macleay Park.</p>
+                </section>
+
+                <section class="run-icon-container">
+                    <img class="thumbnail-map" src="assets/working/FP-MarathonTwo.svg">
+                </section>
+
+            </section>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <section id="footer-container">
+            <img src="assets/boundless-logo-white.svg" id="footer-logo">
+            <p id="footer-copyright">&copy; Commitment Issues 2019</p>
+        </section>
+    </footer>
+    <script type="module" src="src/map.js"></script>
+</body>
+</html>
