@@ -9,7 +9,7 @@ export default function makeHtmlTemplate(route) {
                 </a>
 
                 <section class="run-info-container">
-                    <a href="route.html?routeid=${route.id}">
+                    <a href="route-detail.html?routeid=${route.id}">
                         <h3>${route.name}</h3>
                     </a>
                     <h4>${route.distance} miles</h4>
