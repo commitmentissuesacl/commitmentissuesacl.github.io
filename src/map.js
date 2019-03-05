@@ -11,6 +11,7 @@ const userJson = window.localStorage.getItem('user');
 if(!userJson) {
     window.location = './index.html';
 }
+
 const user = JSON.parse(userJson);
 userNameDisplay.textContent = user.name;
 
@@ -28,6 +29,7 @@ for(let i = 0; i < routeOptions.length; i++) {
 
     const runContainer = document.createElement('section');
     runContainer.classList.add('run-container');
+
     if(!route.bathroom){
         runContainer.classList.add('no-bathroom');
     }
@@ -52,6 +54,11 @@ for(let i = 0; i < routeOptions.length; i++) {
     
     const link = document.createElement('a');
     link.href = 'route.html?routeid=' + encodeURIComponent(route.id);
+
+    if(routeUrl === 'other'){
+        link.href = 'index.html';
+    }
+
     const runName = document.createElement('h3');
     runName.textContent = route.name;
     link.appendChild(runName);
@@ -99,21 +106,25 @@ function filter() {
     if(familyFilter.checked) {
         filterByFamily = true;
     }
+
     for(let i = 0; i < routes.length; i++){
         routes[i].classList.remove('hidden');
     }
+
     if(filterByBathrooms){
         const noBathroom = document.getElementsByClassName('no-bathroom');
         for(let i = 0; i < noBathroom.length; i++) {
             noBathroom[i].classList.add('hidden');
         }
     }
+
     if(filterByFamily){
         const noFamily = document.getElementsByClassName('no-family');
         for(let i = 0; i < noFamily.length; i++) {
             noFamily[i].classList.add('hidden');
         }
     }
+
     const min = minMiles.value;
     maxMiles.min = Number(min) + 2;
     for(let i = 0; i < routes.length; i++) {
@@ -121,6 +132,7 @@ function filter() {
             routes[i].classList.add('hidden');
         }
     }
+
     const max = maxMiles.value;
     minMiles.max = Number(max) - 2;
     for(let i = 0; i < routes.length; i++) {
@@ -128,6 +140,7 @@ function filter() {
             routes[i].classList.add('hidden');
         }
     }
+
     const minElev = minElevation.value;
     maxElevation.min = Number(minElev) + 2;
     for(let i = 0; i < routes.length; i++) {
@@ -135,6 +148,7 @@ function filter() {
             routes[i].classList.add('hidden');
         }
     }
+    
     const maxElev = maxElevation.value;
     minElevation.max = Number(maxElev) - 2;
     for(let i = 0; i < routes.length; i++) {

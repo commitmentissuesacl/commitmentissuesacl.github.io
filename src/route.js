@@ -1,4 +1,5 @@
 import forestParkOptions from './routes/forest-park.js';
+import otherOptions from './routes/other.js';
 
 const routeMap = document.getElementById('route-map');
 const elevationChart = document.getElementById('elevation-chart');
@@ -8,8 +9,8 @@ const detailPhoto2 = document.getElementById('detail-photo-2');
 const detailPhoto3 = document.getElementById('detail-photo-3');
 const detailPhoto4 = document.getElementById('detail-photo-4');
 const moreInfoSection = document.getElementById('more-info-section');
-const back = document.getElementById('back');
-
+const mapNav = document.getElementById('map-nav');
+const userNameDisplay = document.getElementById('user-name-display');
 
 const userJson = window.localStorage.getItem('user');
 if(!userJson) {
@@ -19,9 +20,16 @@ if(!userJson) {
 const user = JSON.parse(userJson);
 let routeOptions = null;
 
+mapNav.href = 'map.html?destination=' + encodeURIComponent(user.destination);
+userNameDisplay.textContent = user.name;
+
 if(user.destination === 'forest-park') {
     routeOptions = forestParkOptions;
 }
+else {
+    routeOptions = otherOptions;
+}
+
 const urlParams = new URLSearchParams(window.location.search);
 const routeId = urlParams.get('routeid');
 
@@ -35,7 +43,6 @@ for(let i = 0; i < routeOptions.length; i++) {
 
 routeMap.src = route.largeMap;
 elevationChart.src = route.elevationChart;
-
 
 const runName = document.createElement('h3');
 runName.textContent = route.name;
@@ -64,7 +71,3 @@ detailPhoto4.src = route.imageFour;
 const moreInfo = document.createElement('p');
 moreInfo.textContent = route.extraInfo;
 moreInfoSection.appendChild(moreInfo);
-
-back.addEventListener('click', function() {
-    window.history.back();
-});

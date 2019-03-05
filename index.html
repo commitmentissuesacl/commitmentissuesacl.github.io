@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <title>The Runs</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600|Roboto:400,400i,500,600,700,700i|Shrikhand" rel="stylesheet">
+    <title>Boundless</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600|Roboto:400,400i,700,700i|Shrikhand"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
 </head>
+
 <body class="index-background">
     <header class="index-header">
-        <img src="./assets/logo-white.png" alt="Logo" id="logo-image-index">
+        <a href="index.html"><img src="assets/boundless-logo-white.svg" alt="Logo" id="logo-image-index"></a>
 
         <section id="user-name-container" hidden>
-            <a href="runnerprofile.html" class="index-link"><span id="user-name-display"></span></a>
+            <span id="user-name-display" class="user-name-display-index"></span>
         </section>
     </header>
 
     <main class="index-container">
-        <h1>"Of all the paths you take in life, make sure a few of them are dirt."<br><span class="muir">- John Muir</span></h1>
+        <h1>find your next favorite run</h1>
 
         <section class="index-forms">
             <form id="user-name" class="user-name">
-                <input type="text" id="name" name="name" placeholder="Enter Your Name" autocomplete="off">
+                <input type="text" id="name" name="name" label="enter name" placeholder="Enter Name" autocomplete="off"
+                    required>
                 <button id="submit">SUBMIT</button>
             </form>
-    
+
             <form id="destination-form" class="hidden">
                 <select id="destination-dropdown" name="destination-dropdown" class="hidden">
-                    
                     <option value="" disabled selected>Choose Your Destination:</option>
                     <option value="forest-park">Forest Park</option>
                     <option value="other">Other</option>
                 </select>
             </form>
-
         </section>
-
     </main>
 
-    
     <script type="module" src="./src/index.js"></script>
 </body>
 </html>

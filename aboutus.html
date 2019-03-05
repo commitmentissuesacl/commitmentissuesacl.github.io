@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Route Details</title>
+    <title>About Us</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600|Roboto:400,400i,700,700i|Shrikhand" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600|Roboto:400,400i,700,700i|Shrikhand"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
 </head>
+
 <body>
     <header class="header">
         <section class="header-container">
-            <a href="index.html"><img src="./assets/logo.png" alt="Logo" id="logo-image"></a>
             <nav class="nav-container">
-                Links will go here
+                <a href="index.html"><img src="assets/boundless-logo.svg" alt="Logo" id="logo-image"></a>
+                <a href="" id="map-nav" class="header-nav">All Routes</a>
+                <a href="aboutus.html" class="header-nav">About Us</a>
             </nav>
             <section id="user-name-container">
                 <a href="runnerprofile.html"><span id="user-name-display"></span></a>
@@ -22,39 +26,62 @@
         </section>
     </header>
 
-    <main>
-        <h1>About us!</h1>
-        <section class="about-me" id="bonnie">
-            <!-- <img src="assets/about-us/bonnie.jpg"> -->
-            <p class="about">
-                Bonnie
-            </p>
+    <main id="about-us-container">
+        <section id="about-us-headline">
+            <h3>About us</h3>
         </section>
-        <section class="about-me" id="colin">
-            <img src="assets/about-us/bonnie.jpg" width ="100px">
-            <p class="about">
-                Colin
-            </p>
-        </section>
-        <section class="about-me" id="payton">
-            <!-- <img src="assets/about-us/bonnie.jpg"> -->
-            <p class="about">
-                payton
-            </p>
-        </section>
-        <section class="about-me" id="laura">
-            <!-- <img src="assets/about-us/bonnie.jpg"> -->
-            <p class="about">
-                Laura
-            </p>
-        </section>
-        <!-- add a back button? -->
 
+        <section id="about-us-flex">
+            <section class="about-me" id="bonnie">
+                <img src="assets/about-us/bonnie.png" class="about-me-image" alt="photo of Bonnie">
+                <h4>Bonnie</h4>
+                <p class="about">
+                    Bonnie came up with the idea for this app after spending many hours pouring over a paper map,
+                    tracing out routes for runs, wondering why something like Boundless didn't already exist.
+                    <br><br>
+                </p>
+            </section>
+
+            <section class="about-me" id="colin">
+                <img src="assets/about-us/colin.png" class="about-me-image" alt ="photo of Colin">
+                <h4>Colin</h4>
+                <p class="about">
+                    Colin Andrew Coutts CBE is an English actor who has received an Academy Award, a Golden Globe Award,
+                    two BAFTA Awards, and three Screen Actors Guild Awards, as well as the Volpi Cup for Best Actor at
+                    the Venice Film Festival.
+                    <br><br>
+                    Special thanks to my team for teaching this old actor a few new tricks.
+                </p>
+            </section>
+
+            <section class="about-me" id="payton">
+                <img src="assets/about-us/payton.png" class="about-me-image" alt= "photo of Payton">
+                <h4>Payton</h4>
+                <p class="about">
+                    Although Payton has a strong aversion to running, he loves hiking and walking is okay too, so this app has been right up his alley... or trail. He hasn't actually been to Forest Park yet, so this is going to legitimately come in handy soon. Thanks to my teammates for all the hard work and laughs over the last few days!<br><br>The Runs are dead, long live The Runs.
+                </p>
+            </section>
+
+            <section class="about-me" id="laura">
+                <img src="assets/about-us/laura.png" class="about-me-image" alt="photo of Laura">
+                <h4>Laura</h4>
+                <p class="about">
+                    Laura likes long walks through the woods and over the hills to grandmother’s house. Her main hope is to use this app to eliminate the final excuse to starting her New Year resolution... and to avoid getting lost in the woods...again. 
+                    <br><br>
+                    A special thanks to my teammates Bonnie, Colin and Payton for putting up with me and making this
+                    sick app!
+                </p>
+            </section>
+        </section>
     </main>
 
     <footer class="footer">
-            <!-- contains same information as nav and about us page -->
+        <section id="footer-container">
+            <img src="assets/boundless-logo-white.svg" id="footer-logo" alt="footer-logo">
+            <p id="footer-copyright">&copy; Commitment Issues 2019</p>
+        </section>
     </footer>
-    
+
+    <script type="module" src="src/about-us.js"></script>
 </body>
 </html>
