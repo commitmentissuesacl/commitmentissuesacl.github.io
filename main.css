@@ -42,6 +42,10 @@ h5 {
     top: 4px;
 }
 
+#firebaseui-auth-container {
+    background: white;
+}
+
 a {
     color: #404041;
 

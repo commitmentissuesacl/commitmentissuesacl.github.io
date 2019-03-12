@@ -1,4 +1,4 @@
-import { auth } from './firebase.js';
+import { auth } from './firebase/firebase.js';
 
 const ui = new firebaseui.auth.AuthUI(auth);
 
