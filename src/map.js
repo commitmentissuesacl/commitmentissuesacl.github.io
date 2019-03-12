@@ -10,7 +10,7 @@ const userJson = window.localStorage.getItem('user');
 
 if(!userJson) {
     window.location = './index.html';
-}
+} 
 
 const user = JSON.parse(userJson);
 userNameDisplay.textContent = user.name;
