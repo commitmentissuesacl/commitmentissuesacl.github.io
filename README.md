@@ -12,3 +12,4 @@ To do:
 -filter (in module load-filter)
 -make responsive
 -INTERNS (hot)
+-add firebase
