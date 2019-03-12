@@ -1,4 +1,4 @@
-const userJson = window.localStorage.getItem('user');
+//const userJson = window.localStorage.getItem('user');
 const mapNav = document.getElementById('map-nav');
 const userNameDisplay = document.getElementById('user-name-display');
 
