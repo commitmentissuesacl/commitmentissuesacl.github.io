@@ -7,14 +7,14 @@ const userNameDisplay = document.getElementById('user-name-display');
 const search = window.location.search;
 const searchParams = new URLSearchParams(search);
 const routeUrl = searchParams.get('destination');
-const userJson = window.localStorage.getItem('user');
+// const userJson = window.localStorage.getItem('user');
 
-if(!userJson) {
-    window.location = './index.html';
-}
+// if(!userJson) {
+//     window.location = './index.html';
+// }
 
-const user = JSON.parse(userJson);
-userNameDisplay.textContent = user.name;
+// const user = JSON.parse(userJson);
+// userNameDisplay.textContent = user.name;
 
 let routeOptions = null;
 

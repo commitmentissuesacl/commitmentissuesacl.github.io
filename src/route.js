@@ -10,25 +10,26 @@ const detailPhoto3 = document.getElementById('detail-photo-3');
 const detailPhoto4 = document.getElementById('detail-photo-4');
 const moreInfoSection = document.getElementById('more-info-section');
 const mapNav = document.getElementById('map-nav');
-const userNameDisplay = document.getElementById('user-name-display');
+// const userNameDisplay = document.getElementById('user-name-display');
 
-const userJson = window.localStorage.getItem('user');
-if(!userJson) {
-    window.location = 'index.html';
-} 
+// const userJson = window.localStorage.getItem('user');
+// if(!userJson) {
+//     window.location = 'index.html';
+// } 
 
-const user = JSON.parse(userJson);
+// const user = JSON.parse(userJson);
 let routeOptions = null;
 
 mapNav.href = 'map.html?destination=' + encodeURIComponent(user.destination);
-userNameDisplay.textContent = user.name;
+// userNameDisplay.textContent = user.name;
 
-if(user.destination === 'forest-park') {
-    routeOptions = forestParkOptions;
-}
-else {
-    routeOptions = otherOptions;
-}
+// if(user.destination === 'forest-park') {
+//     routeOptions = forestParkOptions;
+// }
+// else {
+//     routeOptions = otherOptions;
+// }
+routeOptions = forestParkOptions;
 
 const urlParams = new URLSearchParams(window.location.search);
 const routeId = urlParams.get('routeid');

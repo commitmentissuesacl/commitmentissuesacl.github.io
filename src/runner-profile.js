@@ -1,6 +1,6 @@
-const userJson = window.localStorage.getItem('user');
+// const userJson = window.localStorage.getItem('user');
 const mapNav = document.getElementById('map-nav');
-const userNameDisplay = document.getElementById('user-name-display');
+// const userNameDisplay = document.getElementById('user-name-display');
 
 let user = {
     name: '',
@@ -10,11 +10,11 @@ let user = {
     destination: ''
 };
 
-if(userJson) {
-    user = JSON.parse(userJson);
-}
+// if(userJson) {
+//     user = JSON.parse(userJson);
+// }
 
-userNameDisplay.textContent = user.name;
+// userNameDisplay.textContent = user.name;
 mapNav.href = 'map.html?destination=' + encodeURIComponent(user.destination);
 
 const name = document.getElementById('input-name');
