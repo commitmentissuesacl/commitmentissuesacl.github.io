@@ -30,17 +30,57 @@ function loadRoutes(routeOptions) {
     routeOptions.forEach(route => {
         const dom = makeHtmlTemplate(route);
         const favoriteIcon = dom.querySelector('#favorite-icon');
-        favoriteIcon.addEventListener('click', () => {
-            const userId = auth.currentUser.uid;
-            const userFavoritesRef = favoritesByUserRef.child(userId);
-            const userFavoriteRouteRef = userFavoritesRef.child(route.id);
-            userFavoriteRouteRef.set({
-                id: route.id,
-                name: route.name
-            });
-
-            console.log('hi');
+        
+        auth.onAuthStateChanged(user => {
+            if(user) {
+                const userId = user.uid;
+                const userFavoritesRef = favoritesByUserRef.child(userId);
+                const userFavoriteRouteRef = userFavoritesRef.child(route.id);
+                userFavoriteRouteRef.once('value')
+                    .then(snapshot => {
+                        const value = snapshot.val();
+                        let isFavorite = false;
+                        if(value) {
+                            addFavorite();
+                        }
+                        else {
+                            removeFavorite();
+                        }
+                
+                        function addFavorite() {
+                            isFavorite = true;
+                            favoriteIcon.src = 'assets/fav-selected.svg';
+                        }
+                
+                        function removeFavorite() {
+                            isFavorite = false;
+                            favoriteIcon.src = 'assets/fav-unselected.svg';
+                        }
+                
+                        favoriteIcon.addEventListener('click', () => {
+                            if(isFavorite) {
+                                userFavoriteRouteRef.remove();
+                                removeFavorite();
+                                console.log('remove', route.name);
+                            }
+                            else {
+                                console.log('add', route.name);
+                                userFavoriteRouteRef.set({
+                                    id: route.id,
+                                    name: route.name
+                                });
+                                addFavorite();
+                            }
+                        });
+                    });
+            }
+            else {
+                console.log('no user');
+                favoriteIcon.classList.add('hidden');
+            }
         });
+        
+                        
 
 
         runContainerAll.appendChild(dom);

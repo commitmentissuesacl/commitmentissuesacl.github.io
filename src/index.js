@@ -12,6 +12,7 @@ ui.start('#firebaseui-auth-container', {
     callbacks: {
         signInSuccessWithAuthResult(authResult) {
             const user = authResult.user;
+            console.log(user);
             usersRef.child(user.uid)
                 .set({
                     uid: user.uid,
