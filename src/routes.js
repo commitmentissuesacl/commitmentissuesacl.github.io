@@ -2,12 +2,15 @@ import forestParkOptions from './routes/forest-park.js';
 import otherOptions from './routes/other.js';
 import makeHtmlTemplate from './make-html-template.js';
 import { auth } from './firebase/firebase.js';
+import { loadHeader } from './header-template.js';
 
 const runContainerAll = document.getElementById('run-container-all');
 const userNameDisplay = document.getElementById('user-name-display');
 const search = window.location.search;
 const searchParams = new URLSearchParams(search);
 const routeUrl = searchParams.get('destination');
+
+loadHeader();
 
 // console.log(JSON.stringify(auth, true, 2));
 auth.onAuthStateChanged(user => {

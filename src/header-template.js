@@ -43,3 +43,10 @@ export function updateUserNameDisplay(user) {
 
     return template.content;
 }
+
+const headerContainer = document.getElementById('header-container');
+
+export function loadHeader() {
+    const dom = makeNavigationTemplate();
+    headerContainer.appendChild(dom);
+}
