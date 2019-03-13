@@ -6,7 +6,7 @@ export default function makeNavigationTemplate() {
         <section class="header-container">
             <nav class="nav-container">
                 <a href="index.html"><img src="assets/boundless-logo.svg" alt="Logo" id="logo-image"></a>
-                <a href="" id="map-nav" class="header-nav">All Routes</a>
+                <a href="routes.html" id="map-nav" class="header-nav">All Routes</a>
                 <a href="aboutus.html" class="header-nav">About Us</a>
             </nav>
         </section>
@@ -16,7 +16,6 @@ export default function makeNavigationTemplate() {
     template.innerHTML = dom;
     return template.content;
 }
-
 export function makeFooter() {
     const template = document.createElement('template');
     template.innerHTML = `
@@ -29,6 +28,13 @@ export function makeFooter() {
     `;
 
     return template.content;
+}
+
+const footerContainer = document.getElementById('footer-container');
+
+export function loadFooter() {
+    const dom = makeFooter();
+    footerContainer.appendChild(dom);
 }
 
 export function updateUserNameDisplay(user) {

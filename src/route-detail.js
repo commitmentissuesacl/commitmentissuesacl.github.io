@@ -1,15 +1,10 @@
 import forestParkOptions from './routes/forest-park.js';
 import otherOptions from './routes/other.js';
+import { loadHeader, loadFooter } from './header-template.js';
 
-// const mapNav = document.getElementById('map-nav');
-// const userNameDisplay = document.getElementById('user-name-display');
+loadHeader();
+loadFooter();
 
-// const userJson = window.localStorage.getItem('user');
-// if(!userJson) {
-//     window.location = 'index.html';
-// }
-
-// const user = JSON.parse(userJson);
 let routeOptions = null;
 
 // mapNav.href = 'routes.html?destination=' + encodeURIComponent(user.destination);
