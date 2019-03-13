@@ -2,6 +2,7 @@ import forestParkOptions from './routes/forest-park.js';
 import otherOptions from './routes/other.js';
 import makeHtmlTemplate from './make-html-template.js';
 import { loadHeader, loadFooter } from './header-template.js';
+import { auth, favoritesByUserRef } from './firebase/firebase.js';
 
 const runContainerAll = document.getElementById('run-container-all');
 const search = window.location.search;
@@ -21,7 +22,21 @@ else if(routeUrl === 'other') {
 }
 routeOptions = forestParkOptions;
 
-routeOptions.forEach(route => {
-    const dom = makeHtmlTemplate(route);
-    runContainerAll.appendChild(dom);
-});
+function loadRoutes(routeOptions) {
+    while(runContainerAll.children.length > 0) {
+        runContainerAll.lastElementChild.remove();
+    }
+
+    routeOptions.forEach(route => {
+        const dom = makeHtmlTemplate(route);
+        const favoriteIcon = dom.querySelector('#favorite-icon');
+        favoriteIcon.addEventListener('click', () => {
+            console.log(route.name);
+        });
+
+
+        runContainerAll.appendChild(dom);
+    });
+}
+
+loadRoutes(routeOptions);

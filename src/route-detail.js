@@ -1,5 +1,4 @@
 import forestParkOptions from './routes/forest-park.js';
-import otherOptions from './routes/other.js';
 import { loadHeader, loadFooter } from './header-template.js';
 
 loadHeader();
@@ -7,15 +6,6 @@ loadFooter();
 
 let routeOptions = null;
 
-// mapNav.href = 'routes.html?destination=' + encodeURIComponent(user.destination);
-// userNameDisplay.textContent = user.name;
-
-// if(user.destination === 'forest-park') {
-//     routeOptions = forestParkOptions;
-// }
-// else {
-//     routeOptions = otherOptions;
-// }
 routeOptions = forestParkOptions;
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -75,3 +65,14 @@ function makeRouteDetail(route) {
     `;
     return template.content;
 }
+
+
+// FUNCTIONALITY FOR ADDITIONAL DESTINATIONS - TO COME UPON GROWTH OF PROJECT
+
+// import otherOptions from './routes/other.js';
+// if(user.destination === 'forest-park') {
+//     routeOptions = forestParkOptions;
+// }
+// else {
+//     routeOptions = otherOptions;
+// }

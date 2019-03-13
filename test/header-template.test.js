@@ -12,7 +12,7 @@ test('make header template', assert => {
             <section class="header-container">
                 <nav class="nav-container">
                     <a href="index.html"><img src="assets/boundless-logo.svg" alt="Logo" id="logo-image"></a>
-                    <a href="" id="map-nav" class="header-nav">All Routes</a>
+                    <a href="routes.html" id="map-nav" class="header-nav">All Routes</a>
                     <a href="aboutus.html" class="header-nav">About Us</a>
                 </nav>
             </section>

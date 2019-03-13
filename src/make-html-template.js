@@ -4,7 +4,7 @@ export default function makeHtmlTemplate(route) {
 
                 <a href="route.html?routeid=${route.id}">
                     <section class="image-container">
-                            <img src="${route.imageMapPage}" alt="image of run" class="display-photo">
+                            <img src="${route.imageMapPage}" alt="${route.name}" class="display-photo">
                     </section>
                 </a>
 
@@ -14,6 +14,7 @@ export default function makeHtmlTemplate(route) {
                     </a>
                     <h4>${route.distance} miles</h4>
                     <h4>${route.elevation} feet</h4>
+                    <img src="assets/fav-unselected.svg" title="favorite" id="favorite-icon">
                     <p>${route.description}</p>
                 </section>
 
