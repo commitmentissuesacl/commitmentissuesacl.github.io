@@ -12,6 +12,5 @@ To do:
 -filter (in module load-filter)
 -make responsive
 -INTERNS (hot)
--add firebase
 
 NEXT: add header template function to js, authentication/get user, make favorites
