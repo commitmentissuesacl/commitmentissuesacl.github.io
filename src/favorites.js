@@ -4,6 +4,8 @@ import { auth, favoritesByUserRef } from './firebase/firebase.js';
 import objectToArray from './object-to-array.js';
 import { loadRoutes } from './make-html-template.js';
 
+const noFavorites = document.getElementById('no-favorites-container');
+
 loadHeader();
 loadFooter();
 
@@ -11,7 +13,15 @@ auth.onAuthStateChanged(user => {
     const userFavoritesRef = favoritesByUserRef.child(user.uid);
     userFavoritesRef.on('value', snapshot => {
         const value = snapshot.val();
-        const routes = objectToArray(value);
-        loadRoutes(routes);
+        if(!value) {
+            console.log('no favorites');
+            noFavorites.classList.remove('hidden');
+            loadRoutes([]);
+        }
+        else {
+            noFavorites.classList.add('hidden');
+            const routes = objectToArray(value);
+            loadRoutes(routes);
+        }
     });
 });
