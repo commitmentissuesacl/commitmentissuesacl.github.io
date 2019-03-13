@@ -1,7 +1,5 @@
 import { auth, favoritesByUserRef } from './firebase/firebase.js';
 
-// const favoriteIcon = dom.querySelector('#favorite-icon');
-
 export function toggleFavorite(route, favoriteIcon) {
     auth.onAuthStateChanged(user => {
         if(user) {
@@ -34,7 +32,12 @@ export function toggleFavorite(route, favoriteIcon) {
                         else {
                             userFavoriteRouteRef.set({
                                 id: route.id,
-                                name: route.name
+                                name: route.name,
+                                imageMapPage: route.imageMapPage,
+                                distance: route.distance,
+                                elevation: route.elevation,
+                                description: route.description,
+                                thumbnailMap: route.thumbnailMap
                             });
                             addFavorite();
                         }

@@ -12,5 +12,6 @@ To do:
 -filter (in module load-filter)
 -make responsive
 -INTERNS (hot)
+-imageMap and thumbnailMap: are they the same? Can we combine them?
 
 NEXT: add header template function to js, authentication/get user, make favorites
