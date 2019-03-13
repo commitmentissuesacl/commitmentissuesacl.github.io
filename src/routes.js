@@ -31,7 +31,15 @@ function loadRoutes(routeOptions) {
         const dom = makeHtmlTemplate(route);
         const favoriteIcon = dom.querySelector('#favorite-icon');
         favoriteIcon.addEventListener('click', () => {
-            console.log(route.name);
+            const userId = auth.currentUser.uid;
+            const userFavoritesRef = favoritesByUserRef.child(userId);
+            const userFavoriteRouteRef = userFavoritesRef.child(route.id);
+            userFavoriteRouteRef.set({
+                id: route.id,
+                name: route.name
+            });
+
+            console.log('hi');
         });
 
 
