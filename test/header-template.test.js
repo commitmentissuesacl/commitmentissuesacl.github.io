@@ -1,4 +1,4 @@
-import makeNavigationTemplate from '../src/header-template.js';
+import makeNavigationTemplate, { updateUserNameDisplay } from '../src/header-template.js';
 
 const test = QUnit.test;
 
@@ -18,6 +18,23 @@ test('make header template', assert => {
             </section>
         </header>
     `;
+
+    assert.htmlEqual(result, expected);
+});
+
+test('user profile template', assert => {
+    const user = {
+        displayName: 'Bonnie McNeil',
+        photoURL: 'https://lh6.googleusercontent.com/-D20cdlu8OaE/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3re6jVVZ4PqZYPGq31QitCRT3gyqng/mo/photo.jpg'
+    };
+    const expected = `
+        <section id="user-name-container">
+            <img src="https://lh6.googleusercontent.com/-D20cdlu8OaE/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3re6jVVZ4PqZYPGq31QitCRT3gyqng/mo/photo.jpg" id="user-avatar">
+            <a href="runnerprofile.html"><span id="user-name-display">Bonnie McNeil</span></a>
+            <button>Logout</button>
+        </section>
+    `;
+    const result = updateUserNameDisplay(user);
 
     assert.htmlEqual(result, expected);
 });

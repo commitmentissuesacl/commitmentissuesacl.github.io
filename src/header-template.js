@@ -28,3 +28,18 @@ export function makeFooter() {
 
     return template.content;
 }
+
+export function updateUserNameDisplay(user) {
+    const template = document.createElement('template');
+    const avatar = user.photoURL || '';
+
+    template.innerHTML = `
+        <section id="user-name-container">
+            <img src="${avatar}" id="user-avatar">
+            <a href="runnerprofile.html"><span id="user-name-display">${user.displayName}</span></a>
+            <button>Logout</button>
+        </section>
+    `;
+
+    return template.content;
+}
