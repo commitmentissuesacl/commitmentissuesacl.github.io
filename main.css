@@ -47,7 +47,7 @@ h5 {
 }
 
 #user-avatar {
-    width: 20px;
+    width: 32px;
     border-radius: 100%;
 }
 
@@ -321,11 +321,10 @@ main {
 }
 
 header {
-    width: 100%;
+    /* width: 100%; */
     background-color: #fff;
     display: flex;
-    justify-content: center;
-    border-bottom: 2px solid #f26522;
+    /* justify-content: center; */
 }
 
 header a {
@@ -337,17 +336,19 @@ header a:hover {
     text-decoration-color: #f26522;
 }
 
-.header-container {
+#header-container {
     height: 80px;
     display: flex;
-    width: 1180px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     font-size: .8em;
+    background: #fff;
+    border-bottom: 2px solid #f26522;
 }
 
 .nav-container {
-    width: 400px;
+    width: 500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
