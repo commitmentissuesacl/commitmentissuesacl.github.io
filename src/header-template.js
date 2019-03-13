@@ -46,6 +46,17 @@ export function updateUserNameDisplay(user) {
     return template.content;
 }
 
+function noUserNameDisplay() {
+    const template = document.createElement('template');
+    template.innerHTML = `
+        <section id="user-name-container">
+            <span id="login">Login</span>
+        </section>
+    `;
+
+    return template.content;
+}
+
 const headerContainer = document.getElementById('header-container');
 
 export function loadHeader() {
@@ -61,11 +72,14 @@ export function loadHeader() {
                 auth.signOut();
                 window.location = 'index.html';
             });
-            console.log('there is a logged in user');
         }
         else {
-            console.log('there is not a logged in user');
-            //make login button
+            const noUserInfo = noUserNameDisplay();
+            headerContainer.appendChild(noUserInfo);
+            const logIn = document.getElementById('login');
+            logIn.addEventListener('click', () => {
+                window.location = 'index.html';
+            });
         }
     });
 }
