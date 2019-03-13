@@ -1,5 +1,6 @@
 import forestParkOptions from './routes/forest-park.js';
 import { loadHeader, loadFooter } from './header-template.js';
+import { toggleFavorite } from './favorite-component.js';
 
 loadHeader();
 loadFooter();
@@ -23,6 +24,10 @@ const main = document.getElementById('main');
 const dom = makeRouteDetail(route);
 main.appendChild(dom);
 
+const favoriteIcon = document.getElementById('favorite-icon');
+
+toggleFavorite(route, favoriteIcon);
+
 
 function makeRouteDetail(route) {
     const template = document.createElement('template');
@@ -42,6 +47,7 @@ function makeRouteDetail(route) {
                     <h4>${route.distance} miles</h4>
                     <h4>${route.elevation} feet</h4>
                     <h5>${route.gpsCoordinates}</h5>
+                    <img src="assets/fav-unselected.svg" title="favorite" id="favorite-icon">
                     <p>${route.description}</p>
                 </section>
             </section>
