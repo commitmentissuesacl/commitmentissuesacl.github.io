@@ -13,3 +13,5 @@ To do:
 -make responsive
 -INTERNS (hot)
 -add firebase
+
+NEXT: add header template function to js, authentication/get user, make favorites
