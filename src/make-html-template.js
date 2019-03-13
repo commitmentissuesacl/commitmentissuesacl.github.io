@@ -1,3 +1,5 @@
+import { toggleFavorite } from './favorite-component.js';
+
 export default function makeHtmlTemplate(route) {
     const html = /* html */`
         <section class="run-container">
@@ -28,4 +30,19 @@ export default function makeHtmlTemplate(route) {
     template.innerHTML = html;
 
     return template.content;
+}
+
+const runContainerAll = document.getElementById('run-container-all');
+
+export function loadRoutes(routeOptions) {
+    while(runContainerAll.children.length > 0) {
+        runContainerAll.lastElementChild.remove();
+    }
+    routeOptions.forEach(route => {
+        const dom = makeHtmlTemplate(route);
+        const favoriteIcon = dom.querySelector('#favorite-icon');
+        toggleFavorite(route, favoriteIcon);
+        
+        runContainerAll.appendChild(dom);
+    });
 }
