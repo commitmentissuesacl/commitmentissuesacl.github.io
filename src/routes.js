@@ -9,7 +9,9 @@ const search = window.location.search;
 const searchParams = new URLSearchParams(search);
 const routeUrl = searchParams.get('destination');
 
+console.log(JSON.stringify(auth, true, 2));
 console.log(auth);
+
 // const userJson = window.localStorage.getItem('user');
 // if(!userJson) {
 //     window.location = './index.html';
