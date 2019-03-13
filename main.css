@@ -46,6 +46,11 @@ h5 {
     background: white;
 }
 
+#user-avatar {
+    width: 20px;
+    border-radius: 100%;
+}
+
 a {
     color: #404041;
 

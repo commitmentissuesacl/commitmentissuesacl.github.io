@@ -1,3 +1,5 @@
+import { auth } from './firebase/firebase.js';
+
 export default function makeNavigationTemplate() {
     const dom = `
     <header class="header">
@@ -37,7 +39,7 @@ export function updateUserNameDisplay(user) {
         <section id="user-name-container">
             <img src="${avatar}" id="user-avatar">
             <a href="runnerprofile.html"><span id="user-name-display">${user.displayName}</span></a>
-            <button>Logout</button>
+            <span id="logout">Logout</span>
         </section>
     `;
 
@@ -49,4 +51,21 @@ const headerContainer = document.getElementById('header-container');
 export function loadHeader() {
     const dom = makeNavigationTemplate();
     headerContainer.appendChild(dom);
+
+    auth.onAuthStateChanged(user => {
+        if(user) {
+            const userInfo = updateUserNameDisplay(user);
+            headerContainer.appendChild(userInfo);
+            const logOut = document.getElementById('logout');
+            logOut.addEventListener('click', () => {
+                auth.signOut();
+                window.location = 'index.html';
+            });
+            console.log('there is a logged in user');
+        }
+        else {
+            console.log('there is not a logged in user');
+            //make login button
+        }
+    });
 }

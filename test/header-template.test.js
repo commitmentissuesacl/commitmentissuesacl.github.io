@@ -31,7 +31,7 @@ test('user profile template', assert => {
         <section id="user-name-container">
             <img src="https://lh6.googleusercontent.com/-D20cdlu8OaE/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3re6jVVZ4PqZYPGq31QitCRT3gyqng/mo/photo.jpg" id="user-avatar">
             <a href="runnerprofile.html"><span id="user-name-display">Bonnie McNeil</span></a>
-            <button>Logout</button>
+            <span id="logout">Logout</span>
         </section>
     `;
     const result = updateUserNameDisplay(user);
