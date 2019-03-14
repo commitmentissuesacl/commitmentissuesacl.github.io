@@ -8,9 +8,6 @@ const fileUpload = document.getElementById('avatar-upload');
 const imageDisplay = document.getElementById('image-display');
 const photoForm = document.getElementById('photo-form');
 
-//store reference to file in user database object
-//display photo in header and on upload page
-
 auth.onAuthStateChanged(user => {
     if(!user) {
         window.location = 'routes.html';
@@ -21,7 +18,6 @@ auth.onAuthStateChanged(user => {
             .then(snapshot => {
                 const value = snapshot.val();
                 const customPhotoURL = value.customPhotoURL;
-                console.log(customPhotoURL);
                 if(customPhotoURL) {
                     imageDisplay.src = customPhotoURL;
                     imageDisplay.classList.remove('hidden');

@@ -23,7 +23,7 @@ ui.start('#firebaseui-auth-container', {
                 .update({
                     uid: user.uid,
                     displayName: user.displayName,
-                    photoURL: user.photoURL,
+                    photoURL: user.photoURL || null,
                 });
             return true;
         }

@@ -6,12 +6,13 @@
 
 
 To do:
--upload photo: set up firebase storage
+-style user info page
+-filter (in module load-filter)
 -loading spinner
+-use form to add more user info to db
 -save run times
 -comments?
 -sort (in module load-sort)
--filter (in module load-filter)
 -make responsive
 -INTERNS (hot)
 -imageMap and thumbnailMap: are they the same? Can we combine them?
