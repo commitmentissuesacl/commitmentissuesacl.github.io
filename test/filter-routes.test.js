@@ -51,6 +51,19 @@ function filterByDistance(routes, minMiles, maxMiles) {
     return filterByMaxMiles(filteredByMin, maxMiles);
 }
 
+function filterByMinElevation(routes, minElev) {
+    return routes.filter(route => route.elevation >= minElev);
+}
+
+function filterByMaxElevation(routes, maxElev) {
+    return routes.filter(route => route.elevation <= maxElev);
+}
+
+function filterByElevation(routes, minElev, maxElev) {
+    const filteredByMin = filterByMinElevation(routes, minElev);
+    return filterByMaxElevation(filteredByMin, maxElev);
+}
+
 test('filter routes by max distance', assert => {
     const maxMiles = 20;
     const expected = [
@@ -127,4 +140,81 @@ test('filter routes by min and max distances', assert => {
     const results = filterByDistance(routes, minMiles, maxMiles);
 
     assert.deepEqual(results, expected);
+});
+
+test('filter routes by min elevation', assert => {
+    const minElev = 3000;
+    const expected = [
+        {
+            id: 'fp-marathon',
+            name: 'Forest Park Marathon',
+            distance: '26.38',
+            elevation: '3200',
+            bathroom: true,
+            familyFriendly: false,
+        },
+        {
+            id: 'ultra',
+            name: 'Stumptown Races 50k',
+            distance: '31',
+            elevation: '4180',
+            bathroom: true,
+            familyFriendly: false,
+        }
+    ];
+
+    const result = filterByMinElevation(routes, minElev);
+
+    assert.deepEqual(result, expected);
+});
+
+test('filter routes by max elevation', assert => {
+    const maxElev = 3000;
+    const expected = [
+        {
+            id: 'ramblers',
+            name: 'Half Marathon +',
+            distance: '14.03',
+            elevation: '1600',
+            bathroom: true,
+            familyFriendly: false,
+        },
+        {
+            id: 'half',
+            name: 'Stumptown Races Half Marathon',
+            distance: '13.1',
+            elevation: '2142',
+            bathroom: true,
+            familyFriendly: false,
+        }
+    ];
+
+    const result = filterByMaxElevation(routes, maxElev);
+
+    assert.deepEqual(result, expected);
+});
+
+test('filter routes by min and max elevation', assert => {
+    const minElevation = 2000, maxElevation = 4000;
+    const expected = [
+        {
+            id: 'fp-marathon',
+            name: 'Forest Park Marathon',
+            distance: '26.38',
+            elevation: '3200',
+            bathroom: true,
+            familyFriendly: false,
+        },
+        {
+            id: 'half',
+            name: 'Stumptown Races Half Marathon',
+            distance: '13.1',
+            elevation: '2142',
+            bathroom: true,
+            familyFriendly: false,
+        }
+    ];
+
+    const result = filterByElevation(routes, minElevation, maxElevation);
+    assert.deepEqual(result, expected);
 });
