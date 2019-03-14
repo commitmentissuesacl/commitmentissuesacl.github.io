@@ -22,18 +22,20 @@ auth.onAuthStateChanged(user => {
                 const value = snapshot.val();
                 const customPhotoURL = value.customPhotoURL;
                 console.log(customPhotoURL);
+                if(customPhotoURL) {
+                    imageDisplay.src = customPhotoURL;
+                    imageDisplay.classList.remove('hidden');
+                }
+                if(!customPhotoURL) {
+                    imageDisplay.classList.add('hidden');
+                }
             });
-        if(user.customPhotoUrl) {
-            imageDisplay.src = user.customPhotoUrl;
-        }
-        //check if user has a photo, and add it to imageDisplay
 
         fileUpload.addEventListener('change', e => {
             const file = e.target.files[0];
             console.log(file);
 
             photoForm.addEventListener('submit', event => {
-                console.log('submit form');
                 event.preventDefault();
                 const folderName = user.uid + '/';
                 const fileName = 'avatar';
