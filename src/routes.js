@@ -19,6 +19,15 @@ if(routeUrl === 'forest-park') {
 else if(routeUrl === 'other') {
     routeOptions = otherOptions;
 }
-routeOptions = forestParkOptions;
+else {
+    routeOptions = forestParkOptions;
+}
 
 loadRoutes(routeOptions);
+
+const minMiles = document.getElementById('min-miles');
+const maxMiles = document.getElementById('max-miles');
+const minElevation = document.getElementById('min-elevation');
+const maxElevation = document.getElementById('max-elevation');
+const bathroomFilter = document.getElementById('bathroom');
+const familyFilter = document.getElementById('family');

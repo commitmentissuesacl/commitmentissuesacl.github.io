@@ -16,3 +16,4 @@ To do:
 -make responsive
 -INTERNS (hot)
 -imageMap and thumbnailMap: are they the same? Can we combine them?
+-Other properties in routes we can get rid of: favorite, completed, etc
