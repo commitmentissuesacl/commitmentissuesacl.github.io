@@ -1,5 +1,4 @@
-<!-- new version of route.html -->
-<!-- updated version at route-detail.html -->
+<!-- new version of map.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,10 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Route Details</title>
+    <title>Favorites</title>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600|Roboto:400,400i,700,700i|Shrikhand"
         rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="icon" type="image/png" href="assets/favicon.png" />
 
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
@@ -18,13 +18,23 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
 </head>
 
-<body id="page-body">
+<body>
     <div id="header-container"></div>
 
-    <main id="main"></main>
+    <main>
+        <section class="hero">
+            <h2>Favorites</span></h2>
+        </section>
 
+        <section class="run-container-all" id="run-container-all"></section>
+        <section id="no-favorites-container">
+            <p>You have not selected any favorite runs yet!</p>
+        </section>
+
+    </main>
+    
     <div id="footer-container"></div>
 
-    <script type="module" src="src/route-detail.js"></script>
+    <script type="module" src="src/favorites.js"></script>
 </body>
 </html>

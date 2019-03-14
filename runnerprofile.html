@@ -8,21 +8,14 @@
     <title>Runner Details</title>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
 </head>
 
 <body>
-    <header>
-        <section class="header-container">
-            <nav class="nav-container">
-                <a href="index.html"><img src="assets/boundless-logo.svg" alt="Logo" id="logo-image"></a>
-                <a href="" id="map-nav" class="header-nav">All Routes</a>
-                <a href="aboutus.html" class="header-nav">About Us</a>
-            </nav>
-            <section id="user-name-container">
-                <a href="runnerprofile.html"><span id="user-name-display"></span></a>
-            </section>
-        </section>
-    </header>
+    <div id="header-container"></div>
 
     <main id="user-info-main">
         <h3>Update your profile</h3>
@@ -58,12 +51,7 @@
         </form>
     </main>
 
-    <footer class="footer">
-        <section id="footer-container">
-            <img src="assets/boundless-logo-white.svg" id="footer-logo">
-            <p id="footer-copyright">&copy; Commitment Issues 2019</p>
-        </section>
-    </footer>
+    <div id="footer-container"></div>
 
     <script type="module" src="src/runner-profile.js"></script>
 </body>

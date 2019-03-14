@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
     <title>The Runs</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600|Roboto:400,400i,700,700i|Shrikhand"
         rel="stylesheet">
@@ -12,6 +12,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 </head>
@@ -28,7 +29,10 @@
     <main class="index-container">
         <h1>find your next favorite run</h1>
 
-        <section class="index-forms">
+        <section id="firebaseui-auth-container"></section>
+        <p><a href="routes.html">Continue as Guest</a></p>
+
+        <!-- <section class="index-forms">
             <form id="user-name" class="user-name">
                 <input type="text" id="name" name="name" label="enter name" placeholder="Enter Name" autocomplete="off"
                     required>
@@ -42,7 +46,7 @@
                     <option value="other">Other</option>
                 </select>
             </form>
-        </section>
+        </section> -->
     </main>
 
     <script type="module" src="./src/index.js"></script>

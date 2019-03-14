@@ -1,26 +1,13 @@
 import forestParkOptions from './routes/forest-park.js';
-import otherOptions from './routes/other.js';
+import { loadHeader, loadFooter } from './header-template.js';
+import { toggleFavorite } from './favorite-component.js';
 
-const mapNav = document.getElementById('map-nav');
-const userNameDisplay = document.getElementById('user-name-display');
+loadHeader();
+loadFooter();
 
-const userJson = window.localStorage.getItem('user');
-if(!userJson) {
-    window.location = 'index.html';
-}
-
-const user = JSON.parse(userJson);
 let routeOptions = null;
 
-mapNav.href = 'routes.html?destination=' + encodeURIComponent(user.destination);
-userNameDisplay.textContent = user.name;
-
-if(user.destination === 'forest-park') {
-    routeOptions = forestParkOptions;
-}
-else {
-    routeOptions = otherOptions;
-}
+routeOptions = forestParkOptions;
 
 const urlParams = new URLSearchParams(window.location.search);
 const routeId = urlParams.get('routeid');
@@ -36,6 +23,10 @@ for(let i = 0; i < routeOptions.length; i++) {
 const main = document.getElementById('main');
 const dom = makeRouteDetail(route);
 main.appendChild(dom);
+
+const favoriteIcon = document.getElementById('favorite-icon');
+
+toggleFavorite(route, favoriteIcon);
 
 
 function makeRouteDetail(route) {
@@ -56,6 +47,7 @@ function makeRouteDetail(route) {
                     <h4>${route.distance} miles</h4>
                     <h4>${route.elevation} feet</h4>
                     <h5>${route.gpsCoordinates}</h5>
+                    <img src="assets/fav-unselected.svg" title="favorite" id="favorite-icon">
                     <p>${route.description}</p>
                 </section>
             </section>
@@ -79,3 +71,14 @@ function makeRouteDetail(route) {
     `;
     return template.content;
 }
+
+
+// FUNCTIONALITY FOR ADDITIONAL DESTINATIONS - TO COME UPON GROWTH OF PROJECT
+
+// import otherOptions from './routes/other.js';
+// if(user.destination === 'forest-park') {
+//     routeOptions = forestParkOptions;
+// }
+// else {
+//     routeOptions = otherOptions;
+// }

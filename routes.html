@@ -6,35 +6,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>New Map Page</title>
+    <title>All Routes</title>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600|Roboto:400,400i,700,700i|Shrikhand"
         rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="icon" type="image/png" href="assets/favicon.png" />
 
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
 </head>
 
 <body>
-    <header class="header">
-        <section class="header-container">
-            <nav class="nav-container">
-                <a href="index.html"><img src="assets/boundless-logo.svg" alt="Logo" id="logo-image"></a>
-                <a href="" id="map-nav" class="header-nav">All Routes</a>
-                <a href="aboutus.html" class="header-nav">About Us</a>
-            </nav>
-            <section id="user-name-container">
-                <a href="runnerprofile.html"><span id="user-name-display"></span></a>
-            </section>
-        </section>
-    </header>
+    <div id="header-container"></div>
 
     <main>
-        <!-- <section class="hero">
+        <section class="hero">
             <h2>"Of all the paths you take in life, make sure a few of them are dirt."<br><span class="muir">- John Muir</span></h2>
-        </section> -->
-
-
+        </section>
 
         <section class="filters">
             <section class="filters-container">
@@ -64,16 +54,12 @@
             </section>
         </section>
 
-        <section class="run-container-all" id="run-container-all">
-        </section>
+        <section class="run-container-all" id="run-container-all"></section>
 
     </main>
-    <footer class="footer">
-        <section id="footer-container">
-            <img src="assets/boundless-logo-white.svg" id="footer-logo">
-            <p id="footer-copyright">&copy; Commitment Issues 2019</p>
-        </section>
-    </footer>
+    
+    <div id="footer-container"></div>
+
     <script type="module" src="src/routes.js"></script>
 </body>
 </html>
