@@ -6,6 +6,10 @@
 
 
 To do:
+-upload photo: set up firebase storage
+-loading spinner
+-save run times
+-comments?
 -sort (in module load-sort)
 -filter (in module load-filter)
 -make responsive
