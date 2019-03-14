@@ -1,0 +1,281 @@
+@import "compass/css3";
+
+/* HERO IMAGE */
+
+.hero {
+    background-image: url(../assets/maps-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h2 {
+    color: #fff;
+    text-transform: uppercase;
+    width: 780px;
+    text-align: center;
+    
+}
+
+.muir {
+    font-size: .75em;
+    text-transform: capitalize;
+}
+
+/* FILTERS */
+/* 
+.filters {
+    background-color: #496b73;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 2px #769096;
+}
+
+.filters-container {
+    display: flex;
+    width: 1180px;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    color: #e8e8e8;
+}
+
+#miles-filter {
+    width: 320px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#elevation-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    position: relative;
+    left: -20px;
+}
+
+.filter-text {
+    position: relative;
+    top: -1px;
+    left: 4px;
+}
+
+.filter-input {
+    margin-left: 10px;
+}
+
+#filter-form {
+    width: 300px;
+    margin-right: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 18px;
+    height: 18px;
+    border: 2px solid #cbccce;
+    border-radius: 100%;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 12px;
+    position: relative;
+    top: 3px;
+}
+
+.checkbox:checked {
+    border: 6px solid #f26522;
+}
+
+.input-range {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+
+   width: 60px;
+   height: 23px;
+   border: 2px solid #cbccce;
+   border-radius: 4px;
+   background-color: #e8e8e8;
+   color: #414042;
+   transition: 0.2s all linear;
+   outline: none;
+   padding: 0 5px 0 5px;
+   font-size: .8em;
+   position: relative;
+   top: 0px;
+   margin: 0 3px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance: textfield; 
+} */
+
+
+/* RUNS */
+
+.display-photo {
+    width: 200px;
+}
+
+.run-container-all {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.run-container {
+    background-color: #f4f4f4;
+    border: 1px solid #cbccce;
+    margin: 10px 0;
+    width: 1180px;
+    display: flex;
+    height: 280px;
+    opacity: 1;
+    animation: fade 1s;
+    border-radius: 4px;
+    overflow: hidden;
+
+    transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out;
+}
+
+.run-container:hover {
+    background-color: #E8E8E8;
+
+    transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out;
+}
+
+.image-container {
+    height: 280px;
+    width: 280px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #cbccce;
+}
+
+.display-photo {
+    width: 280px;
+}
+
+.run-info-container p {
+    margin-top: 20px;
+    /* hide text if it more than N lines  */
+    overflow: hidden;
+    /* for set '...' in absolute position */
+    position: relative; 
+    /* use this value to count block height */
+    line-height: 1.3em;
+    /* max-height = line-height (1.2) * lines max number (3) */
+    max-height: 6.5em; 
+    /* fix problem when last visible word doesn't adjoin right side  */
+    /* text-align: justify;   */
+    /* place for '...' */
+    /* margin-right: -1em;
+    padding-right: 1em; */
+  }
+
+.run-info-container {
+    padding: 15px 20px 20px;
+    width: 100%;
+    overflow: hidden;
+} 
+
+.run-icon-container {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+} 
+
+.thumbnail-map {
+    border: 1px solid #cbccce;
+    height: 190px;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1200px) {
+    .run-container-all {
+        width: 100%;
+    }
+    
+    .run-container {
+        width: calc(100% - 40px);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .run-icon-container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .hero h2 {
+        color: #fff;
+        text-transform: uppercase;
+        width: calc(100% - 40px);
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .run-container {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .image-container {
+        height: 160px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #cbccce;
+        border-right: none;
+    }
+
+    .image-container img {
+        width: 100%;
+    }
+
+    .run-info-container {
+        padding: 10px 20px 20px;
+        width: calc(100% - 40px);
+    } 
+}
+
+@media only screen and (max-width: 510px) {
+    .hero h2 {
+        font-size: 2.2em;
+    }
+
+    .run-container {
+        width: 100%;
+    }
+}

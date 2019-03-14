@@ -1,13 +1,13 @@
 import { auth, usersRef } from './firebase/firebase.js';
 
 export default function makeNavigationTemplate() {
-    const dom = `
+    const dom = /*html*/`
     <header class="header">
         <section class="header-container">
             <nav class="nav-container">
                 <a href="routes.html"><img src="assets/boundless-logo.svg" alt="Logo" id="logo-image"></a>
                 <a href="routes.html" id="map-nav" class="header-nav">All Routes</a>
-                <a href="favorites.html" id="favorites-nav">Favorites</a>
+                <a href="favorites.html" id="favorites-nav" class="header-nav">Favorites</a>
                 <a href="aboutus.html" class="header-nav">About Us</a>
             </nav>
         </section>
@@ -17,9 +17,10 @@ export default function makeNavigationTemplate() {
     template.innerHTML = dom;
     return template.content;
 }
+
 export function makeFooter() {
     const template = document.createElement('template');
-    template.innerHTML = `
+    template.innerHTML = /*html*/`
         <footer class="footer">
             <section id="footer-container">
                 <img src="assets/boundless-logo-white.svg" id="footer-logo">
@@ -55,11 +56,22 @@ export function loadFooter() {
 export function updateUserNameDisplay(user) {
     const template = document.createElement('template');
     const avatar = user.customPhotoURL || user.photoURL || ''; 
-    template.innerHTML = `
+    template.innerHTML = /*html*/`
         <section id="user-name-container">
-            <img src="${avatar}" id="user-avatar">
-            <a href="runnerprofile.html"><span id="user-name-display">${user.displayName}</span></a>
-            <span id="logout">Logout</span>
+
+            <div id="user-avatar-and-name" class="pointer drop-down-menu">
+                <div id="user-avatar-container" >
+                    <img src="${avatar}" id="user-avatar">
+                </div>
+                <span id="user-name-display">${user.displayName}</span>
+            </div>
+
+            <ul class="drop-down-content">
+                <li><a href="runnerprofile.html">Updated Your Profile</a>
+                <li><span id="logout" class="pointer">Logout</span>
+            </ul>
+
+
         </section>
     `; 
     return template.content;   
@@ -68,16 +80,16 @@ export function updateUserNameDisplay(user) {
 function noUserNameDisplay() {
 
     const template = document.createElement('template');
-    template.innerHTML = `
+    template.innerHTML = /*html*/`
         <section id="user-name-container">
-            <span id="login">Login</span>
+            <span id="login" class="pointer">Login</span>
         </section>
     `;
 
     return template.content;
 }
 
-const headerContainer = document.getElementById('header-container');
+const headerContainer = document.getElementById('header-container-wrapper');
 
 export function loadHeader() {
     const dom = makeNavigationTemplate();

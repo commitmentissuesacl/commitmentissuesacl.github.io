@@ -1,0 +1,107 @@
+#header-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border-bottom: 2px solid #f26522;
+    font-size: .8em;
+}
+
+#header-container-wrapper {
+    width: 1180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-section a {
+    text-decoration: none;
+}
+
+#header-section a:hover {
+    text-decoration: underline;
+    text-decoration-color: #f26522;
+}
+
+.nav-container {
+    height: 80px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav {
+    margin-left: 40px;
+}
+
+#user-name-container {
+    background-color: aqua;
+}
+
+#logo-image {
+    height: 45px;
+    position: relative;
+    top: 3px;
+    opacity: 1;
+}
+
+#user-name-container {
+    display: block;
+}
+
+#user-avatar-and-name {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#user-avatar-container {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+#user-avatar {
+    width: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.drop-down-content {
+    list-style-type: none;
+    padding: 10px 20px;
+    /* display: none; */
+}
+
+#user-avatar-and-name:hover .drop-down-content {
+    display: block;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 550px) {
+    .nav-container {
+        width: 300px;
+    }
+    
+    #logo-image {
+        height: 35px;
+    }
+}
+
+/* THIS WILL BE CHANGED */
+@media only screen and (max-width: 510px) {
+    .header-nav {
+        display: none;
+    }
+
+    .nav-container {
+        width: 100%;
+    }
+}

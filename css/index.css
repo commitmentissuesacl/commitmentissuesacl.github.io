@@ -1,0 +1,259 @@
+.index-link {
+    color: #fff;
+    font-size: .8em;
+    text-decoration: none;
+}
+
+.index-link:hover {
+    text-decoration: underline;
+}
+
+#logo-image-index {
+    height: 40px;
+}
+
+#logo-image-index:hover {
+    opacity: 1;
+}
+
+.index-container {
+    background-color: transparent;
+}
+
+.index-background {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/index-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#index-container-all {
+    width: 1200px;
+    height: 100vh;
+}
+
+.index-header {
+    display: flex;
+    height: 60px;
+    margin: 20px 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    opacity: 1;
+    animation: fade 2s;
+    border: none;
+}
+
+#user-name-display {
+    opacity: 1;
+    animation: fade 1s;
+    font-size: .8em;
+}
+
+.user-name-display-index {
+    color: #fff;
+}
+
+.index-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    margin: 0 20px;
+    opacity: 1;
+    animation: fade 2s;
+    position: relative;
+    top: 20px;
+}
+
+.index-container h1 {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    bottom: 40px;
+}
+
+
+.user-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#name {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 40px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    border: none;
+    background-color: rgba(0, 0, 0, .5);
+    border-bottom: 2px solid #fff;
+    transition: 0.2s all linear;
+    outline: none;
+    padding: 0 5px 0 5px;
+    font-size: .8em;
+    text-align: center;
+    color: #fff;
+    
+    position: relative;
+    top: 2px;
+}
+
+#name:focus {
+    border-bottom: 2px solid #f26522;
+}
+
+#name::placeholder {
+    color: rgba(255, 255, 255, .75);
+}
+
+#submit {
+    width: 180px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: .7em;
+    font-weight: 500;
+    justify-content: center;
+    outline: none;
+    background-color: #fff;
+    color: black;
+    border: 0px;
+
+    -webkit-transition: background-color .2s ease-in-out,color .2s ease-in-out;
+    transition: background-color .2s ease-in-out,color .2s ease-in-out;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: #f26522;
+    color: #fff;
+}
+
+#submit:active {
+    transform: translateY(1px);
+}
+
+#destination-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#destination-dropdown {
+    -webkit-border-radius: 0px;  
+
+    width: 310px;
+    height: 30px;
+    color: #000; 
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    padding: 0 5px 0 5px;
+    font-size: .8em;
+    border-radius: 0px;
+    outline: none;
+    background-color: rgba(0, 0, 0, .5);
+    position: relative;
+    top: 5px;
+    margin-bottom: 71px;
+    opacity: 1;
+    animation: fade 1s;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1200px) {
+    #index-container-all {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .index-container h1 {
+        max-width: 600px;
+        line-height: 1.2em;
+    }
+    
+    .index-container {
+        position: static;
+    }
+}
+
+@media only screen and (max-width: 405px) {
+    .index-container h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    #name {
+        width: 200px;
+    }
+    
+    #destination-dropdown {
+        width: 210px;
+    }
+    
+    .index-container h1 {
+        font-size: 2.3em;
+    }
+}
+
+@media only screen and (max-height: 400px) {
+    .index-container h1 {
+        position: relative;
+        bottom: 20px;
+    }
+
+    .index-container {
+        height: 70vh;
+    }
+
+    .index-header {
+        display: flex;
+        height: 50px;
+        margin: 20px 20px 10px 20px;
+    }
+
+    #name {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (min-height: 820px) {
+    .index-container h1 {
+        font-size: 4em;
+    }
+}
+
+@media only screen and (min-height: 1200px) {
+    .index-container h1 {
+        font-size: 5em;
+    }
+}
+
+@media only screen and (orientation:landscape) { 
+    .index-container {
+        height: 75vh;
+    }
+}
+
+@media screen and (min-height: 700px) and (orientation:landscape) { 
+    .index-container {
+        height: 85vh;
+    }
+}
