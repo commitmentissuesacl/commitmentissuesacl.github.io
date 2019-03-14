@@ -1,21 +1,41 @@
 import { loadHeader, loadFooter } from './header-template.js';
+import { auth } from './firebase/firebase.js';
 
 loadHeader();
 loadFooter();
 
 const fileUpload = document.getElementById('avatar-upload');
+const imageDisplay = document.getElementById('image-display');
 
-//check for user, if none redirect
-//if user, get user id for file name
-//upload file with userName = user id
 //store reference to file in user database object
+//display photo in header and on upload page
 
-fileUpload.addEventListener('change', event => {
-    const file = event.target.files[0];
-    const fileName = 'userID';
-    const ref = firebase.storage().ref('custom-avatar/' + fileName);
-    ref.put(file);
+auth.onAuthStateChanged(user => {
+    if(!user) {
+        window.location = 'routes.html';
+    }
+    else {
+        console.log(user.uid);
+        fileUpload.addEventListener('change', event => {
+            const file = event.target.files[0];
+            const folderName = user.uid + '/';
+            const fileName = 'avatar';
+            const ref = firebase.storage().ref(folderName + fileName);
+            const uploadTask = ref.put(file);
+
+            uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, 
+                function() {
+                // Upload completed successfully, now we can get the download URL
+                    uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                        console.log('File available at', downloadURL);
+                        imageDisplay.src = downloadURL;
+                    });
+                });
+        });
+
+    }
 });
+
 
 // const name = document.getElementById('input-name');
 // const age = document.getElementById('age');
