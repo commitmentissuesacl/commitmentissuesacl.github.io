@@ -1,5 +1,5 @@
 import { loadHeader, loadFooter } from './header-template.js';
-import { auth } from './firebase/firebase.js';
+import { auth, usersRef } from './firebase/firebase.js';
 
 loadHeader();
 loadFooter();
@@ -15,7 +15,14 @@ auth.onAuthStateChanged(user => {
     if(!user) {
         window.location = 'routes.html';
     }
+
     else {
+        console.log(user.customPhotoUrl);
+        if(user.customPhotoUrl) {
+            imageDisplay.src = user.customPhotoUrl;
+        }
+        //check if user has a photo, and add it to imageDisplay
+
         fileUpload.addEventListener('change', e => {
             const file = e.target.files[0];
             console.log(file);
@@ -30,17 +37,24 @@ auth.onAuthStateChanged(user => {
     
                 uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, 
                     function() {
-                    // Upload completed successfully, now we can get the download URL
                         uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
                             console.log('File available at', downloadURL);
                             imageDisplay.src = downloadURL;
                             imageDisplay.classList.remove('hidden');
+                            //put download url into user database info
+                            //THIS DOESN'T WORK
+                            usersRef.child(user.uid)
+                                .push({
+                                    customPhotoURL: downloadURL
+                                });
                         });
+
                     });
             });
-        });
 
+        });
     }
+
 });
 
 
