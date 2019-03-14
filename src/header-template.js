@@ -64,12 +64,13 @@ export function updateUserNameDisplay(user) {
                     <img src="${avatar}" id="user-avatar">
                 </div>
                 <span id="user-name-display">${user.displayName}</span>
+                
+                <ul class="drop-down-content">
+                    <li><a href="runnerprofile.html">Update Profile</a>
+                    <li><span id="logout" class="pointer text-decoration">Logout</span>
+                </ul>
             </div>
 
-            <ul class="drop-down-content">
-                <li><a href="runnerprofile.html">Updated Your Profile</a>
-                <li><span id="logout" class="pointer">Logout</span>
-            </ul>
 
 
         </section>
@@ -82,7 +83,7 @@ function noUserNameDisplay() {
     const template = document.createElement('template');
     template.innerHTML = /*html*/`
         <section id="user-name-container">
-            <span id="login" class="pointer">Login</span>
+            <span id="login" class="pointer text-decoration">Login</span>
         </section>
     `;
 

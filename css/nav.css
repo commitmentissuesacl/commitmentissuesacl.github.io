@@ -8,7 +8,8 @@
 }
 
 #header-container-wrapper {
-    width: 1180px;
+    padding: 0 20px;
+    width: 1220px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +26,6 @@
 
 .nav-container {
     height: 80px;
-    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,7 +36,8 @@
 }
 
 #user-name-container {
-    background-color: aqua;
+    margin-top: 20px;
+    align-self: flex-start;
 }
 
 #logo-image {
@@ -44,16 +45,6 @@
     position: relative;
     top: 3px;
     opacity: 1;
-}
-
-#user-name-container {
-    display: block;
-}
-
-#user-avatar-and-name {
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
 }
 
 #user-avatar-container {
@@ -72,14 +63,46 @@
     cursor: pointer;
 }
 
+.text-decoration {
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;
+}
+
+.text-decoration:hover {
+    text-decoration: underline;
+    text-decoration-color: #f26522;
+}
+
+#user-avatar-and-name {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+
+
 .drop-down-content {
     list-style-type: none;
-    padding: 10px 20px;
-    /* display: none; */
+    padding: 5px 20px;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    width: 100px;
+    background-color: white;
+    display: none;
+    text-align: center;
 }
 
 #user-avatar-and-name:hover .drop-down-content {
     display: block;
+}
+
+.drop-down-content li {
+    padding: 10px 0;
 }
 
 
