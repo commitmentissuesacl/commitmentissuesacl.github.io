@@ -33,7 +33,6 @@ auth.onAuthStateChanged(user => {
 
         fileUpload.addEventListener('change', e => {
             const file = e.target.files[0];
-            console.log(file);
 
             photoForm.addEventListener('submit', event => {
                 event.preventDefault();
@@ -45,11 +44,8 @@ auth.onAuthStateChanged(user => {
                 uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, 
                     function() {
                         uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-                            console.log('File available at', downloadURL);
                             imageDisplay.src = downloadURL;
                             imageDisplay.classList.remove('hidden');
-                            //put download url into user database info
-                            //THIS DOESN'T WORK
                             usersRef.child(user.uid)
                                 .update({
                                     customPhotoURL: downloadURL
