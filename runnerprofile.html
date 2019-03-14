@@ -22,9 +22,14 @@
 
             <label for="avatar">Choose a profile picture:</label>
 
-            <input type="file" id="avatar-upload" name="avatar" accept="image/png, image/jpeg">
-            
-            <img src="" id="image-display">
+            <form id="photo-form">        
+                <input type="file" id="avatar-upload" name="avatar" accept="image/png, image/jpeg">
+                <button>Upload</button>
+            </form>
+
+            <img src="" id="image-display" class="hidden">
+
+
 
         <!-- <h3>Update your profile</h3>
         <form id="user-info">

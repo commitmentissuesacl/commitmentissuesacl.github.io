@@ -6,6 +6,7 @@ loadFooter();
 
 const fileUpload = document.getElementById('avatar-upload');
 const imageDisplay = document.getElementById('image-display');
+const photoForm = document.getElementById('photo-form');
 
 //store reference to file in user database object
 //display photo in header and on upload page
@@ -15,22 +16,28 @@ auth.onAuthStateChanged(user => {
         window.location = 'routes.html';
     }
     else {
-        console.log(user.uid);
-        fileUpload.addEventListener('change', event => {
-            const file = event.target.files[0];
-            const folderName = user.uid + '/';
-            const fileName = 'avatar';
-            const ref = firebase.storage().ref(folderName + fileName);
-            const uploadTask = ref.put(file);
+        fileUpload.addEventListener('change', e => {
+            const file = e.target.files[0];
+            console.log(file);
 
-            uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, 
-                function() {
-                // Upload completed successfully, now we can get the download URL
-                    uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-                        console.log('File available at', downloadURL);
-                        imageDisplay.src = downloadURL;
+            photoForm.addEventListener('submit', event => {
+                console.log('submit form');
+                event.preventDefault();
+                const folderName = user.uid + '/';
+                const fileName = 'avatar';
+                const ref = firebase.storage().ref(folderName + fileName);
+                const uploadTask = ref.put(file);
+    
+                uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, 
+                    function() {
+                    // Upload completed successfully, now we can get the download URL
+                        uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                            console.log('File available at', downloadURL);
+                            imageDisplay.src = downloadURL;
+                            imageDisplay.classList.remove('hidden');
+                        });
                     });
-                });
+            });
         });
 
     }
