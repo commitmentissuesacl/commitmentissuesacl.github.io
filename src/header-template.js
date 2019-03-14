@@ -1,4 +1,4 @@
-import { auth } from './firebase/firebase.js';
+import { auth, usersRef } from './firebase/firebase.js';
 
 export default function makeNavigationTemplate() {
     const dom = `
@@ -54,18 +54,15 @@ export function loadFooter() {
 
 export function updateUserNameDisplay(user) {
     const template = document.createElement('template');
-    const avatar = user.photoURL || '';
-
-    
+    const avatar = user.customPhotoURL || user.photoURL || ''; 
     template.innerHTML = `
-    <section id="user-name-container">
-    <img src="${avatar}" id="user-avatar">
-    <a href="runnerprofile.html"><span id="user-name-display">${user.displayName}</span></a>
-    <span id="logout">Logout</span>
-    </section>
-    `;
-    
-    return template.content;
+        <section id="user-name-container">
+            <img src="${avatar}" id="user-avatar">
+            <a href="runnerprofile.html"><span id="user-name-display">${user.displayName}</span></a>
+            <span id="logout">Logout</span>
+        </section>
+    `; 
+    return template.content;   
 }
 
 function noUserNameDisplay() {
@@ -90,14 +87,18 @@ export function loadHeader() {
 
     auth.onAuthStateChanged(user => {
         if(user) {
-            const userInfo = updateUserNameDisplay(user);
             favoritesNav.classList.remove('hidden');
-            headerContainer.appendChild(userInfo);
-            const logOut = document.getElementById('logout');
-            logOut.addEventListener('click', () => {
-                auth.signOut();
-                window.location = 'index.html';
-            });
+            usersRef.child(user.uid).once('value')
+                .then(snapshot => {
+                    const user = snapshot.val();
+                    const userHeaderInfo = updateUserNameDisplay(user);
+                    headerContainer.appendChild(userHeaderInfo);
+                    const logOut = document.getElementById('logout');
+                    logOut.addEventListener('click', () => {
+                        auth.signOut();
+                        window.location = 'index.html';
+                    });
+                });
         }
         else {
             const noUserInfo = noUserNameDisplay();

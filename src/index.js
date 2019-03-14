@@ -20,10 +20,10 @@ ui.start('#firebaseui-auth-container', {
         signInSuccessWithAuthResult(authResult) {
             const user = authResult.user;
             usersRef.child(user.uid)
-                .set({
+                .update({
                     uid: user.uid,
                     displayName: user.displayName,
-                    photoURL: user.photoURL
+                    photoURL: user.photoURL || null,
                 });
             return true;
         }

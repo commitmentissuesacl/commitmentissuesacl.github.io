@@ -12,18 +12,31 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-storage.js"></script>
 </head>
 
 <body>
     <div id="header-container"></div>
 
     <main id="user-info-main">
+
+            <label for="avatar">Choose a profile picture:</label>
+
+            <form id="photo-form">        
+                <input type="file" id="avatar-upload" name="avatar" accept="image/png, image/jpeg">
+                <button>Upload</button>
+            </form>
+
+            <img src="" id="image-display" class="hidden">
+
+
+
         <h3>Update your profile</h3>
         <form id="user-info">
             <section id="user-info-container">
                 <section class="user-info-input">
                     <label>Name:
-                        <input type="text" id="input-name" name="input-name" class="user-input-range">
+                        <span id="name-display-profile-page">[User name will go here]</span>
                     </label>
                 </section>
                 <section class="user-info-input">

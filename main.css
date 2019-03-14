@@ -43,7 +43,15 @@ h5 {
 }
 
 #firebaseui-auth-container {
-    background: white;
+    background: rgba(255, 255, 255, .25);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+}
+
+#guest a {
+    color: white;
+    text-decoration: none;
 }
 
 #user-avatar {
@@ -728,6 +736,15 @@ input[type=number] {
  #user-info button {
      background: #769096;
      color: #f4f4f4;
+ }
+
+
+ /* THIS IS NOT THE WAY TO STYLE THIS!!! Set the width and height of a container with overflow hidden then put the image inside container */
+ #image-display {
+     width: 200px;
+     height: 200px;
+     margin: 20px;
+     border-radius: 100%;
  }
 
 /* DO NOT DELETE BECAUSE YOU'll RUIN OUR FILTERS!!! */

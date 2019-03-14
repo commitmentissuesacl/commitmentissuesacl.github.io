@@ -6,12 +6,13 @@
 
 
 To do:
--Header and footer template functions
--link new routes and route-detail pages to app to replace map and route
--sort (in module load-sort)
+-style user info page
 -filter (in module load-filter)
+-loading spinner
+-use form to add more user info to db
+-save run times
+-comments?
+-sort (in module load-sort)
 -make responsive
 -INTERNS (hot)
 -imageMap and thumbnailMap: are they the same? Can we combine them?
-
-NEXT: add header template function to js, authentication/get user, make favorites
