@@ -17,7 +17,12 @@ auth.onAuthStateChanged(user => {
     }
 
     else {
-        console.log(user.customPhotoUrl);
+        usersRef.child(user.uid).once('value')
+            .then(snapshot => {
+                const value = snapshot.val();
+                const customPhotoURL = value.customPhotoURL;
+                console.log(customPhotoURL);
+            });
         if(user.customPhotoUrl) {
             imageDisplay.src = user.customPhotoUrl;
         }
@@ -44,7 +49,7 @@ auth.onAuthStateChanged(user => {
                             //put download url into user database info
                             //THIS DOESN'T WORK
                             usersRef.child(user.uid)
-                                .push({
+                                .update({
                                     customPhotoURL: downloadURL
                                 });
                         });
