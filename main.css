@@ -51,9 +51,12 @@ h5 {
     border-radius: 100%;
 }
 
+footer a {
+    color: #fff;
+}
+
 a {
     color: #404041;
-
     -o-transition:.2s;
     -ms-transition:.2s;
     -moz-transition:.2s;

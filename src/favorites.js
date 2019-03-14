@@ -10,18 +10,23 @@ loadHeader();
 loadFooter();
 
 auth.onAuthStateChanged(user => {
-    const userFavoritesRef = favoritesByUserRef.child(user.uid);
-    userFavoritesRef.on('value', snapshot => {
-        const value = snapshot.val();
-        if(!value) {
-            console.log('no favorites');
-            noFavorites.classList.remove('hidden');
-            loadRoutes([]);
-        }
-        else {
-            noFavorites.classList.add('hidden');
-            const routes = objectToArray(value);
-            loadRoutes(routes);
-        }
-    });
+    if(!user){
+        window.location = 'routes.html';
+    }
+    else {
+        const userFavoritesRef = favoritesByUserRef.child(user.uid);
+        userFavoritesRef.on('value', snapshot => {
+            const value = snapshot.val();
+            if(!value) {
+                console.log('no favorites');
+                noFavorites.classList.remove('hidden');
+                loadRoutes([]);
+            }
+            else {
+                noFavorites.classList.add('hidden');
+                const routes = objectToArray(value);
+                loadRoutes(routes);
+            }
+        });
+    }
 });

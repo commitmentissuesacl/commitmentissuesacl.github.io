@@ -23,6 +23,9 @@ export function makeFooter() {
         <footer class="footer">
             <section id="footer-container">
                 <img src="assets/boundless-logo-white.svg" id="footer-logo">
+                <a href="routes.html" id="map-nav" class="header-nav">All Routes</a>
+                <a href="favorites.html" id="footer-favorites-nav">Favorites</a>
+                <a href="aboutus.html" class="header-nav">About Us</a>
                 <p id="footer-copyright">&copy; Commitment Issues 2019</p>
             </section>
         </footer>
@@ -36,6 +39,17 @@ const footerContainer = document.getElementById('footer-container');
 export function loadFooter() {
     const dom = makeFooter();
     footerContainer.appendChild(dom);
+
+    const footerFavoritesNav = document.getElementById('footer-favorites-nav');
+
+    auth.onAuthStateChanged(user => {
+        if(user) {
+            footerFavoritesNav.classList.remove('hidden');
+        }
+        else {
+            footerFavoritesNav.classList.add('hidden');
+        }
+    });
 }
 
 export function updateUserNameDisplay(user) {
