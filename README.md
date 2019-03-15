@@ -7,7 +7,6 @@
 
 To do:
 -style user info page
--filter (in module load-filter)
 -loading spinner
 -use form to add more user info to db
 -save run times
