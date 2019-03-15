@@ -13,6 +13,7 @@ const age = document.getElementById('age');
 const gender = document.getElementById('gender');
 const location = document.getElementById('location');
 const form = document.getElementById('user-info');
+const userProfileSubmittedMessage = document.getElementById('user-profile-submitted-message');
 
 auth.onAuthStateChanged(user => {
     if(!user) {
@@ -70,11 +71,14 @@ auth.onAuthStateChanged(user => {
                     gender: formData.get('gender'),
                     location: formData.get('location')
                 });
-            window.alert('User info updated');     
+            userProfileSubmittedMessage.classList.remove('invisible');
+            userProfileSubmittedMessage.classList.add('visible');
+            setTimeout(() => {
+                userProfileSubmittedMessage.classList.remove('visible');
+                userProfileSubmittedMessage.classList.add('invisible');
+            }, 4000);  
         });
-
     }
-
 });
 
 
