@@ -12,7 +12,8 @@ ui.start('#firebaseui-auth-container', {
     signInOptions: [
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        firebase.auth.TwitterAuthProvider.PROVIDER_ID
+        firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
     ],
     signInSuccessUrl: './routes.html?destination=forest-park',
     credentialHelper: firebaseui.auth.CredentialHelper.NONE,

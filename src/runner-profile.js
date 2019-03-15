@@ -21,7 +21,6 @@ auth.onAuthStateChanged(user => {
     }
 
     else {
-        //get custom photo from user database info
         usersRef.child(user.uid).once('value')
             .then(snapshot => {
                 const value = snapshot.val();
@@ -42,17 +41,15 @@ auth.onAuthStateChanged(user => {
                     imageDisplay.classList.add('hidden');
                 }
             });
-        //get file from user
         fileUpload.addEventListener('change', e => {
             const file = e.target.files[0];
-            //add file to storage
             photoForm.addEventListener('submit', event => {
                 event.preventDefault();
                 const folderName = user.uid + '/';
                 const fileName = 'avatar';
                 const ref = firebase.storage().ref(folderName + fileName);
                 const uploadTask = ref.put(file);
-                //add reference to photo to user database
+                
                 uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, 
                     function() {
                         uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
