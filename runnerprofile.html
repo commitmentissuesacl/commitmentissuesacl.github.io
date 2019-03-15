@@ -30,34 +30,36 @@
         <form id="user-info">
             <section id="user-info-container">
                     
-                    <label for="avatar">Choose a profile picture:</label>
-            
-                    <section id="image-display-container">
-                        <img src="" id="image-display" class="hidden">
-                    </section>
-            
-                    <form id="photo-form">        
-                        <input type="file" id="avatar-upload" name="avatar" accept="image/png, image/jpeg">
-                        <button>Upload</button>
-                    </form>
+                <label for="avatar">Upload a profile picture:</label>
+        
+                <section id="image-display-container">
+                    <img src="" id="image-display" class="hidden">
+                </section>
+        
+                <form id="photo-form">        
+                    <input type="file" id="avatar-upload" name="avatar" accept="image/png, image/jpeg">
+                    <button class="user-info-button">Upload</button>
+                </form>
+
+                <hr>
                     
                 <section class="user-info-input">
-                    <label>Name:
+                    <label>Name
                         <span id="name-display-profile-page">[User name will go here]</span>
                     </label>
                 </section>
                 <section class="user-info-input">
-                    <label>Age:
+                    <label>Age
                         <input type="number" id="age" name="age" min="1" class="user-input-range">
                     </label>
                 </section>
                 <section class="user-info-input">
-                    <label>Location:
+                    <label>Location
                         <input type="text" id="location" name="location" class="user-input-range">
                     </label>
                 </section>
                 <section class="user-info-input">
-                    <label>Gender:
+                    <label>Gender
                         <select id="gender" name="gender">
                             <option value="" selected></option>
                             <option value="female">Female</option>
@@ -66,7 +68,7 @@
                         </select>
                     </label>
                 </section>
-                <button id="submit">SUBMIT</button>
+                <button id="submit" class="user-info-button">SUBMIT</button>
                 
             </section>
         </form>
