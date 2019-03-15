@@ -7,7 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Runner Details</title>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./css/runner-profile.css">
+
 
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-auth.js"></script>
@@ -16,7 +19,9 @@
 </head>
 
 <body>
-    <div id="header-container"></div>
+    <section id="header-section">
+        <div id="header-container-wrapper"></div>
+    </section>
 
     <main id="user-info-main">
 
@@ -27,7 +32,9 @@
                 <button>Upload</button>
             </form>
 
-            <img src="" id="image-display" class="hidden">
+            <section id="image-display-container">
+                <img src="" id="image-display" class="hidden">
+            </section>
 
 
 

@@ -1,7 +1,7 @@
 import { auth, usersRef } from './firebase/firebase.js';
 
 export default function makeNavigationTemplate() {
-    const dom = /*html*/`
+    const dom = `
     <header class="header">
         <section class="header-container">
             <nav class="nav-container">
@@ -20,7 +20,7 @@ export default function makeNavigationTemplate() {
 
 export function makeFooter() {
     const template = document.createElement('template');
-    template.innerHTML = /*html*/`
+    template.innerHTML = `
         <footer class="footer">
             <section id="footer-container">
                 <img src="assets/boundless-logo-white.svg" id="footer-logo">
