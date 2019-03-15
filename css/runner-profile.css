@@ -1,3 +1,9 @@
+#user-info-main h3 {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 40px 0 0 0;
+}
+
 #image-display-container {
     width: 200px;
     height: 200px;
@@ -15,7 +21,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 82px);
+    /* height: calc(100vh - 82px); */
 }
 
 #user-info-container {
@@ -26,8 +32,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    margin: 40px 0;
+    padding: 30px;
+    margin: 20px 0;
 }
 
 .user-info-input input {
@@ -56,7 +62,7 @@
     font-size: .8em;
  }
 
-#sex {
+#gender {
     margin: 5px 0 20px 0;
     width: 340px;
     display: flex;
@@ -77,3 +83,18 @@
      background: #769096;
      color: #f4f4f4;
  }
+
+
+ #user-profile-submitted-message {
+    font-size: .8em;
+    color: #7a787b;
+    text-align: center;
+    /* margin-top: 10px; */
+    margin-bottom: 50px;
+}
+
+#name-display-profile-page {
+    display: block;
+    margin: 10px 0 20px;
+    font-weight: 600;
+}

@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/nav.css">
     <link rel="stylesheet" type="text/css" href="./css/runner-profile.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
 
 
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
@@ -24,25 +25,22 @@
     </section>
 
     <main id="user-info-main">
-
-            <label for="avatar">Choose a profile picture:</label>
-
-            <form id="photo-form">        
-                <input type="file" id="avatar-upload" name="avatar" accept="image/png, image/jpeg">
-                <button>Upload</button>
-            </form>
-
-            <section id="image-display-container">
-                <img src="" id="image-display" class="hidden">
-            </section>
-
-
-
         <h3>Update your profile</h3>
-        <p id="user-profile-submitted-message" class="invisible">User profile updated</p>
 
         <form id="user-info">
             <section id="user-info-container">
+                    
+                    <label for="avatar">Choose a profile picture:</label>
+            
+                    <section id="image-display-container">
+                        <img src="" id="image-display" class="hidden">
+                    </section>
+            
+                    <form id="photo-form">        
+                        <input type="file" id="avatar-upload" name="avatar" accept="image/png, image/jpeg">
+                        <button>Upload</button>
+                    </form>
+                    
                 <section class="user-info-input">
                     <label>Name:
                         <span id="name-display-profile-page">[User name will go here]</span>
@@ -72,6 +70,9 @@
                 
             </section>
         </form>
+
+        <p id="user-profile-submitted-message" class="invisible">User profile updated</p>
+
     </main>
 
     <div id="footer-container"></div>
