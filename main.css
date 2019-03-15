@@ -716,7 +716,7 @@ input[type=number] {
     font-size: .8em;
  }
 
-#sex {
+#gender {
     margin: 5px 0 20px 0;
     width: 340px;
     display: flex;
