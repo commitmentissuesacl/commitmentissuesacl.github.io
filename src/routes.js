@@ -2,6 +2,7 @@ import forestParkOptions from './routes/forest-park.js';
 import otherOptions from './routes/other.js';
 import { loadRoutes } from './make-html-template.js';
 import { loadHeader, loadFooter } from './header-template.js';
+import loadFilter from './filter-component.js';
 
 
 const search = window.location.search;
@@ -24,10 +25,4 @@ else {
 }
 
 loadRoutes(routeOptions);
-
-const minMiles = document.getElementById('min-miles');
-const maxMiles = document.getElementById('max-miles');
-const minElevation = document.getElementById('min-elevation');
-const maxElevation = document.getElementById('max-elevation');
-const bathroomFilter = document.getElementById('bathroom');
-const familyFilter = document.getElementById('family');
+loadFilter(routeOptions);
