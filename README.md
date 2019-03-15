@@ -14,3 +14,4 @@ To do:
 -make responsive
 -INTERNS (hot)
 -imageMap and thumbnailMap: are they the same? Can we combine them?
+-make route API on Firebase
