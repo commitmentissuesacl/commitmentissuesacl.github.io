@@ -63,7 +63,7 @@ export function updateUserNameDisplay(user) {
                 <div id="user-avatar-container" >
                     <img src="${avatar}" id="user-avatar">
                 </div>
-                <span id="user-name-display">${user.displayName}</span>
+                <span id="user-name-display">${user.displayName}</span> <span id="down-arrow"><img src="assets/down-arrow.svg"></span>
                 
                 <ul class="drop-down-content">
                     <li><a href="runnerprofile.html">Update Profile</a>

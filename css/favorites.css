@@ -1,0 +1,34 @@
+.fav-hero {
+    background-image: url(../assets/favorites-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fav-hero h2 {
+    color: #fff;
+    text-transform: uppercase;
+    width: 780px;
+    text-align: center;
+}
+
+#no-favorites-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 50px;
+}
+
+#no-favorites-container h3 {
+    padding: 0 0 20px;
+}
+
+#no-favorites-container p {
+    padding: 5px 0;
+}

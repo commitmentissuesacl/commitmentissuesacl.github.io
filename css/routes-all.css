@@ -28,7 +28,7 @@
 }
 
 /* FILTERS */
-/* 
+
 .filters {
     background-color: #496b73;
     display: flex;
@@ -127,7 +127,7 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance: textfield; 
-} */
+}
 
 
 /* RUNS */
