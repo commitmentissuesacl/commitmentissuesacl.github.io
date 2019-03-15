@@ -2,6 +2,7 @@ import forestParkOptions from './routes/forest-park.js';
 import otherOptions from './routes/other.js';
 import { loadRoutes } from './make-html-template.js';
 import { loadHeader, loadFooter } from './header-template.js';
+import loadFilter from './filter-component.js';
 
 
 const search = window.location.search;
@@ -19,6 +20,9 @@ if(routeUrl === 'forest-park') {
 else if(routeUrl === 'other') {
     routeOptions = otherOptions;
 }
-routeOptions = forestParkOptions;
+else {
+    routeOptions = forestParkOptions;
+}
 
 loadRoutes(routeOptions);
+loadFilter(routeOptions);
