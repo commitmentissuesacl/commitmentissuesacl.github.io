@@ -8,7 +8,7 @@ const fileUpload = document.getElementById('avatar-upload');
 const imageDisplay = document.getElementById('image-display');
 const photoForm = document.getElementById('photo-form');
 
-const name = document.getElementById('input-name');
+const name = document.getElementById('name-display-profile-page');
 const age = document.getElementById('age');
 const gender = document.getElementById('gender');
 const location = document.getElementById('location');
@@ -17,7 +17,7 @@ const userProfileSubmittedMessage = document.getElementById('user-profile-submit
 
 auth.onAuthStateChanged(user => {
     if(!user) {
-        window.location = 'routes.html';
+        window.location = 'index.html';
     }
 
     else {
@@ -26,6 +26,14 @@ auth.onAuthStateChanged(user => {
             .then(snapshot => {
                 const value = snapshot.val();
                 const customPhotoURL = value.customPhotoURL;
+                const nameValue = value.displayName;
+                const ageValue = value.age;
+                const genderValue = value.gender;
+                const locationValue = value.location;
+                name.textContent = nameValue;
+                age.value = ageValue;
+                gender.value = genderValue;
+                location.value = locationValue;
                 if(customPhotoURL) {
                     imageDisplay.src = customPhotoURL;
                     imageDisplay.classList.remove('hidden');
@@ -80,12 +88,3 @@ auth.onAuthStateChanged(user => {
         });
     }
 });
-
-
-
-// set form values with existing data
-// name.value = user.name;
-// age.value = user.age;
-// gender.value = user.gender;
-// location.value = user.location;
-

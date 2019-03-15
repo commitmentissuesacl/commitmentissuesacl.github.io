@@ -746,6 +746,12 @@ input[type=number] {
      margin-bottom: -20px;
  }
 
+ #name-display-profile-page {
+     display: block;
+     margin: 10px 0 20px;
+     font-weight: 600;
+ }
+
 
  /* THIS IS NOT THE WAY TO STYLE THIS!!! Set the width and height of a container with overflow hidden then put the image inside container */
  #image-display {
