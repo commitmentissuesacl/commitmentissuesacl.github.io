@@ -716,7 +716,7 @@ input[type=number] {
     font-size: .8em;
  }
 
-#sex {
+#gender {
     margin: 5px 0 20px 0;
     width: 340px;
     display: flex;
@@ -738,6 +738,20 @@ input[type=number] {
      color: #f4f4f4;
  }
 
+ #user-profile-submitted-message {
+     font-size: .8em;
+     color: #7a787b;
+     text-align: center;
+     margin-top: 10px;
+     margin-bottom: -20px;
+ }
+
+ #name-display-profile-page {
+     display: block;
+     margin: 10px 0 20px;
+     font-weight: 600;
+ }
+
 
  /* THIS IS NOT THE WAY TO STYLE THIS!!! Set the width and height of a container with overflow hidden then put the image inside container */
  #image-display {
@@ -751,4 +765,15 @@ input[type=number] {
 
 .hidden {
     display: none;
+}
+
+.invisible {
+    visibility: hidden;
+    /* opacity: 0;
+    animation: fade 1.5s; */
+}
+
+.visible {
+    opacity: 1;
+    animation: fade 1.5s;
 }

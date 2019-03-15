@@ -1,11 +1,11 @@
 import { loadRoutes } from './make-html-template.js';
 
 export function filterByMaxMiles(routes, max) {
-    return routes.filter(route => parseFloat(route.distance) < parseFloat(max));
+    return routes.filter(route => parseFloat(route.distance) <= parseFloat(max));
 }
 
 export function filterByMinMiles(routes, min) {
-    return routes.filter(route => parseFloat(route.distance) > parseFloat(min));
+    return routes.filter(route => parseFloat(route.distance) >= parseFloat(min));
 }
 
 export function filterByDistance(routes, min, max) {
@@ -14,11 +14,11 @@ export function filterByDistance(routes, min, max) {
 }
 
 export function filterByMinElevation(routes, min) {
-    return routes.filter(route => parseInt(route.elevation) > parseInt(min));
+    return routes.filter(route => parseInt(route.elevation) >= parseInt(min));
 }
 
 export function filterByMaxElevation(routes, max) {
-    return routes.filter(route => parseInt(route.elevation) < parseInt(max));
+    return routes.filter(route => parseInt(route.elevation) <= parseInt(max));
 }
 
 export function filterByElevation(routes, min, max) {
