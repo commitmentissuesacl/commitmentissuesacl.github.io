@@ -8,7 +8,6 @@
 To do:
 -style user info page
 -loading spinner
--use form to add more user info to db
 -save run times
 -comments?
 -sort (in module load-sort)

@@ -4,8 +4,6 @@ const comingSoon = {
     description: 'Your next favorite hot trail running destination coming soon to an app near you!',
     distance: '15',
     elevation: '2500',
-    favorite: false,
-    completed: false,
     imageMapPage: 'assets/creed280280.jpg',
     imageOne: 'assets/creed280280.jpg',
     imageTwo: 'assets/creed280280.jpg',
