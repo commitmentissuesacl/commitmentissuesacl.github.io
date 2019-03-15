@@ -1,0 +1,130 @@
+#header-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border-bottom: 2px solid #f26522;
+    font-size: .8em;
+}
+
+#header-container-wrapper {
+    padding: 0 20px;
+    width: 1220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-section a {
+    text-decoration: none;
+}
+
+#header-section a:hover {
+    text-decoration: underline;
+    text-decoration-color: #f26522;
+}
+
+.nav-container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav {
+    margin-left: 40px;
+}
+
+#user-name-container {
+    margin-top: 20px;
+    align-self: flex-start;
+}
+
+#logo-image {
+    height: 45px;
+    position: relative;
+    top: 3px;
+    opacity: 1;
+}
+
+#user-avatar-container {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+#user-avatar {
+    width: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.text-decoration {
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;
+}
+
+.text-decoration:hover {
+    text-decoration: underline;
+    text-decoration-color: #f26522;
+}
+
+#user-avatar-and-name {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.drop-down-content {
+    list-style-type: none;
+    padding: 5px 20px;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    width: 100px;
+    background-color: white;
+    display: none;
+    text-align: center;
+}
+
+#user-avatar-and-name:hover .drop-down-content {
+    display: block;
+}
+
+.drop-down-content li {
+    padding: 10px 0;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 550px) {
+    .nav-container {
+        width: 300px;
+    }
+    
+    #logo-image {
+        height: 35px;
+    }
+}
+
+/* THIS WILL BE CHANGED */
+@media only screen and (max-width: 510px) {
+    .header-nav {
+        display: none;
+    }
+
+    .nav-container {
+        width: 100%;
+    }
+}

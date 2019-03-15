@@ -1,0 +1,79 @@
+#image-display-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+#image-display {
+    width: 100%;
+}
+
+#user-info-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 82px);
+}
+
+#user-info-container {
+    border: 1px solid #cbccce;
+    background: #f4f4f4;
+    border-radius: 10px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 40px 0;
+}
+
+.user-info-input input {
+    margin: 10px 0;
+    width: 320px;
+    display: flex;
+}
+
+.user-info-input {
+    text-align: center;
+}
+
+.user-input-range {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    height: 27px;
+    border: 2px solid #cbccce;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #414042;
+    transition: 0.2s all linear;
+    outline: none;
+    padding: 0 5px 0 5px;
+    font-size: .8em;
+ }
+
+#sex {
+    margin: 5px 0 20px 0;
+    width: 340px;
+    display: flex;
+    -webkit-border-radius: 0px;
+
+    height: 30px;
+    color: #414042; 
+    border: 2px solid #cbccce;
+    text-align: center;
+    padding: 0 5px 0 5px;
+    font-size: .8em;
+    border-radius: 0px;
+    outline: none;
+    background-color: #fff;
+}
+
+ #user-info button {
+     background: #769096;
+     color: #f4f4f4;
+ }
