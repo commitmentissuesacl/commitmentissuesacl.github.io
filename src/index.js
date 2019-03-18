@@ -1,6 +1,8 @@
 import { auth, usersRef } from './firebase/firebase.js';
 
 const ui = new firebaseui.auth.AuthUI(auth);
+//const loading = document.getElementById('auth-loading-message');
+
 
 auth.onAuthStateChanged(user => {
     if(user){
@@ -30,3 +32,5 @@ ui.start('#firebaseui-auth-container', {
         }
     }
 });
+
+auth.addAuthStateListener();

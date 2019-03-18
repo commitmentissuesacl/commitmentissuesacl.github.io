@@ -17,7 +17,6 @@ auth.onAuthStateChanged(user => {
         userFavoritesRef.on('value', snapshot => {
             const value = snapshot.val();
             if(!value) {
-                console.log('no favorites');
                 noFavorites.classList.remove('hidden');
                 loadRoutes([]);
             }

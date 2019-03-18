@@ -50,6 +50,10 @@
     border: none;
 }
 
+#auth-loading-message h2 {
+    color: white;
+}
+
 #user-name-display {
     opacity: 1;
     animation: fade 1s;
@@ -172,7 +176,6 @@
     opacity: 1;
     animation: fade 1s;
 }
-
 
 /* RESPONSIVE */
 
