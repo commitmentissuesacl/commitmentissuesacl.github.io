@@ -101,6 +101,10 @@ main {
     top: -38px;
 }
 
+#favorite-icon {
+    cursor: pointer;
+}
+
 @keyframes fade {
     0% {
         opacity: 0;
@@ -113,6 +117,17 @@ main {
 
 @-ms-viewport{
     width: device-width;
+}
+
+.invisible {
+    visibility: hidden;
+    /* opacity: 0;
+    animation: fade 1.5s; */
+}
+
+.visible {
+    opacity: 1;
+    animation: fade 1.5s;
 }
 
 .hidden {

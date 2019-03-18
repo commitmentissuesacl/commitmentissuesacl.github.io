@@ -1,0 +1,82 @@
+.route-map {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#route-map {
+    width: 780px;
+    margin-top: 20px;
+}
+
+#elevation-details {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#elevation-chart {
+    width: 780px;
+}
+
+#route-details {
+    margin: 40px 0 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.route-details-container {
+    width: 780px;
+    display: flex;
+    flex-direction: column;
+}
+
+.route-details-container h5 {
+    align-self: flex-end;
+    position: relative;
+    top: -98px;
+    color: #769096;
+    word-spacing: 15px;
+}
+
+.route-details-container p {
+    margin-top: 10px;
+}
+
+
+#detail-photo-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#detail-photo-flex {
+    width: 780px;
+    border-top: 3px solid #769096;
+    border-bottom: 3px solid #769096;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 520px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+#more-info-container {
+    padding: 40px 0 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#more-info-section {
+    width: 780px;
+}
+
+#more-info-section p {
+    margin-top: 20px;
+}
