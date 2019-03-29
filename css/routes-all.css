@@ -202,7 +202,14 @@ input[type=number] {
     padding: 15px 20px 20px;
     width: 100%;
     overflow: hidden;
+    position: relative;
 } 
+
+#favorite-icon {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
 
 .run-icon-container {
     width: 280px;
