@@ -1,11 +1,16 @@
-.index-link {
+a {
     color: #fff;
     font-size: .8em;
     text-decoration: none;
 }
 
-.index-link:hover {
+.index-link {
+    color: #fff;
+}
+
+a:hover {
     text-decoration: underline;
+    text-decoration-color: #f26522;
 }
 
 #logo-image-index {

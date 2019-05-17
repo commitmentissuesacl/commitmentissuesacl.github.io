@@ -25,108 +25,6 @@
     text-transform: capitalize;
 }
 
-/* FILTERS */
-
-/* .filters {
-    background-color: #496b73;
-    display: flex;
-    justify-content: center;
-    border-bottom: solid 2px #769096;
-}
-
-.filters-container {
-    display: flex;
-    width: 1180px;
-    height: 60px;
-    align-items: center;
-    justify-content: space-between;
-    color: #e8e8e8;
-}
-
-#miles-filter {
-    width: 320px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-#elevation-filter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 380px;
-    position: relative;
-    left: -20px;
-}
-
-.filter-text {
-    position: relative;
-    top: -1px;
-    left: 4px;
-}
-
-.filter-input {
-    margin-left: 10px;
-}
-
-#filter-form {
-    width: 300px;
-    margin-right: 6px;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-}
-
-.checkbox {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
-    width: 18px;
-    height: 18px;
-    border: 2px solid #cbccce;
-    border-radius: 100%;
-    transition: 0.2s all linear;
-    outline: none;
-    margin-right: 12px;
-    position: relative;
-    top: 3px;
-}
-
-.checkbox:checked {
-    border: 6px solid #f26522;
-}
-
-.input-range {
-   -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
-
-   width: 60px;
-   height: 23px;
-   border: 2px solid #cbccce;
-   border-radius: 4px;
-   background-color: #e8e8e8;
-   color: #414042;
-   transition: 0.2s all linear;
-   outline: none;
-   padding: 0 5px 0 5px;
-   font-size: .8em;
-   position: relative;
-   top: 0px;
-   margin: 0 3px;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0; 
-}
-
-input[type=number] {
-    -moz-appearance: textfield; 
-} */
-
 
 /* RUNS */
 
@@ -153,6 +51,7 @@ input[type=number] {
     border-radius: 4px;
     overflow: hidden;
 
+    transition: box-shadow .2s ease-in-out;
     transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
     -webkit-transition: background .2s ease-in-out;
@@ -160,6 +59,7 @@ input[type=number] {
 
 .run-container:hover {
     background-color: #E8E8E8;
+    box-shadow: 0 0 7px rgba(0,0,0,0.15);
 
     transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
