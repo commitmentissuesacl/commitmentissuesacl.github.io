@@ -201,14 +201,14 @@
 .run-info-container {
     padding: 15px 20px 20px;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
 } 
 
 #favorite-icon {
     position: absolute;
     top: 25px;
-    right: 20px;
+    right: -280px;
 }
 
 .run-icon-container {
@@ -220,6 +220,8 @@
 } 
 
 .thumbnail-map {
+    position: relative;
+    bottom: -22px;
     border: 1px solid #cbccce;
     height: 190px;
 }
@@ -248,6 +250,10 @@
 
     #filter-form {
         width: 250px;
+    }
+
+    #favorite-icon {
+        right: 20px;
     }
 }
 
