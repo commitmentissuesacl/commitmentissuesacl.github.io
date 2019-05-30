@@ -2,14 +2,14 @@ function makeHtmlTemplate(route) {
     const html = /* html */`
         <section class="run-container">
 
-                <a href="route.html?routeid=${route.id}">
+                <a href="-detail.html?routeid=${route.id}">
                     <section class="image-container">
                             <img src="${route.imageMapPage}" alt="image of run" class="display-photo">
                     </section>
                 </a>
 
                 <section class="run-info-container">
-                    <a href="route.html?routeid=${route.id}">
+                    <a href="route-detail.html?routeid=${route.id}">
                         <h3>${route.name}</h3>
                     </a>
                     <h4>${route.distance} miles</h4>
@@ -57,14 +57,14 @@ QUnit.test('forest park template', assert => {
     const expected = /* html */ `
         <section class="run-container">
 
-                <a href="route.html?routeid=fp-marathon">
+                <a href="route-detail.html?routeid=fp-marathon">
                     <section class="image-container">
                             <img src="assets/thumbnailsformaps/forest-park-marathon-thumb.jpg" alt="image of run" class="display-photo">
                     </section>
                 </a>
 
                 <section class="run-info-container">
-                    <a href="route.html?routeid=fp-marathon">
+                    <a href="route-detail.html?routeid=fp-marathon">
                         <h3>Forest Park Marathon</h3>
                     </a>
                     <h4>26.38 miles</h4>

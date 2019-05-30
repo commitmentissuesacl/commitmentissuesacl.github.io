@@ -24,10 +24,13 @@ export function makeFooter() {
         <footer class="footer">
             <section id="footer-container">
                 <img src="assets/boundless-logo-white.svg" id="footer-logo">
-                <a href="routes.html" id="map-nav" class="header-nav">All Routes</a>
-                <a href="favorites.html" id="footer-favorites-nav">Favorites</a>
-                <a href="aboutus.html" class="header-nav">About Us</a>
-                <p id="footer-copyright">&copy; Commitment Issues 2019</p>
+                <section id="footer-content">
+                    <ul>
+                        <li><a href="routes.html" id="map-nav" class="header-nav">All Routes</a></li>
+                        <li><a href="favorites.html" id="footer-favorites-nav" class="header-nav">Favorites</a></li>
+                        <li><a href="aboutus.html" class="header-nav">About Us</a></li>
+                    <p id="footer-copyright">&copy; Commitment Issues 2019</p>
+                </section>
             </section>
         </footer>
     `;

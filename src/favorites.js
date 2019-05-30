@@ -23,6 +23,7 @@ auth.onAuthStateChanged(user => {
             else {
                 noFavorites.classList.add('hidden');
                 const routes = objectToArray(value);
+                console.log('hi');
                 loadRoutes(routes);
             }
         });

@@ -63,42 +63,14 @@ a:hover {
     text-decoration-color: #f26522;
 }
 
+ul {
+    list-style-type: none;
+}
+
 main {
     opacity: 1;
     animation: fade 1.5s;
     background: #fff;
-}
-
-
-
-/* REWORK FOOTER AFTER BUILDING TEMPLATE WITH LINKS */
-
-.footer {
-    width: 100%;
-    background-color: #414042;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 0;
-}
-
-#footer-container {
-    width: 1220px;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-#footer-logo {
-    width: 35%;
-}
-
-#footer-copyright {
-    color: #CBCCCE;
-    font-size: .7em;
-    position: relative;
-    top: -38px;
 }
 
 #favorite-icon {

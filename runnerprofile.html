@@ -11,12 +11,22 @@
     <link rel="stylesheet" type="text/css" href="./css/nav.css">
     <link rel="stylesheet" type="text/css" href="./css/runner-profile.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600|Roboto:400,400i,700,700i|Shrikhand"
+        rel="stylesheet">
 
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-storage.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137290567-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-137290567-1');
+    </script>
 </head>
 
 <body>
@@ -77,8 +87,10 @@
 
     </main>
 
-    <div id="footer-container"></div>
-
+    <section id="footer-wrapper">
+        <div id="footer-container"></div>
+    </section>
+    
     <script type="module" src="src/runner-profile.js"></script>
 </body>
 </html>

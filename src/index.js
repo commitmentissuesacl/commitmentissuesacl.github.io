@@ -33,4 +33,5 @@ ui.start('#firebaseui-auth-container', {
     }
 });
 
-auth.addAuthStateListener();
+// causing error. is this necessary?
+// auth.addAuthStateListener();

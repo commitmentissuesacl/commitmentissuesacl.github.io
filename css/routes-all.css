@@ -1,5 +1,3 @@
-@import "compass/css3";
-
 /* HERO IMAGE */
 
 .hero {
@@ -34,56 +32,56 @@
     display: flex;
     justify-content: center;
     border-bottom: solid 2px #769096;
-}
-
-.filters-container {
+    padding: 15px 25px;
+  }
+  
+  .filters-container {
     display: flex;
-    width: 1180px;
-    height: 60px;
+    width: 100%;
+    // height: 60px;
     align-items: center;
     justify-content: space-between;
     color: #e8e8e8;
-}
+  }
 
-#miles-filter {
-    width: 320px;
+  #miles-filter {
+    // width: 320px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
-
-#elevation-filter {
+  }
+  
+  #elevation-filter {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 380px;
     position: relative;
-    left: -20px;
-}
-
-.filter-text {
+    left: -5px;
+  }
+  
+  .filter-text {
     position: relative;
     top: -1px;
     left: 4px;
-}
-
-.filter-input {
+  }
+  
+  .filter-input {
     margin-left: 10px;
-}
-
-#filter-form {
+  }
+  
+  #filter-form {
     width: 300px;
     margin-right: 6px;
     display: flex;
     justify-content: space-between;
     align-content: center;
-}
-
-.checkbox {
+  }
+  
+  .checkbox {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
+  
     width: 18px;
     height: 18px;
     border: 2px solid #cbccce;
@@ -93,22 +91,22 @@
     margin-right: 12px;
     position: relative;
     top: 3px;
-}
-
-.checkbox:checked {
+  }
+  
+  .checkbox:checked {
     border: 6px solid #f26522;
-}
-
-.input-range {
+  }
+  
+  .input-range {
    -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
-
+  
    width: 60px;
    height: 23px;
    border: 2px solid #cbccce;
    border-radius: 4px;
-   background-color: #e8e8e8;
+   background-color: #fff;
    color: #414042;
    transition: 0.2s all linear;
    outline: none;
@@ -117,18 +115,18 @@
    position: relative;
    top: 0px;
    margin: 0 3px;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; 
-}
-
-input[type=number] {
+  }
+  
+  input[type=number] {
     -moz-appearance: textfield; 
-}
-
+  }
+    
 
 /* RUNS */
 
@@ -146,8 +144,8 @@ input[type=number] {
 .run-container {
     background-color: #f4f4f4;
     border: 1px solid #cbccce;
-    margin: 10px 0;
-    width: 1180px;
+    margin: 10px 30px;
+    /* width: 1180px; */
     display: flex;
     height: 280px;
     opacity: 1;
@@ -155,6 +153,7 @@ input[type=number] {
     border-radius: 4px;
     overflow: hidden;
 
+    transition: box-shadow .2s ease-in-out;
     transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
     -webkit-transition: background .2s ease-in-out;
@@ -162,6 +161,7 @@ input[type=number] {
 
 .run-container:hover {
     background-color: #E8E8E8;
+    box-shadow: 0 0 7px rgba(0,0,0,0.15);
 
     transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
@@ -202,7 +202,14 @@ input[type=number] {
     padding: 15px 20px 20px;
     width: 100%;
     overflow: hidden;
+    position: relative;
 } 
+
+#favorite-icon {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
 
 .run-icon-container {
     width: 280px;
@@ -228,11 +235,30 @@ input[type=number] {
     .run-container {
         width: calc(100% - 40px);
     }
+
+    .filters {
+        padding: 15px 20px;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
     .run-icon-container {
         display: none;
+    }
+
+    #filter-form {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .filters-container {
+        flex-direction: column;
+    }
+
+    #elevation-filter {
+        padding: 10px 0;
+        left: -5px;
     }
 }
 
@@ -245,7 +271,7 @@ input[type=number] {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
     .run-container {
         flex-direction: column;
         height: 100%;

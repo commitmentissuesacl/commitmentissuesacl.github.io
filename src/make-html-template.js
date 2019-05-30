@@ -4,7 +4,7 @@ export default function makeHtmlTemplate(route) {
     const html = /* html */`
         <section class="run-container">
 
-                <a href="route.html?routeid=${route.id}">
+                <a href="route-detail.html?routeid=${route.id}">
                     <section class="image-container">
                             <img src="${route.imageMapPage}" alt="${route.name}" class="display-photo">
                     </section>

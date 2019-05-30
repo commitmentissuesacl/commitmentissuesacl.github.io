@@ -131,7 +131,6 @@ const saltzman = {
     imageFour: 'assets/images/lowerpark/wildcherry1.jpg',
     thumbnailMap: 'assets/working/saltzman-slog-map.png',
     largeMap: 'assets/working/saltzman-slog-map.png',
-
     extraInfo: 'There are port-a-potties at the start of this route near Wildwood mile marker 11. The trailhead where this run starts has off-street parking, and there is street parking at the ending point.',
     bathroom: true,
     familyFriendly: false,

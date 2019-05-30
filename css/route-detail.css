@@ -32,6 +32,7 @@
     width: 780px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .route-details-container h5 {
@@ -42,10 +43,15 @@
     word-spacing: 15px;
 }
 
+#favorite-icon {
+    position: absolute;
+    right: 0;
+    top: 45px; 
+}
+
 .route-details-container p {
     margin-top: 10px;
 }
-
 
 #detail-photo-section {
     width: 100%;
