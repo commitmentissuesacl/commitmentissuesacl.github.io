@@ -18,7 +18,7 @@
 }
 
 #elevation-chart {
-    width: 780px;
+    width: 100%;
 }
 
 #route-details {
@@ -85,4 +85,14 @@
 
 #more-info-section p {
     margin-top: 20px;
+}
+
+/* RESPONSIVE */
+
+
+@media only screen and (max-width: 800px) {
+    #detail-photo-section {
+        display: block;
+        background-color: pink;
+    }
 }
