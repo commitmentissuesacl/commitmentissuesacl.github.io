@@ -5,7 +5,7 @@ export default function makeNavigationTemplate() {
     <header class="header">
         <section class="header-container">
             <nav class="nav-container">
-                <a href="routes.html"><img src="assets/logo/therunslogo-grey.svg" alt="Logo" id="logo-image"></a>
+                <a href="routes.html"><div id="logo-image"></div></a>
                 <a href="routes.html" id="map-nav" class="header-nav">All Routes</a>
                 <a href="favorites.html" id="favorites-nav" class="header-nav">Favorites</a>
                 <a href="aboutus.html" class="header-nav" style="display: none">About Us</a>
@@ -23,7 +23,7 @@ export function makeFooter() {
     template.innerHTML = `
         <footer class="footer">
             <section id="footer-container">
-                <img src="assets/logo/therunslogo-white.svg" id="footer-logo">
+                <a href="routes.html"><div id="footer-logo"></div></a>
                 <section id="footer-content">
                     <ul>
                         <li><a href="routes.html" id="map-nav" class="header-nav">All Routes</a></li>

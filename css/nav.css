@@ -33,13 +33,29 @@
 
 .header-nav {
     margin-left: 40px;
-    position: relative;
-    top: 1px;
 }
 
 #logo-image {
-    height: 55px;
-    opacity: 1;
+    height: 60px;
+    width: 80px;
+    background-image: url('../assets/logo/therunslogo-grey.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80px;
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;
+}
+
+#logo-image:hover {
+    background-image: url('../assets/logo/therunslogo-greyorange.svg');
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;
 }
 
 #user-avatar-container {
@@ -134,7 +150,26 @@
 }
 
 #footer-logo {
-    height: 100px;
+    height: 150px;
+    width: 202px;
+    background-image: url('../assets/logo/therunslogo-white.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 200px;
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;
+}
+
+#footer-logo:hover {
+    background-image: url('../assets/logo/therunslogo-orange.svg');
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;
 }
 
 #footer-content {
@@ -175,28 +210,49 @@
 }
 
 @media only screen and (max-width: 600px) {
-    #logo-image {
-        height: 25px;
+    #footer-logo {
+        height: 80px;
+        width: 106px;
+        // background-color: pink;
+        background-size: 105px;
     }
 }
 
 /* THIS WILL BE CHANGED */
 @media only screen and (max-width: 510px) {
-    #footer-container {
-        flex-direction: column;
-        align-content: center;
-    }
-
-    .footer {
-        padding: 30px 0;
-
-    }
-
-    .header-nav {
-        display: none;
-    }
+    // .header-nav {
+    //     display: none;
+    // }
 
     .nav-container {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    #logo-image {
+        height: 50px;
+        width: 60px;
+        background-size: 60px;
+    }
+
+    .nav-container {
+        height: 60px;
+    }
+
+    #header-section {
+        font-size: .7em;
+    }
+
+    #header-container-wrapper {
+        padding: 0 10px;
+    }
+
+    .header-nav {
+        margin-left: 10px;
+    }
+
+    .footer {
+        padding: 15px 15px;
     }
 }
