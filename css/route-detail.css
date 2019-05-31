@@ -18,7 +18,7 @@
 }
 
 #elevation-chart {
-    width: 100%;
+    width: 780px;
     height: 100%;
 }
 
@@ -104,6 +104,10 @@
         width: 100%;
         height: 100%;
         margin: 5px 0;
+    }
+
+    #elevation-chart {
+        width: 100%;
     }
 }
 
