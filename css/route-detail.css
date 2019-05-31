@@ -105,3 +105,28 @@
         margin: 5px 0;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .route-details-container h5 {
+        align-self: flex-start;
+        position: static;
+        top: 0;
+    }
+    
+    #favorite-icon {
+        position: static;
+        align-self: flex-start;
+        right: 0;
+        top: 5px; 
+    }
+    
+    .route-details-container p {
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    main {
+        padding: 0 5px;
+    }
+}
