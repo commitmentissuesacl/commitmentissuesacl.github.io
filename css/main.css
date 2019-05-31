@@ -93,8 +93,6 @@ main {
 
 .invisible {
     visibility: hidden;
-    /* opacity: 0;
-    animation: fade 1.5s; */
 }
 
 .visible {
@@ -106,4 +104,6 @@ main {
     visibility: hidden;
     height: 0px;
     width: 0px;
+    font-size: 0em;
+    padding: 0;
 }
