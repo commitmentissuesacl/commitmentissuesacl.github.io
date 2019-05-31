@@ -14,7 +14,7 @@ a:hover {
 }
 
 #logo-image-index {
-    height: 40px;
+    height: 100px;
 }
 
 #logo-image-index:hover {
@@ -45,8 +45,7 @@ a:hover {
 
 .index-header {
     display: flex;
-    height: 60px;
-    margin: 20px 20px;
+    margin: 40px 0 10px;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;

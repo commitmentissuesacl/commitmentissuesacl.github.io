@@ -5,10 +5,10 @@ export default function makeNavigationTemplate() {
     <header class="header">
         <section class="header-container">
             <nav class="nav-container">
-                <a href="routes.html"><img src="assets/boundless-logo.svg" alt="Logo" id="logo-image"></a>
+                <a href="routes.html"><img src="assets/logo/therunslogo-grey.svg" alt="Logo" id="logo-image"></a>
                 <a href="routes.html" id="map-nav" class="header-nav">All Routes</a>
                 <a href="favorites.html" id="favorites-nav" class="header-nav">Favorites</a>
-                <a href="aboutus.html" class="header-nav">About Us</a>
+                <a href="aboutus.html" class="header-nav" style="display: none">About Us</a>
             </nav>
         </section>
     </header>
@@ -23,13 +23,13 @@ export function makeFooter() {
     template.innerHTML = `
         <footer class="footer">
             <section id="footer-container">
-                <img src="assets/boundless-logo-white.svg" id="footer-logo">
+                <img src="assets/logo/therunslogo-white.svg" id="footer-logo">
                 <section id="footer-content">
                     <ul>
                         <li><a href="routes.html" id="map-nav" class="header-nav">All Routes</a></li>
                         <li><a href="favorites.html" id="footer-favorites-nav" class="header-nav">Favorites</a></li>
-                        <li><a href="aboutus.html" class="header-nav">About Us</a></li>
-                    <p id="footer-copyright">&copy; Commitment Issues 2019</p>
+                        <li><a href="aboutus.html" class="header-nav" style="display: none">About Us</a></li>
+                    <p id="footer-copyright">&copy; The Runs 2019</p>
                 </section>
             </section>
         </footer>
@@ -69,7 +69,7 @@ export function updateUserNameDisplay(user) {
                 <span id="user-name-display">${user.displayName}</span> <span id="down-arrow"><img src="assets/down-arrow.svg"></span>
                 
                 <ul class="drop-down-content">
-                    <li><a href="runnerprofile.html">Update Profile</a>
+                    <!-- <li><a href="runnerprofile.html">Update Profile</a> -->
                     <li><span id="logout" class="pointer text-decoration">Logout</span>
                 </ul>
             </div>
